@@ -1,0 +1,41 @@
+@import '../_whiteframe';
+
+.card {
+  background-color: #fff;
+  border-radius: 2px;
+  @extend .whiteframe-z1;
+  //padding: 16px;
+  .primary-title {
+    margin: 24px 16px 16px 16px;
+    .title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: rgba(0,0,0,.54);
+      font-weight: 400;
+    }
+  }
+  .actions {
+    padding: 8px;
+  }
+
+  .card-supporting-text {
+    font-size: 14px;
+    margin: 16px;
+  }
+
+  .card-actions {
+    padding: 8px;
+    .button {
+      margin-bottom: 0;
+      color: rgba(0,0,0,.87);
+    }
+  }
+
+  .card-content {
+    margin: 32px 16px 16px 16px;
+    display: block;
+  }
+}
