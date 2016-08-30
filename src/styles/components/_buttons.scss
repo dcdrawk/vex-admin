@@ -41,8 +41,8 @@
   &.icon-button {
     border-radius: 50%;
     margin: 0;
-    height: 56px;
-    width: 56px;
+    height: 40px;
+    width: 40px;
     padding: 0px;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     i {
@@ -65,10 +65,11 @@
 
 .icon-button-wrapper {
   border-radius: 50%;
-  height: 56px;
-  width: 56px;
+  height: 40px;
+  width: 40px;
   display: inline-block;
   margin-right: 8px;
+  position: relative;
   &.small {
     height: 40px;
     width: 40px;
