@@ -1,7 +1,7 @@
 <template>
   <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label>{{label}}</label>
-    <input v-model="value" v-focus-model="focused"/>
+    <input v-model="value" v-focus-model="focused" :type="type"/>
   </div>
 </template>
 
@@ -16,7 +16,8 @@
     name: 'MaterialButton',
     props: [
       'label',
-      'value'
+      'value',
+      'type',
     ],
 
     data () {

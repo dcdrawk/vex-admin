@@ -1,24 +1,10 @@
 <template>
   <div id="app">
-
+    <app-bar></app-bar>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <material-card title="Card Title"
-                subtitle="Card Subtitle Text"
-                content="this is the content"
-                v-bind:actions="actions"
-          ></material-card>
-
-        </div>
-
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <material-button raised="true" primary="true">MY BUTTON</material-button>
-        </div>
 
         <router-view></router-view>
 
-      </div>
     </div>
   </div>
 </template>
@@ -27,15 +13,38 @@
 import Hello from './components/Hello'
 import MaterialCard from './components/material/MaterialCard'
 import MaterialButton from './components/material/MaterialButton'
-
+import AppBar from './components/AppBar.vue';
+import firebase from 'firebase';
 //var router = new VueRouter();
 //console.log('test', router)
+
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyACdSfcm596fdnyoIFiovJWlq_15g0Vuag',
+  authDomain: 'codex-9bc8c.firebaseapp.com',
+  databaseURL: 'https://codex-9bc8c.firebaseio.com',
+  storageBucket: 'codex-9bc8c.appspot.com',
+};
+
+firebase.initializeApp(config);
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log('a user has signed in');
+    // User is signed in.
+  } else {
+    console.log('no user has signed in');
+    // No user is signed in.
+  }
+});
+
 export default {
 
   components: {
     Hello,
     MaterialCard,
-    MaterialButton
+    MaterialButton,
+    AppBar
   },
   data () {
     return {

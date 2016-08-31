@@ -19,7 +19,9 @@
 
     <nav>
       <material-list dense="true">
-        <material-list-item text="List Item!" icon="star"></material-list-item>
+        <material-list-item text="List Item!" icon="star" v-link="'home'"></material-list-item>
+        <material-list-item text="List Item!" icon="person"></material-list-item>
+        <material-list-item text="List Item!" icon="edit"></material-list-item>
       </material-list>
       <!--<List>-->
       <!--<Link to="/about"><ListItem text="List Item"/></Link>-->
@@ -57,7 +59,7 @@
     ],
     data () {
       return {
-        open: true
+        open: false
       }
     },
     methods: {

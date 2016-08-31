@@ -1,5 +1,5 @@
 <template>
-  <li class="list-item" v-bind:class="{ 'avatar': avatar, 'two-line': !twoLine}">
+  <li class="list-item" v-bind:class="{ 'avatar': avatar, 'two-line': twoLine}">
     <span v-if="icon && avatar" class="list-item-avatar">
       <i class="material-icons">{{ icon }}</i>
     </span>

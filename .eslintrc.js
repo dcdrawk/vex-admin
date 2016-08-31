@@ -24,6 +24,7 @@ module.exports = {
     'indent': 'off',
     'semi': 'off',
     'no-multiple-empty-lines': 'off',
-    'spaced-comment': 'off'
+    'spaced-comment': 'off',
+    'space-before-function-paren': 'off'
   }
 };

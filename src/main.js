@@ -12,6 +12,7 @@ import VueResource from 'vue-resource';
 import App from './App';
 import Hello from './components/Hello';
 import About from './components/About';
+import LogIn from './components/LogIn.vue'
 Vue.use(VueRouter);
 
 // Setup / import components for use with the router
@@ -39,11 +40,14 @@ router.map({
   '/foo': {
     component: Foo
   },
-  '/bar': {
+  '/about': {
     component: About
   },
   '/people': {
     component: Hello
+  },
+  '/login': {
+    component: LogIn
   }
 });
 

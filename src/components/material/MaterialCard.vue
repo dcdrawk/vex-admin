@@ -5,7 +5,10 @@
       <h2 v-if="title" class="title">{{title}}</h2>
       <h3 v-if="subtitle" class="subtitle">{{subtitle}}</h3>
     </div>
-    <div v-if="content" class="card-supporting-text">{{content}}</div>
+    <div class="card-supporting-text">
+      <slot></slot>
+    </div>
+
     <div v-if="actions" class="card-actions">
       <button v-for="item in actions" primary="true">{{ item }}</button>
     </div>

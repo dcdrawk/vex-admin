@@ -3,8 +3,11 @@
         <div>ABOUT VIEW!</div>
         <material-input v-ref:email value="test" label="label"></material-input>
         <material-checkbox></material-checkbox>
-        <button  v-on:click="greet($event)">Button!</button>
-        <app-bar></app-bar>
+        <button  @click="showDialog();">Button!</button>
+
+        <material-dialog title="test" v-ref:dialog  >
+            Here is the dialog!
+        </material-dialog>
       <!--<i class="material-icons">face</i>-->
     </div>
 </template>
@@ -14,28 +17,25 @@
 <script>
   import MaterialInput from './material/MaterialInput';
   import MaterialCheckbox from './material/MaterialCheckbox';
-  import AppBar from './AppBar.vue';
+  import MaterialDialog from './material/MaterialDialog.vue';
+
 
   export default {
     components: {
       MaterialInput,
       MaterialCheckbox,
-      AppBar
+      MaterialDialog
     },
 
     data () {
       return {
-        msg: 'hello vue'
+        msg: 'hello vue',
       }
     },
 
     methods: {
-      greet (event) {
-        // `this` inside methods point to the Vue instance
-        console.log('Hello ' + this.name + '!')
-        // `event` is the native DOM event
-        console.log(event.target.tagName)
-        console.log(this.$refs.email.value);
+      showDialog () {
+        this.$refs.dialog.show = true;
       }
     }
   }
