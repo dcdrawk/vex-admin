@@ -15,28 +15,14 @@ import MaterialCard from './components/material/MaterialCard'
 import MaterialButton from './components/material/MaterialButton'
 import AppBar from './components/AppBar.vue';
 import firebase from 'firebase';
+//import Vuex from 'vuex'
+import store from './services/Store';
+
 //var router = new VueRouter();
 //console.log('test', router)
+//Vue.use(Vuex);
 
-// Initialize Firebase
-var config = {
-  apiKey: 'AIzaSyACdSfcm596fdnyoIFiovJWlq_15g0Vuag',
-  authDomain: 'codex-9bc8c.firebaseapp.com',
-  databaseURL: 'https://codex-9bc8c.firebaseio.com',
-  storageBucket: 'codex-9bc8c.appspot.com',
-};
 
-firebase.initializeApp(config);
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log('a user has signed in');
-    // User is signed in.
-  } else {
-    console.log('no user has signed in');
-    // No user is signed in.
-  }
-});
 
 export default {
 
@@ -50,6 +36,30 @@ export default {
     return {
       actions: ['test', 'test2']
     }
+  },
+  ready () {
+    // Initialize Firebase
+    var config = {
+      apiKey: 'AIzaSyACdSfcm596fdnyoIFiovJWlq_15g0Vuag',
+      authDomain: 'codex-9bc8c.firebaseapp.com',
+      databaseURL: 'https://codex-9bc8c.firebaseio.com',
+      storageBucket: 'codex-9bc8c.appspot.com',
+    };
+
+    firebase.initializeApp(config);
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log('a user has signed in');
+        console.log(user);
+        store.dispatch('SETUSER', user);
+        console.log(store);
+        // User is signed in.
+      } else {
+        console.log('no user has signed in');
+        // No user is signed in.
+      }
+    });
   }
 }
 </script>

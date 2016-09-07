@@ -30,8 +30,14 @@
 
       // Subscribing to 'mousedown' and 'mouseup' button events to activate ripple effect
       // when a user clicks on the button.
+      var event = function () {
+        ripple.upAction();
+        window.removeEventListener('mouseup', event);
+      };
+
       button.addEventListener('mousedown', function (ev) {
         ripple.downAction(ev)
+        window.addEventListener('mouseup', event);
       });
 
       button.addEventListener('mouseup', function () {

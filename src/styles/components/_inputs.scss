@@ -9,6 +9,7 @@
     transform: translateY(4px);
     transition: $transition-timing;
     color: rgba(0, 0, 0, .38);
+    pointer-events: none;
   }
 
   input,

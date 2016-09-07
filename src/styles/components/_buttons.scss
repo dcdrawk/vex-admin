@@ -15,6 +15,13 @@
   cursor: pointer;
   transition: $transition-timing;
   margin: 0 8px 8px 0;
+  user-select: none;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: .54;
+    pointer-events: none;
+  }
   &.flat {
     &.primary {
       color: $primary-color;

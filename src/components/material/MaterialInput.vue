@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss">
-  @import '../../styles/components/inputs';
+  @import '../../styles/components/_inputs.scss';
 </style>
 <script>
   import { focusModel } from 'vue-focus';
@@ -18,6 +18,7 @@
       'label',
       'value',
       'type',
+        'model'
     ],
 
     data () {

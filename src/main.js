@@ -7,12 +7,18 @@
 //   components: { App }
 // })
 import Vue from 'vue';
+import Vuex from 'vuex';
+
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
 import Hello from './components/Hello';
 import About from './components/About';
-import LogIn from './components/LogIn.vue'
+import LogIn from './components/LogIn.vue';
+import Profile from './components/Profile';
+import CharacterList from './components/CharacterList.vue';
+// import store from './services/Store';
+
 Vue.use(VueRouter);
 
 // Setup / import components for use with the router
@@ -48,6 +54,12 @@ router.map({
   },
   '/login': {
     component: LogIn
+  },
+  '/profile': {
+    component: Profile
+  },
+  '/character-list': {
+    component: CharacterList
   }
 });
 

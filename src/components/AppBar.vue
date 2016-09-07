@@ -2,32 +2,28 @@
   <div class="app-bar">
 
 
-    <material-toolbar title="TESTING">
+    <material-toolbar title="VueJS App">
       <material-icon-button icon="menu" primary="true" @click="toggleSidenav"></material-icon-button>
     </material-toolbar>
 
   <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
   <material-sidebar :open="open">
-    <div class="avatar-container">
-      <div class="avatar"></div>
+    <div class="avatar-container" v-if="user">
+      <div class="avatar" v-if="!user.photoURL"></div>
+      <img class="avatar" v-else :src="user.photoURL">
       <div class="user-info">
-        <p class="body-1">Username</p>
-        <p class="body-1 secondary-text">email</p>
+        <p class="body-1">{{ user.displayName }}</p>
+        <p class="body-1 secondary-text">{{ user.email}}</p>
       </div>
     </div>
 
     <nav>
       <material-list dense="true">
-        <material-list-item text="List Item!" icon="star" v-link="'home'"></material-list-item>
-        <material-list-item text="List Item!" icon="person"></material-list-item>
-        <material-list-item text="List Item!" icon="edit"></material-list-item>
+        <material-list-item v-if="!user" text="Log In" v-link="'login'" @click="toggleSidenav()"></material-list-item>
+        <material-list-item text="Character List" v-link="'character-list'"></material-list-item>
+        <material-list-item text="List Item!"></material-list-item>
       </material-list>
-      <!--<List>-->
-      <!--<Link to="/about"><ListItem text="List Item"/></Link>-->
-      <!--<Link to="/login"><ListItem text="Log In"/></Link>-->
-      <!--<Link to="/"><ListItem text="List Item2"/></Link>-->
-      <!--</List>-->
     </nav>
   </material-sidebar>
 
@@ -35,8 +31,11 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../styles/components/appbar';
+  .list-item {
+    cursor: pointer;
+  }
 </style>
 
 <script>
@@ -45,6 +44,8 @@
   import MaterialSidebar from './material/MaterialSidebar';
   import MaterialList from './material/MaterialList';
   import MaterialListItem from './material/MaterialListItem';
+  import FirebaseService from '../services/FirebaseService';
+  import store from '../services/Store';
 
   export default {
     components: {
@@ -65,6 +66,11 @@
     methods: {
       toggleSidenav () {
         this.open = !this.open;
+      }
+    },
+    computed: {
+      user: function () {
+        return store.state.user
       }
     }
   }
