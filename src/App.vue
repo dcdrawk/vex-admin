@@ -15,6 +15,7 @@ import MaterialCard from './components/material/MaterialCard'
 import MaterialButton from './components/material/MaterialButton'
 import AppBar from './components/AppBar.vue';
 import firebase from 'firebase';
+import CharacterService from './services/CharacterService';
 //import Vuex from 'vuex'
 import store from './services/Store';
 
@@ -45,21 +46,30 @@ export default {
       databaseURL: 'https://codex-9bc8c.firebaseio.com',
       storageBucket: 'codex-9bc8c.appspot.com',
     };
-
+    console.log('App is Ready');
     firebase.initializeApp(config);
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log('Auth State Changed');
       if (user) {
-        console.log('a user has signed in');
-        console.log(user);
-        store.dispatch('SETUSER', user);
-        console.log(store);
         // User is signed in.
+        store.dispatch('SETUSER', user);
+        this.getCharacters();
       } else {
         console.log('no user has signed in');
+        store.dispatch('SETUSER', undefined);
         // No user is signed in.
       }
     });
+  },
+
+  methods: {
+    getCharacters() {
+      console.log('lets get the characters');
+      CharacterService.getCharacterList().then((characters) => {
+        store.dispatch('SETCHARACTERS', characters);
+      })
+    }
   }
 }
 </script>

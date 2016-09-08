@@ -1,4 +1,8 @@
 @import '../whiteframe', '../variables';
+
 .material-data-table {
+  width: 100%;
+  padding: 24px;
+  background-color: #fff;
   @extend .whiteframe-z1;
 }

@@ -1,8 +1,7 @@
 <template>
   <div class="row space-around">
-    This is the character list
-
-    <material-data-table :rows="rows"></material-data-table>
+    This is the character list {{ characters }}
+    <material-data-table :headers="headers" :rows="characters" :keys="keys"></material-data-table>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -23,50 +22,51 @@
 
 </style>
 <script>
-  import FirebaseService from '../services/FirebaseService';
   import MaterialDataTable from './material/MaterialDataTable.vue';
+  import FirebaseService from '../services/FirebaseService';
+  import CharacterService from '../services/CharacterService';
   import store from '../services/Store';
 
   export default {
     store,
+
     components: {
       MaterialDataTable
-//      MaterialInput,
-//      MaterialButton,
-//      MaterialCard,
     },
 
     ready () {
-//      console.log(store);
       console.log('character list is ready');
     },
 
     data () {
       return {
-        msg: 'hello vue',
-        user: undefined,
-        rows: [
+        headers: [
           {
-            name: 'test1'
+            title: 'Name'
           },
           {
-            name: 'test2'
+            title: 'Level'
           },
+          {
+            title: 'Race'
+          },
+          {
+            title: 'Class'
+          }
+        ],
+        keys: [
+          'name',
+          'level',
+          'race',
+          'class'
         ]
       }
     },
-
-    methods: {
-//      logIn (event) {
-//        let email = this.$refs.email.value;
-//        let password = this.$refs.password.value;
-//        FirebaseService.logIn(email, password);
-//      }
-    },
-//    computed: {
-//      user: function () {
-//        return store.state.user
-//      }
-//    }
+    computed: {
+      characters: function () {
+        console.log('BUT BUT');
+        return store.state.characters
+      }
+    }
   }
 </script>

@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
+
 const state = {
-  user: undefined
+  user: undefined,
+  characters: undefined
 };
 
 const mutations = {
@@ -13,6 +15,12 @@ const mutations = {
   SETUSER (state, user) {
     console.log('user has updated');
     state.user = user;
+    console.log(state);
+  },
+
+  SETCHARACTERS (state, characters) {
+    console.log('character list has updated');
+    state.characters = characters;
     console.log(state);
   }
 };

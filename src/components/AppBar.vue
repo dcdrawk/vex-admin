@@ -48,6 +48,7 @@
   import store from '../services/Store';
 
   export default {
+    store,
     components: {
       MaterialToolbar,
       MaterialIconButton,
@@ -68,9 +69,17 @@
         this.open = !this.open;
       }
     },
+    vuex: {
+      getters: {
+        characters: state => state.characters
+      }
+    },
     computed: {
       user: function () {
         return store.state.user
+      },
+      characters: function () {
+        return store.state.characters
       }
     }
   }

@@ -2,15 +2,34 @@
   <div class="material-data-table">
     Data table!
       <table>
-        <tr v-for="row in rows">{{ row.name }}</tr>
+        <thead>
+          <tr>
+            <th v-for="header in headers">{{ header.title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr v-for="row in rows">
+            <td v-for="key in keys">
+              {{ row[key] }}
+            </td>
+          </tr>
+
+        </tbody>
       </table>
   </div>
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../../styles/components/datatables';
   /**/
+  table {
+    width: 100%;
+      &.fixed {
+
+      }
+  }
 </style>
 
 <script>
@@ -21,7 +40,9 @@
       Button
     },
     props: [
+      'headers',
       'rows',
+      'keys'
     ],
 
     data () {
