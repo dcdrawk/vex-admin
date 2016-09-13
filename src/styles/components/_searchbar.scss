@@ -1,0 +1,47 @@
+@import '../whiteframe';
+
+.material-search-bar {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 16px;
+  padding: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @extend .whiteframe-z1;
+
+  i {
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  input {
+    border: none;
+    font-size: 16px;
+    outline: none;
+    height: 24px;
+    width: 100%;
+  }
+
+}
+
+.material-autocomplete {
+  position: absolute;
+  top: 58px;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  border-top: 1px solid #eee;
+  //border-top: 1px solid rgba(0,0,0,.12);
+  @extend .whiteframe-z1;
+
+  .material-autocomplete-item {
+    //margin-left: 16px;
+    padding: 16px 16px 16px 56px;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    &:hover {
+      background-color: #EEEEEE;
+    }
+  }
+}

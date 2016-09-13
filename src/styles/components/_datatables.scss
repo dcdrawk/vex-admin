@@ -2,7 +2,84 @@
 
 .material-data-table {
   width: 100%;
-  padding: 24px;
+  //padding: 24px;
   background-color: #fff;
   @extend .whiteframe-z1;
+  //overflow: auto;
+  .material-data-table-container {
+    overflow: auto;
+  }
+  .material-data-table-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+
+  }
+  table {
+    border-top: 1px solid rgba(0,0,0,.12);
+    border-spacing: 0;
+    border-collapse: separate;
+  }
+  th {
+    font-size: 12px;
+    text-align: right;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+    height: 56px;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    //display: flex;
+    //align-items: center;
+    vertical-align: middle;
+    i {
+      font-size: 16px;
+      font-weight: 600;
+      margin-right: 8px;
+      transition: all .25s $swift-out;
+      vertical-align: middle;
+      &.ascending {
+        transform: rotate(180deg);
+      }
+    }
+    span {
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+  td {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    height: 48px;
+    text-align: right;
+    font-size: 13px;
+    color: rgba(0,0,0,.87);
+  }
+  td,
+  th {
+    padding-right: 56px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    user-select: none;
+  }
+
+  tr th:first-child,
+  tr td:first-child {
+    padding-left: 24px;
+    text-align: left;
+    i {
+      margin-left: 8px;
+      margin-right: 0;
+    }
+  }
+
+  tr th:last-child,
+  tr td:last-child {
+    padding-right: 24px;
+    //text-align: left;
+  }
+  tr:hover {
+    td {
+      background-color: #EEEEEE;
+    }
+  }
 }

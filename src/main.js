@@ -38,6 +38,17 @@ const router = new VueRouter();
 // create Router instance
 Vue.use(VueResource);
 
+Vue.filter('recordLength', function (result, key) {
+  if (result) {
+    console.log('the result is:')
+    console.log(this);
+    console.log(result);
+    console.log(key);
+    this.$set(key, result.length)
+  }
+  // return result;
+});
+
 // add your routes and their components
 router.map({
   '/': {

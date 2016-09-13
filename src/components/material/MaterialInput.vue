@@ -1,7 +1,7 @@
 <template>
   <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label>{{label}}</label>
-    <input v-model="value" v-focus-model="focused" :type="type"/>
+    <input v-model="value" v-focus-model="focused" :placeholder="placeholder" :type="type"/>
   </div>
 </template>
 
@@ -18,7 +18,8 @@
       'label',
       'value',
       'type',
-        'model'
+      'model',
+      'placeholder'
     ],
 
     data () {
