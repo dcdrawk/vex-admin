@@ -1,28 +1,32 @@
 <template>
   <div class="material-data-table">
-
-    <div class="material-data-table-header">
-      <h2>{{ title }}</h2>
-    </div>
+    <!--TABLE-->
     <div class="material-data-table-container">
-
-      <!--<table cellspacing="0" cellpadding="0">-->
-        <slot></slot>
-        <!--<thead>-->
-          <!--<tr>-->
-            <!--<th v-for="header in headers">{{ header.title }}</th>-->
-          <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-
-          <!--<tr v-for="row in rows">-->
-            <!--<td v-for="key in keys">-->
-              <!--{{ row[key] }}-->
-            <!--</td>-->
-          <!--</tr>-->
-
-        <!--</tbody>-->
-      <!--</table>-->
+      <table>
+        <thead>
+          <tr>
+            <th v-for="column in columns">
+              <i class="material-icons" v-if="$index !== 0"
+                 v-bind:class="{'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+                arrow_downward
+              </i>
+              <span @click="orderBy(column.key);">{{ column.head }}</span>
+              <i class="material-icons" v-if="$index === 0"
+                 v-bind:class="{'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+                arrow_downward
+              </i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        <!--<tr v-for="row in rows | filterBy filter in 'name' | orderBy order direction | testLength 'count'" >-->
+          <tr v-for="row in rows | filterBy filter in 'name' | orderBy order direction | numRows 'count'">
+            <td v-for="column in columns">
+              {{row[column.key]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
@@ -51,22 +55,41 @@
     },
 
     props: [
-      'title',
-      'headers',
       'rows',
-      'keys',
-
+      'columns',
+      'order',
+      'direction',
+      'filter',
+      'count'
     ],
+    methods: {
+      orderBy(property) {
+        if (this.order === property) {
+          this.direction = this.direction * -1;
+        } else {
+          this.direction = 1;
+        }
+        this.order = property;
+      }
+    },
+    filters: {
+      numRows: function (arr) {
+        // record length
+        this.$set('count', arr.length)
+        // return it intact
+        return arr
+      }
+    },
 
 //    data () {
 //      return {
-//        msg: 'hello vue'
+//        count: '0'
 //      }
 //    },
 
-//    ready () {
-//      console.log('data table ready!');
-//      console.log(this);
-//    }
+    ready () {
+      console.log('data table ready!');
+      console.log(this);
+    }
   }
 </script>
