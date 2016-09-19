@@ -73,23 +73,11 @@
       }
     },
     filters: {
+      //Get the number of rows
       numRows: function (arr) {
-        // record length
-        this.$set('count', arr.length)
-        // return it intact
-        return arr
+        this.$set('count', arr.length);
+        return arr;
       }
-    },
-
-//    data () {
-//      return {
-//        count: '0'
-//      }
-//    },
-
-    ready () {
-      console.log('data table ready!');
-      console.log(this);
     }
   }
 </script>

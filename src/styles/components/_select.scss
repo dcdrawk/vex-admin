@@ -1,0 +1,44 @@
+@import '../whiteframe';
+@import '../variables';
+
+.material-select-container {
+  position: relative;
+}
+.material-select {
+  align-items: center;
+  display: inline-flex;
+  padding: 16px;
+  cursor: pointer;
+}
+.material-select-option-container {
+  @extend .whiteframe-z2;
+  position: absolute;
+  top: -4px;
+  z-index: 10;
+  background-color: #fff;
+  padding: 8px 0;
+  min-height: 48px;
+  max-height: 256px;
+  overflow: auto;
+
+}
+.material-select-option {
+  font-size: 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: opacity .25s $swift-in;
+  &:hover {
+    background-color: #EEEEEE;
+  }
+}
+.material-select-backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}

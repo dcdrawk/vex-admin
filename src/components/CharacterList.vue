@@ -6,6 +6,10 @@
     <data-table :columns="columns" :rows="characters" :filter="$refs.search.value">
 
     </data-table>
+    <div class="col-md-12">
+        <material-select :options="options"></material-select>
+
+    </div>
 
   </div>
 </template>
@@ -21,6 +25,8 @@
   import MaterialSearchBar from './material/MaterialSearchBar.vue';
   import FirebaseService from '../services/FirebaseService';
   import CharacterService from '../services/CharacterService';
+  import MaterialSelect from './material/MaterialSelect.vue';
+
   import store from '../services/Store';
 
   export default {
@@ -29,7 +35,8 @@
 
     components: {
       DataTable,
-      MaterialSearchBar
+      MaterialSearchBar,
+      MaterialSelect
     },
 
     ready () {
@@ -51,7 +58,8 @@
         }],
         order: 'name',
         direction: 1,
-        searchText: ''
+        searchText: '',
+        options: ['test1', 'test2', 'test3 longer', 'test4', 'test5 this', 'testjiosjtios', 'esfesf']
       }
     },
     methods: {
