@@ -21,11 +21,11 @@
 
 </style>
 <script>
-  import DataTable from './material/MaterialDataTable.vue';
-  import MaterialSearchBar from './material/MaterialSearchBar.vue';
+  import DataTable from './vex/DataTable.vue';
+  import MaterialSearchBar from './vex/SearchBar.vue';
   import FirebaseService from '../services/FirebaseService';
   import CharacterService from '../services/CharacterService';
-  import MaterialSelect from './material/MaterialSelect.vue';
+  import MaterialSelect from './vex/Select.vue';
 
   import store from '../services/Store';
 

@@ -1,5 +1,5 @@
 <template>
-  <button class="material-button paper-button" v-bind:class="{ 'primary': primary, 'raised': raised }">
+  <button class="material-button paper-button" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised }">
     <slot></slot>
   </button>
 </template>
@@ -12,7 +12,8 @@
   export default{
     props: [
       'raised',
-      'primary'
+      'primary',
+      'secondary'
     ],
     ready () {
       var button = this.$el;

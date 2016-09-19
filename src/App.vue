@@ -10,9 +10,8 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
-import MaterialCard from './components/material/MaterialCard'
-import MaterialButton from './components/material/MaterialButton'
+import MaterialCard from './components/vex/Card'
+import MaterialButton from './components/vex/Button'
 import AppBar from './components/AppBar.vue';
 import firebase from 'firebase';
 import CharacterService from './services/CharacterService';
@@ -28,7 +27,6 @@ import store from './services/Store';
 export default {
 
   components: {
-    Hello,
     MaterialCard,
     MaterialButton,
     AppBar

@@ -1,6 +1,6 @@
-# vue-dndhub
+# Vex Admin
 
-> A Vue.js project
+> A Vue.js Admin Dashboard with Material Design Components
 
 ## Build Setup
 

@@ -1,7 +1,7 @@
 <template>
   <div class="material-search-bar" v-bind:class="{ 'has-value': value, 'focus': focused }" @click="focusSearch()">
     <i class="material-icons" @click="focused = true">search</i>
-    <!--<i v-if="value.length > 0" class="material-icons" @click.stop="clearSearch($event)">arrow_back</i>-->
+    <!--<i v-if="value.length > 0" class="vex-icons" @click.stop="clearSearch($event)">arrow_back</i>-->
     <input v-model="value" v-focus-model="focused" placeholder="Search" v-on:change="inputChanged()">
     <i v-if="value.length > 0" class="material-icons" @click.stop="clearSearch($event)">close</i>
     <div class="material-autocomplete" v-if="searchResults.length > 0 && !hideAutocomplete">
@@ -17,7 +17,7 @@
 </style>
 <script>
   import { focusModel } from 'vue-focus';
-  import MaterialInput from './MaterialInput.vue';
+  import MaterialInput from './Input.vue';
 
   export default {
     components: { MaterialInput },

@@ -21,7 +21,7 @@
 </style>
 
 <script>
-  import Button from './MaterialButton'
+  import Button from './Button'
 
   export default{
     components: {

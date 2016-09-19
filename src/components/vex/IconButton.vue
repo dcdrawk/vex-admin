@@ -1,6 +1,6 @@
 <template>
 
-  <span class="icon-button-wrapper" v-bind:class="{ 'primary': primary, 'raised': raised }">
+  <span class="icon-button-wrapper" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised, 'square': square }">
     <button class="material-button icon-button paper-button" v-bind:class="{ 'primary': primary, 'raised': raised }">
       <i class="material-icons">{{ icon }}</i>
     </button>
@@ -17,7 +17,9 @@
     props: [
       'raised',
       'primary',
-      'icon'
+      'secondary',
+      'icon',
+
     ],
     ready () {
       var button = this.$el;

@@ -18,8 +18,8 @@
 </style>
 
 <script>
-  import MaterialButton from './MaterialButton.vue';
-  import MaterialCard from './MaterialCard.vue';
+  import MaterialButton from './Button.vue';
+  import MaterialCard from './Card.vue';
 
   export default{
     components: {

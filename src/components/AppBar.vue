@@ -2,13 +2,13 @@
   <div class="app-bar">
 
 
-    <material-toolbar title="VueJS App">
-      <material-icon-button icon="menu" primary="true" @click="toggleSidenav"></material-icon-button>
-    </material-toolbar>
+    <toolbar title="Vex Admin">
+      <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
+    </toolbar>
 
   <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
-  <material-sidebar :open="open">
+  <sidebar :open="open">
     <div class="avatar-container" v-if="user">
       <div class="avatar" v-if="!user.photoURL"></div>
       <img class="avatar" v-else :src="user.photoURL">
@@ -18,43 +18,76 @@
       </div>
     </div>
 
-    <nav>
-      <material-list dense="true">
-        <material-list-item v-if="!user" text="Log In" v-link="'login'" @click="toggleSidenav()"></material-list-item>
-        <material-list-item text="Character List" v-link="'character-list'"></material-list-item>
-        <material-list-item text="List Item!"></material-list-item>
-      </material-list>
+    <nav class="sidebar-nav">
+      <list dense="true">
+        <list-item text="Components" bold="true" @click="expand('components')"></list-item>
+      </list>
+      <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
+        <list-item text="Buttons" v-link="'buttons'"></list-item>
+        <list-item text="Lists" v-link="'character-list'"></list-item>
+        <list-item text="Cards"></list-item>
+      </list>
+
+      <list dense="true">
+        <list-item text="Layout" bold="true" @click="expand('layout')"></list-item>
+      </list>
+      <list dense="true" v-ref:layout style="height: 0px; overflow: hidden;" class="secondary-list">
+        <list-item text="Grid" v-link="'login'"></list-item>
+        <list-item text="Grid List" v-link="'character-list'"></list-item>
+      </list>
+
+      <list dense="true">
+        <list-item text="Style" bold="true" @click="expand('theming')"></list-item>
+      </list>
+      <list dense="true" v-ref:theming style="height: 0px; overflow: hidden;" class="secondary-list">
+        <list-item text="Typography" v-link="'typography'"></list-item>
+      </list>
     </nav>
-  </material-sidebar>
+  </sidebar>
 
     <!--TEST-->
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import '../styles/components/appbar';
   .list-item {
     cursor: pointer;
   }
+  .sidebar-nav {
+    margin: 8px 0;
+    .list {
+      margin: 0;
+    }
+  }
+  .secondary-list li {
+
+    padding-left: 32px;
+  }
+
+  .app-bar-menu .icon-button-wrapper.flat.primary i {
+    color: #fff!important;
+  }
+
 </style>
 
 <script>
-  import MaterialToolbar from './material/MaterialToolbar';
-  import MaterialIconButton from './material/MaterialIconButton.vue';
-  import MaterialSidebar from './material/MaterialSidebar';
-  import MaterialList from './material/MaterialList';
-  import MaterialListItem from './material/MaterialListItem';
+  import Toolbar from './vex/Toolbar';
+  import IconButton from './vex/IconButton.vue';
+  import Sidebar from './vex/Sidebar';
+  import List from './vex/List';
+  import ListItem from './vex/ListItem';
   import FirebaseService from '../services/FirebaseService';
   import store from '../services/Store';
 
   export default {
     store,
     components: {
-      MaterialToolbar,
-      MaterialIconButton,
-      MaterialSidebar,
-      MaterialList,
-      MaterialListItem
+      Toolbar,
+      IconButton,
+      Sidebar,
+      List,
+      ListItem
     },
     props: [
       'title'
@@ -67,19 +100,23 @@
     methods: {
       toggleSidenav () {
         this.open = !this.open;
+      },
+      expand (list) {
+        if (this.$refs[list].$el.style.height === '0px') {
+          this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
+        } else {
+          this.$refs[list].$el.style.height = 0;
+        }
       }
     },
     vuex: {
       getters: {
-        characters: state => state.characters
+        user: state => state.user
       }
     },
     computed: {
       user: function () {
         return store.state.user
-      },
-      characters: function () {
-        return store.state.characters
       }
     }
   }

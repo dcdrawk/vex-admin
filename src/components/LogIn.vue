@@ -32,11 +32,11 @@
 </style>
 
 <script>
-  import MaterialInput from './material/MaterialInput';
-  import MaterialButton from './material/MaterialButton.vue';
-  import MaterialCard from './material/MaterialCard.vue';
+  import MaterialInput from './vex/Input';
+  import MaterialButton from './vex/Button.vue';
+  import MaterialCard from './vex/Card.vue';
   import FirebaseService from '../services/FirebaseService';
-  import MaterialLoadingSpinner from './material/MaterialLoadingSpinner.vue';
+  import MaterialLoadingSpinner from './vex/LoadingSpinner.vue';
   import router from 'vue-router';
 
   export default {

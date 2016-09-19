@@ -26,6 +26,9 @@
     &.primary {
       color: $primary-color;
     }
+    &.secondary {
+      color: $secondary-color;
+    }
   }
   &.raised {
     //background-color: $primary-color;
@@ -44,6 +47,10 @@
       color: #fff;
       background-color: $primary-color;
     }
+    &.secondary {
+      color: #fff;
+      background-color: $secondary-color;
+    }
   }
   &.icon-button {
     border-radius: 50%;
@@ -52,6 +59,15 @@
     width: 40px;
     padding: 0px;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    //&.flat {
+    &.primary, &.primary i {
+      color: $primary-color;
+    }
+    &.secondary, &.secondary i {
+      //color: $secondary-color;
+      color: red;
+    }
+    //}
     i {
       vertical-align: middle;
     }
@@ -77,6 +93,7 @@
   display: inline-block;
   margin-right: 8px;
   position: relative;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
   &.small {
     height: 40px;
     width: 40px;
@@ -86,11 +103,37 @@
     &:hover {
       @extend .whiteframe-z3;
     }
-    //&:focus {
-    //  background-color: rgba(0,0,0,.12);
-    //}
     &:active {
       @extend .whiteframe-z4;
     }
+  }
+  &.flat {
+    &.primary, &.primary i {
+      color: $primary-color;
+    }
+    &.secondary, &.secondary i {
+      color: $secondary-color;
+
+    }
+  }
+
+  &.raised {
+    &.primary, &.primary i {
+      color: #fff;
+    }
+    &.secondary, &.secondary i {
+      color: #fff;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.list {
+  transition: all .25s $swift-out;
+}
+
+.secondary-list {
+  .list {
+    margin: 0px;
   }
 }

@@ -7,30 +7,15 @@
 //   components: { App }
 // })
 import Vue from 'vue';
-import Vuex from 'vuex';
-
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
-import Hello from './components/Hello';
-import About from './components/About';
-import LogIn from './components/LogIn.vue';
-import Profile from './components/Profile';
-import CharacterList from './components/CharacterList.vue';
-// import store from './services/Store';
 
+import Dashboard from './components/pages/Dashboard/Dashboard.vue';
+import Buttons from './components/pages/Buttons.vue';
+import Typography from './components/pages/Style/Typography.vue';
+// use Vue Router
 Vue.use(VueRouter);
-
-// Setup / import components for use with the router
-const Foo = Vue.extend({
-  template: '<p>This is foo!</p>'
-});
-// or, if you create your components in seperate .vue files:
-// const Foo = require('./components/Foo.vue');
-
-// const Bar = Vue.extend({
-//   template: '<p>This is bar!</p>'
-// });
 
 // create Router instance
 const router = new VueRouter();
@@ -38,40 +23,18 @@ const router = new VueRouter();
 // create Router instance
 Vue.use(VueResource);
 
-Vue.filter('recordLength', function (result, key) {
-  if (result) {
-    console.log('the result is:')
-    console.log(this);
-    console.log(result);
-    console.log(key);
-    this.$set(key, result.length)
-  }
-  // return result;
-});
-
 // add your routes and their components
 router.map({
   '/': {
-    component: About
+    component: Dashboard
   },
-  '/foo': {
-    component: Foo
+  '/buttons': {
+    component: Buttons
   },
-  '/about': {
-    component: About
-  },
-  '/people': {
-    component: Hello
-  },
-  '/login': {
-    component: LogIn
-  },
-  '/profile': {
-    component: Profile
-  },
-  '/character-list': {
-    component: CharacterList
+  '/typography': {
+    component: Typography
   }
 });
 
+// initialize the app
 router.start(App, '#app');

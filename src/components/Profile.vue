@@ -13,8 +13,8 @@
         <material-input :value="user.displayName" label="Display Name" type="text"></material-input>
       </material-card>
     </div>
-    <!--<material-loading-spinner></material-loading-spinner>-->
-    <!--<i class="material-icons">face</i>-->
+    <!--<vex-loading-spinner></vex-loading-spinner>-->
+    <!--<i class="vex-icons">face</i>-->
   </div>
 </template>
 <style lang="scss" scoped>
@@ -35,9 +35,9 @@
 
 </style>
 <script>
-  import MaterialInput from './material/MaterialInput';
-  import MaterialButton from './material/MaterialButton.vue';
-  import MaterialCard from './material/MaterialCard.vue';
+  import MaterialInput from './vex/Input';
+  import MaterialButton from './vex/Button.vue';
+  import MaterialCard from './vex/Card.vue';
   import FirebaseService from '../services/FirebaseService';
   import store from '../services/Store';
 

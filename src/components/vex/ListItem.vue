@@ -1,5 +1,5 @@
 <template>
-  <li class="list-item" v-bind:class="{ 'avatar': avatar, 'two-line': twoLine}">
+  <li class="list-item" v-bind:class="{ 'avatar': avatar, 'two-line': twoLine, 'bold': bold}">
     <span v-if="icon && avatar" class="list-item-avatar">
       <i class="material-icons">{{ icon }}</i>
     </span>
@@ -17,6 +17,12 @@
 </template>
 <style lang="scss">
   @import '../../styles/components/lists';
+
+  .bold {
+    .item-text {
+      font-weight: 500
+    }
+  }
 </style>
 <script>
   import PaperRipple from 'paper-ripple'
@@ -27,7 +33,8 @@
       'twoLine',
       'icon',
       'text',
-      'secondaryText'
+      'secondaryText',
+      'bold'
     ],
     ready () {
       var button = this.$el;
