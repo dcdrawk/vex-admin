@@ -55,6 +55,58 @@
       </div>
     </Card>
 
+    <!--Textarea Demo-->
+    <Card title="Textarea" class="col-xs-12">
+      <!--Input Markup-->
+      <div class="row headings">
+        <div class="col-md-4"><strong>Markup</strong></div>
+        <div class="col-md-8"><strong>Output</strong></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="selector">
+            <span>
+              {{ textareaMarkup }}
+            </span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <v-textarea value="Demo Input"></v-textarea>
+        </div>
+      </div>
+
+      <!--Input Properties-->
+      <div class="row headings">
+        <div class="col-md-4"><strong>Property</strong></div>
+        <div class="col-md-8"><strong>Output</strong></div>
+      </div>
+
+      <!--Input with Placeholder-->
+      <div class="row centered">
+        <div class="col-md-4">
+          <div class="no-margin">
+            <span class="selector">:auto-grow="false"</span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <v-textarea :auto-grow="false" value="This textarea won't grow as the user types"></v-textarea>
+        </div>
+      </div>
+
+      <!--Input with Label-->
+      <div class="row centered">
+        <div class="col-md-4">
+          <div class="no-margin">
+            <span class="selector">rows="5" :auto-grow="false"</span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <v-textarea rows="5" :auto-grow="false" value="This text area has 5 rows"></v-textarea>
+        </div>
+      </div>
+    </Card>
+
     <!--Checkbox Demo-->
     <Card title="Checkbox" class="col-xs-12">
       <!--Input Markup-->
@@ -102,6 +154,7 @@
   // Imports
   import Card from '../vex/Card.vue';
   import VInput from '../vex/Input.vue';
+  import VTextarea from '../vex/Textarea.vue';
   import Checkbox from '../vex/Checkbox.vue';
 
   // Exports
@@ -111,14 +164,16 @@
     components: {
       Card,
       VInput,
-      Checkbox
+      Checkbox,
+      VTextarea
     },
 
     // Data
     data () {
       return {
         inputMarkup: '<v-input value="Demo Input"></v-input>',
-        checkboxMarkup: '<checkbox :value="true"></checkbox>'
+        checkboxMarkup: '<checkbox :value="true"></checkbox>',
+        textareaMarkup: '<v-textarea value="Demo Input"></v-textarea>'
       }
     },
 
