@@ -20,8 +20,8 @@
   }
   .checkbox {
     margin: 10px;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
@@ -29,15 +29,20 @@
     vertical-align: middle;
     transition: $transition-timing;
   }
-
   &.has-value {
     i {
       opacity: 1;
     }
-
     .checkbox {
       background-color: $primary-color;
       border-color: $primary-color;
     }
+    &.secondary-color {
+      .checkbox {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
   }
+
 }

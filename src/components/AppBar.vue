@@ -9,38 +9,38 @@
   <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
   <sidebar :open="open" class="locked-open">
-    <div class="avatar-container" v-if="user">
-      <div class="avatar" v-if="!user.photoURL"></div>
-      <img class="avatar" v-else :src="user.photoURL">
-      <div class="user-info">
-        <p class="body-1">{{ user.displayName }}</p>
-        <p class="body-1 secondary-text">{{ user.email}}</p>
-      </div>
-    </div>
+    <!--<div class="avatar-container" v-if="user">-->
+      <!--<div class="avatar" v-if="!user.photoURL"></div>-->
+      <!--<img class="avatar" v-else :src="user.photoURL">-->
+      <!--<div class="user-info">-->
+        <!--<p class="body-1">{{ user.displayName }}</p>-->
+        <!--<p class="body-1 secondary-text">{{ user.email}}</p>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <nav class="sidebar-nav">
       <list dense="true">
         <list-item text="Components" bold="true" @click="expand('components')"></list-item>
       </list>
       <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item text="Buttons" v-link="'buttons'"></list-item>
-        <list-item text="Lists" v-link="'lists'"></list-item>
-        <list-item text="Cards" v-link="'cards'"></list-item>
+        <list-item v-el:buttons text="Buttons" v-link="'/components/buttons'" :no-ripple="true" @click="setActive('buttons')"></list-item>
+        <list-item v-el:lists text="Lists" v-link="'/components/lists'" :no-ripple="true" @click="setActive('lists')"></list-item>
+        <list-item v-el:cards text="Cards" v-link="'/components/cards'" :no-ripple="true" @click="setActive('cards')"></list-item>
+        <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
       </list>
 
       <list dense="true">
         <list-item text="Layout" bold="true" @click="expand('layout')"></list-item>
       </list>
       <list dense="true" v-ref:layout style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item text="Grid" v-link="'login'"></list-item>
-        <list-item text="Grid List" v-link="'character-list'"></list-item>
+        <list-item v-el:grid text="Grid" v-link="'login'" :no-ripple="true" @click="setActive('grid')"></list-item>
       </list>
 
       <list dense="true">
-        <list-item text="Style" bold="true" @click="expand('theming')"></list-item>
+        <list-item text="Style" bold="true" @click="expand('style')"></list-item>
       </list>
-      <list dense="true" v-ref:theming style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item text="Typography" v-link="'typography'"></list-item>
+      <list dense="true" v-ref:style style="height: 0px; overflow: hidden;" class="secondary-list">
+        <list-item v-el:typography text="Typography" v-link="'/style/typography'" @click="setActive('typography')"></list-item>
       </list>
     </nav>
   </sidebar>
@@ -55,7 +55,7 @@
     cursor: pointer;
   }
   .sidebar-nav {
-    margin: 8px 0;
+    /*margin: 8px 0;*/
     .list {
       margin: 0;
     }
@@ -67,6 +67,7 @@
   .app-bar-menu .icon-button-wrapper.flat.primary i {
     color: #fff!important;
   }
+
 
 </style>
 
@@ -101,7 +102,7 @@
         this.open = !this.open;
       },
       expand (list) {
-        this.collapseAll();
+//        this.collapseAll();
         if (this.$refs[list].$el.style.height === '0px') {
           this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
         } else {
@@ -112,6 +113,12 @@
         for (var i in this.$refs) {
           this.$refs[i].$el.style.height = 0;
         }
+      },
+      setActive(listItem) {
+        for (var i in this.$els) {
+          this.$els[i].classList.remove('active');
+        }
+        this.$els[listItem].classList.add('active');
       }
     },
     vuex: {
@@ -123,6 +130,17 @@
       user: function () {
         return store.state.user
       }
+    },
+    ready () {
+      console.log(this);
+      var path = this.$route.path;
+      var pathArray = path.replace(/\/+/, '').split('/');
+
+      this.expand(pathArray[0]);
+      this.setActive(pathArray[1]);
+
+
+      console.log(pathArray);
     }
   }
 

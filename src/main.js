@@ -18,6 +18,7 @@ import Dashboard from './components/pages/Dashboard/Dashboard.vue';
 import Buttons from './components/pages/Buttons.vue';
 import Lists from './components/pages/Lists.vue';
 import Cards from './components/pages/Cards.vue';
+import Forms from './components/pages/Forms.vue';
 
 // Style
 import Typography from './components/pages/Style/Typography.vue';
@@ -37,16 +38,23 @@ router.map({
   '/': {
     component: Dashboard
   },
-  '/buttons': {
+
+  //Component Pages
+  '/components/buttons': {
     component: Buttons
   },
-  '/lists': {
+  '/components/lists': {
     component: Lists
   },
-  '/cards': {
+  '/components/cards': {
     component: Cards
   },
-  '/typography': {
+  '/components/forms': {
+    component: Forms
+  },
+
+  //Style Pages
+  '/style/typography': {
     component: Typography
   }
 });

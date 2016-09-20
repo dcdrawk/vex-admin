@@ -1,9 +1,7 @@
 <template>
-  <div class="checkbox-container" @click="toggleCheckbox();" v-bind:class="{ 'has-value': value }">
-    <div class="checkbox ">
-    </div>
+  <div class="checkbox-container" @click="toggleCheckbox();" v-bind:class="{ 'has-value': value, 'secondary-color': secondaryColor }">
+    <div class="checkbox"></div>
     <i class="material-icons">check</i>
-
   </div>
 </template>
 <style lang="scss">
@@ -15,6 +13,7 @@
   export default{
     props: [
       'value',
+      'secondaryColor'
     ],
     ready () {
       var checkbox = this.$el;

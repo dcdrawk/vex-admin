@@ -34,41 +34,44 @@
       'icon',
       'text',
       'secondaryText',
-      'bold'
+      'bold',
+      'noRipple'
     ],
     ready () {
-      var button = this.$el;
+      if (!this.noRipple) {
+        var button = this.$el;
 
-      // New PaperRipple for the button
-      var ripple = new PaperRipple();
+        // New PaperRipple for the button
+        var ripple = new PaperRipple();
 
-      // Adding ripple container to the button
-      button.appendChild(ripple.$);
+        // Adding ripple container to the button
+        button.appendChild(ripple.$);
 
-      // Subscribing to 'mousedown' and 'mouseup' button events to activate ripple effect
-      // when a user clicks on the button.
-      var mouseUpEvent = function () {
-        ripple.upAction();
-        window.removeEventListener('mouseup', mouseUpEvent);
-        window.removeEventListener('touchend', mouseUpEvent);
-      };
-
-      var mouseDownEvent = function(ev) {
-        ev.preventDefault();
-        if (ripple._waves.length > 0) {
+        // Subscribing to 'mousedown' and 'mouseup' button events to activate ripple effect
+        // when a user clicks on the button.
+        var mouseUpEvent = function () {
           ripple.upAction();
-        }
-        ripple.downAction(ev);
-        window.addEventListener('mouseup', mouseUpEvent);
-        window.addEventListener('touchend', mouseUpEvent);
-      };
+          window.removeEventListener('mouseup', mouseUpEvent);
+          window.removeEventListener('touchend', mouseUpEvent);
+        };
 
-      button.addEventListener('touchstart', mouseDownEvent);
-      button.addEventListener('mousedown', mouseDownEvent);
+        var mouseDownEvent = function(ev) {
+          ev.preventDefault();
+          if (ripple._waves.length > 0) {
+            ripple.upAction();
+          }
+          ripple.downAction(ev);
+          window.addEventListener('mouseup', mouseUpEvent);
+          window.addEventListener('touchend', mouseUpEvent);
+        };
 
-      button.addEventListener('mouseup', function () {
-        ripple.upAction()
-      });
+        button.addEventListener('touchstart', mouseDownEvent);
+        button.addEventListener('mousedown', mouseDownEvent);
+
+        button.addEventListener('mouseup', function () {
+          ripple.upAction()
+        });
+      }
     }
   }
 </script>
