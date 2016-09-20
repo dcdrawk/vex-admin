@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pages/Template.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Lists.vue" afterPath="$PROJECT_DIR$/src/components/pages/Lists.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Card.vue" afterPath="$PROJECT_DIR$/src/components/vex/Card.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_demos.scss" afterPath="$PROJECT_DIR$/src/styles/_demos.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Button.vue" afterPath="$PROJECT_DIR$/src/components/vex/Button.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/IconButton.vue" afterPath="$PROJECT_DIR$/src/components/vex/IconButton.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/ListItem.vue" afterPath="$PROJECT_DIR$/src/components/vex/ListItem.vue" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,6 +49,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="IconButton.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/IconButton.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Cards.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/Cards.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,11 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Button.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Button.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            <state relative-caret-position="705">
+              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListItem.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/ListItem.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="68" column="59" selection-start-line="49" selection-start-column="6" selection-end-line="68" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -151,11 +167,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/pages/Style/Typography.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Components/Buttons.vue" />
-        <option value="$PROJECT_DIR$/src/components/vex/IconButton.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/vex/List.vue" />
-        <option value="$PROJECT_DIR$/src/components/vex/ListItem.vue" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/styles/core.scss" />
         <option value="$PROJECT_DIR$/src/styles/_variables.scss" />
@@ -173,7 +187,9 @@
         <option value="$PROJECT_DIR$/src/components/vex/Card.vue" />
         <option value="$PROJECT_DIR$/src/styles/_demos.scss" />
         <option value="$PROJECT_DIR$/src/components/pages/Cards.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/ListItem.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Button.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/IconButton.vue" />
       </list>
     </option>
   </component>
@@ -539,12 +555,12 @@
       <workItem from="1473778250523" duration="24964000" />
       <workItem from="1474055149510" duration="8203000" />
       <workItem from="1474308956607" duration="12211000" />
-      <workItem from="1474322731757" duration="14580000" />
+      <workItem from="1474322731757" duration="16902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151108000" />
+    <option name="totallyTimeSpent" value="153430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -793,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/IconButton.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -829,14 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/ListItem.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="94" selection-start-line="1" selection-start-column="94" selection-end-line="1" selection-end-column="94" />
           <folding />
         </state>
       </provider>
@@ -982,10 +982,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/ListItem.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="68" column="59" selection-start-line="49" selection-start-column="6" selection-end-line="68" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Button.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="705">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/IconButton.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
           <folding />
         </state>
       </provider>
