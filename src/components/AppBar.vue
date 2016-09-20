@@ -25,7 +25,7 @@
       <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
         <list-item text="Buttons" v-link="'buttons'"></list-item>
         <list-item text="Lists" v-link="'lists'"></list-item>
-        <list-item text="Cards"></list-item>
+        <list-item text="Cards" v-link="'cards'"></list-item>
       </list>
 
       <list dense="true">

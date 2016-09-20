@@ -32,7 +32,7 @@
       };
 
       button.addEventListener('mousedown', function (ev) {
-        ripple.downAction(ev)
+        ripple.downAction(ev);
         window.addEventListener('mouseup', event);
       });
 

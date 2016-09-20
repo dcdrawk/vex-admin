@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row page-content">
     <!--Title-->
     <h1 class="col-md-12 display-1">Lists</h1>
     <Card title="List Properties" class="col-md-12">
@@ -22,13 +22,9 @@
             <list>
               <list-item text="List Item 1"></list-item>
               <list-item text="List Item 2"></list-item>
-              <list-item text="List Item 1"></list-item>
+              <list-item text="List Item 3"></list-item>
             </list>
         </div>
-
-
-
-
       </div>
 
       <!--List Properties-->
@@ -48,7 +44,7 @@
           <list dense="true">
             <list-item text="List Item 1"></list-item>
             <list-item text="List Item 2"></list-item>
-            <list-item text="List Item 1"></list-item>
+            <list-item text="List Item 3"></list-item>
           </list>
         </div>
       </div>
@@ -75,7 +71,7 @@
           <list>
             <list-item icon="person" text="List Item 1"></list-item>
             <list-item icon="person" text="List Item 2"></list-item>
-            <list-item icon="person" text="List Item 1"></list-item>
+            <list-item icon="person" text="List Item 3"></list-item>
           </list>
         </div>
       </div>
@@ -91,7 +87,7 @@
           <list>
             <list-item text="List Item 1" secondary-text="Secondary Text"></list-item>
             <list-item text="List Item 2" secondary-text="Secondary Text"></list-item>
-            <list-item text="List Item 1" secondary-text="Secondary Text"></list-item>
+            <list-item text="List Item 3" secondary-text="Secondary Text"></list-item>
           </list>
         </div>
       </div>
@@ -107,7 +103,7 @@
           <list>
             <list-item icon="person" text="List Item 1" :avatar="true"></list-item>
             <list-item icon="person" text="List Item 2" :avatar="true"></list-item>
-            <list-item icon="person" text="List Item 1" :avatar="true"></list-item>
+            <list-item icon="person" text="List Item 3" :avatar="true"></list-item>
           </list>
         </div>
       </div>
@@ -144,30 +140,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .typography-demo > div {
-    margin: 16px 0;
-  }
-  .headings {
-    border-bottom: 1px solid rgba(0,0,0,.12);
-    padding: 16px 0;
-  }
-  .selector {
-    background-color: rgba(0,0,0,.12);
-    padding: 8px;
-    font-family: 'Roboto Mono', monospace;
-    color: rgb(63, 81, 181);
 
-    span {
-      white-space: pre-wrap;
-      display: flex;
-    }
-  }
-  .no-margin {
-    margin: 0 0 0 0;
-  }
-
-  .typography-demo .row {
-    margin-bottom: 16px;
-  }
 
 </style>

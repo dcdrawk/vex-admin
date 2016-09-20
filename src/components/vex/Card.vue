@@ -18,6 +18,9 @@
 <style lang="scss">
   @import '../../styles/components/_card';
   /**/
+  .card > .row {
+    padding-top: 0;
+  }
 </style>
 
 <script>
@@ -32,12 +35,6 @@
       'subtitle',
       'content',
       'actions'
-    ],
-
-    data () {
-      return {
-        msg: 'hello vue'
-      }
-    }
+    ]
   }
 </script>
