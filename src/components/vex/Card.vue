@@ -1,6 +1,8 @@
 <template>
   <div class="card">
-
+    <div class="media-container" v-if="media">
+      <img :src="media"/>
+    </div>
     <div v-if="title || subtitle" class="primary-title">
       <h2 v-if="title" class="title">{{title}}</h2>
       <h3 v-if="subtitle" class="subtitle">{{subtitle}}</h3>
@@ -9,8 +11,9 @@
       <slot></slot>
     </div>
 
-    <div v-if="actions" class="card-actions">
-      <button v-for="item in actions" primary="true">{{ item }}</button>
+    <div class="card-actions" v-if="_slotContents.actions">
+      <!--<button v-for="item in actions" primary="true" @click="item.click">{{ item.text }}</button>-->
+      <slot name="actions"></slot>
     </div>
   </div>
 </template>
@@ -18,8 +21,13 @@
 <style lang="scss">
   @import '../../styles/components/_card';
   /**/
-  .card > .row {
-    padding-top: 0;
+  /*.card {*/
+    /*margin-bottom: 16px;*/
+  /*}*/
+  .card {
+    img {
+      width: 100%;
+    }
   }
 </style>
 
@@ -34,7 +42,8 @@
       'title',
       'subtitle',
       'content',
-      'actions'
+      'actions',
+      'media'
     ]
   }
 </script>

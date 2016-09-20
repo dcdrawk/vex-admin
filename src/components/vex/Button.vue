@@ -27,7 +27,6 @@
       // Subscribing to 'mousedown' and 'mouseup' button events to activate ripple effect
       // when a user clicks on the button.
       var mouseUpEvent = function () {
-        console.log('mouse up');
         ripple.upAction();
         window.removeEventListener('mouseup', mouseUpEvent);
         window.removeEventListener('touchend', mouseUpEvent);
@@ -35,7 +34,6 @@
 
       var mouseDownEvent = function(ev) {
         ev.preventDefault();
-        console.log('mouse down');
         if (ripple._waves.length > 0) {
           ripple.upAction();
         }
@@ -50,12 +48,6 @@
       button.addEventListener('mouseup', function () {
         ripple.upAction()
       });
-    },
-
-    data () {
-      return {
-        msg: 'hello vue'
-      }
     }
 
   }

@@ -20,7 +20,7 @@
               </span>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-4">
             <Card title="Card Title">
               Supporting Text Goes Here
             </Card>
@@ -40,22 +40,64 @@
               <span class="selector">subtitle="Here is the Subtitle"</span>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-4">
             <Card title="Card Title" subtitle="Here is the Subtitle">
               Supporting Text Goes Here
             </Card>
           </div>
         </div>
+      </Card>
+    </div>
 
-        <!--Subheader Card-->
-        <div class="row centered">
+    <!--Card With Actions-->
+    <div class="col-md-12">
+      <Card title="Card with Actions">
+        <!--Card Markup-->
+        <div class="row headings">
+          <div class="col-md-4"><strong>Markup</strong></div>
+          <div class="col-md-8"><strong>Output</strong></div>
+        </div>
+
+        <div class="row">
           <div class="col-md-4">
-            <div class="no-margin">
-              <span class="selector">subtitle="Here is the Subtitle"</span>
+            <div class="selector">
+              <span>
+                {{ cardWithActionsMarkup }}
+              </span>
             </div>
           </div>
-          <div class="col-md-8">
-            <Card title="Card Title" subtitle="Here is the Subtitle" :actions="actions">
+          <div class="col-md-4">
+            <Card title="Card Title">
+              Supporting Text Goes Here
+              <div slot="actions">
+                <button primary="true">Action 1</button>
+                <button primary="true">Action 2</button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!--Card With Media-->
+    <div class="col-md-12">
+      <Card title="Card with Media">
+        <!--Card Markup-->
+        <div class="row headings">
+          <div class="col-md-4"><strong>Markup</strong></div>
+          <div class="col-md-8"><strong>Output</strong></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="selector">
+              <span>
+                {{ cardWithMediaMarkup }}
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <Card title="Card Title" media="http://placehold.it/640x360">
               Supporting Text Goes Here
             </Card>
           </div>
@@ -68,13 +110,14 @@
 <script>
   // Imports
   import Card from '../vex/Card.vue';
-
+  import Button from '../vex/Button.vue';
   // Exports
   export default {
 
     // Components
     components: {
-      Card
+      Card,
+      Button
     },
 
     // Data
@@ -83,13 +126,24 @@
         cardMarkup: `<Card title="Card Title">
   Supporting Text Goes Here
 </Card>`,
-        actions: ['Test 1', 'Test 2']
+        cardWithActionsMarkup: `<Card title="Card Title">
+  Supporting Text Goes Here
+  <div slot="actions">
+    <button primary="true">Action 1</button>
+    <button primary="true">Action 2</button>
+  </div>
+</Card>`,
+        cardWithMediaMarkup: `<Card title="Card Title" media="http://placehold.it/640x360">
+  Supporting Text Goes Here
+</Card>`
       }
     },
 
     methods: {
-
-    },
+      testAlert(ev) {
+        console.log('test');
+      }
+    }
 
   }
 </script>
