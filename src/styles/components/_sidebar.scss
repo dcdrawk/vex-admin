@@ -2,21 +2,21 @@
 
 .sidebar {
   position: fixed;
-  top: 0px;
+  top: 0;
   height: 100vh;
   background-color: #fff;
   z-index: 10;
   width: 280px;
   transition: transform .3s $swift-out;
+
   .avatar-container {
-    //padding: 16px 16px 4px 16px;
     padding: 16px;
     background-color: #e8eaf6;
     .avatar {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background-color: rgba(0,0,0,.54);
+      background-color: rgba(0, 0, 0, .54);
       margin-right: 16px;
     }
     .user-info,
@@ -33,6 +33,35 @@
 
   &.closed {
     transform: translateX(-280px);
+  }
+  &.locked-open {
+    position: relative;
+    transform: translateX(0px);
+    top: -48px;
+
+  }
+
+  @media only screen and (max-width: $small-breakpoint) {
+    &.locked-open {
+      transform: translateX(0px);
+      top: 0;
+
+    }
+    &.closed {
+      transform: translateX(-280px);
+    }
+  }
+
+}
+//
+.app-bar.locked-open + .container {
+  //padding-left: 280px;
+  width: calc(100vw - 280px);
+  margin-left: 280px;
+  @media only screen and (max-width: $small-breakpoint) {
+    padding-left: 0;
+    margin-left: auto;
+    width: 100vw;
   }
 }
 .sidebar-backdrop {

@@ -1,7 +1,33 @@
+@import '../variables';
+
 .app-bar {
   position: fixed;
-  z-index: 1;
   width: 100%;
+  height: 0;
   top: 0;
   right: 0;
+  z-index: 10;
+  .toolbar {
+    z-index: 10;
+  }
+  &.open {
+    //z-index: 10;
+  }
+  &.locked-open {
+    .toolbar {
+      margin-left: 280px;
+      width: calc(100vw - 288px);
+    }
+    .app-bar-menu {
+      display: none;
+    }
+    @media only screen and (max-width: $small-breakpoint) {
+      .toolbar {
+        margin-left: 0;
+      }
+      .app-bar-menu {
+        display: block;
+      }
+    }
+  }
 }

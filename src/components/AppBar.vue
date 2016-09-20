@@ -1,14 +1,14 @@
 <template>
-  <div class="app-bar">
+  <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
 
 
-    <toolbar title="Vex Admin">
-      <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
-    </toolbar>
+  <toolbar title="Vex Admin">
+    <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
+  </toolbar>
 
   <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
-  <sidebar :open="open">
+  <sidebar :open="open" class="locked-open">
     <div class="avatar-container" v-if="user">
       <div class="avatar" v-if="!user.photoURL"></div>
       <img class="avatar" v-else :src="user.photoURL">
@@ -24,7 +24,7 @@
       </list>
       <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
         <list-item text="Buttons" v-link="'buttons'"></list-item>
-        <list-item text="Lists" v-link="'character-list'"></list-item>
+        <list-item text="Lists" v-link="'lists'"></list-item>
         <list-item text="Cards"></list-item>
       </list>
 
@@ -60,8 +60,7 @@
       margin: 0;
     }
   }
-  .secondary-list li {
-
+  .secondary-list .list-item {
     padding-left: 32px;
   }
 
@@ -102,10 +101,16 @@
         this.open = !this.open;
       },
       expand (list) {
+        this.collapseAll();
         if (this.$refs[list].$el.style.height === '0px') {
           this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
         } else {
           this.$refs[list].$el.style.height = 0;
+        }
+      },
+      collapseAll() {
+        for (var i in this.$refs) {
+          this.$refs[i].$el.style.height = 0;
         }
       }
     },

@@ -16,7 +16,7 @@
   transition: $transition-timing;
   margin: 0 8px 8px 0;
   user-select: none;
-
+  z-index: 1;
   &.disabled {
     cursor: not-allowed;
     opacity: .54;
@@ -33,15 +33,15 @@
   &.raised {
     //background-color: $primary-color;
 
-    @extend .whiteframe-z2;
+    @extend .whiteframe-z3;
     &:hover {
-      @extend .whiteframe-z3;
+      @extend .whiteframe-z4;
     }
     //&:focus {
     //  background-color: rgba(0,0,0,.12);
     //}
     &:active {
-      @extend .whiteframe-z4;
+      @extend .whiteframe-z5;
     }
     &.primary {
       color: #fff;
