@@ -229,26 +229,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .typography-demo > div {
-    margin: 16px 0;
-  }
-  .headings {
-    border-bottom: 1px solid rgba(0,0,0,.12);
-    padding: 16px 0;
-  }
-  .selector {
-    background-color: rgba(0,0,0,.12);
-    padding: 8px;
-    display: inline;
-    font-family: 'Roboto Mono', monospace;
-    color: rgb(63, 81, 181)
-  }
-  .no-margin {
-    margin: 0 0 0 0;
-  }
 
-  .typography-demo .row {
-    margin-bottom: 16px;
-  }
 
 </style>

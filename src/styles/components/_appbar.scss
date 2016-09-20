@@ -16,7 +16,7 @@
   &.locked-open {
     .toolbar {
       margin-left: 280px;
-      width: calc(100vw - 288px);
+      width: calc(100% - 280px);
     }
     .app-bar-menu {
       display: none;
@@ -24,6 +24,7 @@
     @media only screen and (max-width: $small-breakpoint) {
       .toolbar {
         margin-left: 0;
+        width: 100%;
       }
       .app-bar-menu {
         display: block;
