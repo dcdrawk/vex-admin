@@ -29,18 +29,18 @@
         <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
       </list>
 
-      <list dense="true">
-        <list-item text="Layout" bold="true" @click="expand('layout')"></list-item>
-      </list>
-      <list dense="true" v-ref:layout style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item v-el:grid text="Grid" v-link="'login'" :no-ripple="true" @click="setActive('grid')"></list-item>
-      </list>
+      <!--<list dense="true">-->
+        <!--<list-item text="Layout" bold="true" @click="expand('layout')"></list-item>-->
+      <!--</list>-->
+      <!--<list dense="true" v-ref:layout style="height: 0px; overflow: hidden;" class="secondary-list">-->
+        <!--<list-item v-el:grid text="Grid" v-link="'login'" :no-ripple="true" @click="setActive('grid')"></list-item>-->
+      <!--</list>-->
 
       <list dense="true">
         <list-item text="Style" bold="true" @click="expand('style')"></list-item>
       </list>
       <list dense="true" v-ref:style style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item v-el:typography text="Typography" v-link="'/style/typography'" @click="setActive('typography')"></list-item>
+        <list-item v-el:typography text="Typography" v-link="'/style/typography'" :no-ripple="true" @click="setActive('typography')"></list-item>
       </list>
     </nav>
   </sidebar>

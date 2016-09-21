@@ -1,7 +1,8 @@
 <template>
   <div class="material-select-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <div class="material-select" @click="openSelect()">
-      {{value}}
+      <span v-if="value">{{value}}</span>
+      <span v-if="placeholder && !value">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
     </div>
 
@@ -29,7 +30,8 @@
     props: [
       'label',
       'value',
-      'options'
+      'options',
+      'placeholder'
     ],
 
     methods: {
@@ -39,16 +41,10 @@
         setTimeout(() => {
           var container = this.$els.container;
           var offset = this.selectedIndex ? this.selectedIndex * 48 : 0;
-          console.log(this.$els);
-          var scrollableHeight = container.scrollHeight - container.clientHeight;
+          var scrollOffset = this.selectedIndex > 4 ? (this.options.length - 5) * 48 : 0;
 
-//          offset = offset - 80;
-
-//          container.scrollTop = container.scrollHeight - (48 * (this.selectedIndex)) + 16;
-
-          container.scrollTop = scrollableHeight * (this.selectedIndex / (this.options.length - 1));
-
-          container.style.transform = `translateY(-${offset}px)`;
+          container.scrollTop = this.selectedIndex > 4 ? 48 * (this.options.length - this.selectedIndex + 1) : 0;
+          container.style.transform = `translateY(-${offset - scrollOffset}px)`;
         }
         , 0);
       },
@@ -58,10 +54,19 @@
       },
 
       selectOption (option, index) {
-        console.log('test');
         this.value = option;
         this.selectedIndex = index;
         this.closeSelect();
+      },
+
+      getSelectedIndex () {
+        if (this.value && this.options) {
+          this.options.forEach((item, index) => {
+            if (item === this.value) {
+              this.selectedIndex = index;
+            }
+          })
+        }
       }
     },
 
@@ -71,5 +76,9 @@
         selectedIndex: 0
       }
     },
+
+    ready () {
+      this.getSelectedIndex();
+    }
   }
 </script>

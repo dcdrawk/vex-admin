@@ -30,6 +30,11 @@ Vue.use(VueRouter);
 // create Router instance
 const router = new VueRouter();
 
+router.beforeEach(function (transition) {
+  window.scrollTo(0, 0);
+  transition.next();
+});
+
 // create Router instance
 Vue.use(VueResource);
 

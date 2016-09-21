@@ -13,11 +13,9 @@
 
       <div class="row">
         <div class="col-md-4">
-          <div class="selector">
-            <span>
-              {{ inputMarkup }}
-            </span>
-          </div>
+          <span class="selector">
+            {{ inputMarkup }}
+          </span>
         </div>
         <div class="col-md-8">
           <v-input value="Demo Input"></v-input>
@@ -65,11 +63,9 @@
 
       <div class="row">
         <div class="col-md-4">
-          <div class="selector">
-            <span>
-              {{ textareaMarkup }}
-            </span>
-          </div>
+          <span class="selector">
+            {{ textareaMarkup }}
+          </span>
         </div>
         <div class="col-md-8">
           <v-textarea value="Demo Input"></v-textarea>
@@ -117,11 +113,9 @@
 
       <div class="row">
         <div class="col-md-4">
-          <div class="selector">
-            <span>
-              {{ checkboxMarkup }}
-            </span>
-          </div>
+          <span class="selector">
+            {{ checkboxMarkup }}
+          </span>
         </div>
         <div class="col-md-8">
           <checkbox :value="true"></checkbox>
@@ -147,6 +141,43 @@
       </div>
     </Card>
 
+    <!--Select Demo-->
+    <Card title="Select" class="col-xs-12">
+      <!--Select Markup-->
+      <div class="row headings">
+        <div class="col-md-4"><strong>Markup</strong></div>
+        <div class="col-md-8"><strong>Output</strong></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="selector">
+            {{ selectMarkup }}
+          </div>
+        </div>
+        <div class="col-md-8">
+          <v-select :options="options" placeholder="Select Option"></v-select>
+        </div>
+      </div>
+
+      <!--Select Properties-->
+      <div class="row headings">
+        <div class="col-md-4"><strong>Property</strong></div>
+        <div class="col-md-8"><strong>Output</strong></div>
+      </div>
+
+      <!--Select with Placeholder-->
+      <div class="row centered">
+        <div class="col-md-4">
+          <div class="no-margin">
+            <span class="selector">:secondary-color="true"</span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <checkbox :value="true" :secondary-color="true"></checkbox>
+        </div>
+      </div>
+    </Card>
   </div>
 </template>
 
@@ -156,6 +187,7 @@
   import VInput from '../vex/Input.vue';
   import VTextarea from '../vex/Textarea.vue';
   import Checkbox from '../vex/Checkbox.vue';
+  import VSelect from '../vex/Select.vue';
 
   // Exports
   export default {
@@ -165,7 +197,8 @@
       Card,
       VInput,
       Checkbox,
-      VTextarea
+      VTextarea,
+      VSelect
     },
 
     // Data
@@ -173,7 +206,9 @@
       return {
         inputMarkup: '<v-input value="Demo Input"></v-input>',
         checkboxMarkup: '<checkbox :value="true"></checkbox>',
-        textareaMarkup: '<v-textarea value="Demo Input"></v-textarea>'
+        textareaMarkup: '<v-textarea value="Demo Input"></v-textarea>',
+        selectMarkup: '<v-select :options="options" placeholder="Select Option"></v-select>',
+        options: ['option 1', 'option 2', 'option 3', 'option 4', 'option 5', 'option 6', 'option 7']
       }
     },
 
