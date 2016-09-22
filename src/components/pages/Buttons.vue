@@ -3,7 +3,7 @@
     <!--Title-->
     <h1 class="col-xs-12 col-sm-12 col-xs12 display-1">Buttons</h1>
 
-    <Card title="Flat / Raised Buttons" class="col-xs-12">
+    <v-card title="Flat / Raised Buttons" class="col-xs-12">
 
       <!--Button Markup-->
       <div class="row headings">
@@ -21,7 +21,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <Button>Button</Button>
+            <v-button>Button</v-button>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-              <Button :primary="true">Button</Button>
+              <v-button :primary="true">Button</v-button>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <Button :secondary="true">Button</Button>
+            <v-button :secondary="true">Button</v-button>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <Button :raised="true">Button</Button>
+            <v-button :raised="true">Button</v-button>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <Button :primary="true" :raised="true">Button</Button>
+            <v-button :primary="true" :raised="true">Button</v-button>
           </div>
         </div>
       </div>
@@ -97,14 +97,14 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <Button :secondary="true" :raised="true">Button</Button>
+            <v-button :secondary="true" :raised="true">Button</v-button>
           </div>
         </div>
       </div>
-    </Card>
+    </v-card>
 
 
-    <Card title="Flat / Raised Buttons" class="col-xs-12">
+    <v-card title="Flat / Raised Buttons" class="col-xs-12">
 
       <!--Button Markup-->
       <div class="row headings">
@@ -122,7 +122,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person"></icon-button>
+            <v-icon-button icon="person"></v-icon-button>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person" :primary="true">Button</icon-button>
+            <v-icon-button icon="person" :primary="true">Button</v-icon-button>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person" :secondary="true">Button</icon-button>
+            <v-icon-button icon="person" :secondary="true">Button</v-icon-button>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person" :raised="true"></icon-button>
+            <v-icon-button icon="person" :raised="true"></v-icon-button>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person" :raised="true" :primary="true"></icon-button>
+            <v-icon-button icon="person" :raised="true" :primary="true"></v-icon-button>
           </div>
         </div>
       </div>
@@ -198,29 +198,29 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <icon-button icon="person" :raised="true" :secondary="true"></icon-button>
+            <v-icon-button icon="person" :raised="true" :secondary="true"></v-icon-button>
           </div>
         </div>
       </div>
-    </Card>
+    </v-card>
   </div>
 </template>
 
 <script>
-  import Card from '../vex/Card.vue';
-  import Button from '../vex/Button.vue';
-  import IconButton from '../vex/IconButton.vue';
+  import VCard from '../vex/Card.vue';
+  import VButton from '../vex/Button.vue';
+  import VIconButton from '../vex/IconButton.vue';
 
   export default {
     components: {
-      Card,
-      Button,
-      IconButton
+      VCard,
+      VButton,
+      VIconButton
     },
     data () {
       return {
-        buttonSelector: '<Button>Button</Button>',
-        iconButtonMarkup: '<icon-button icon="person"></icon-button>'
+        buttonSelector: '<v-button>Button</v-button>',
+        iconButtonMarkup: '<v-icon-button icon="person"></v-icon-button>'
       }
     }
 

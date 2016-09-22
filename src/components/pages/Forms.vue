@@ -4,7 +4,7 @@
     <h1 class="col-xs-12 display-1">Forms</h1>
 
     <!--Input Demo-->
-    <Card title="Inputs" class="col-xs-12">
+    <v-card title="Inputs" class="col-xs-12">
       <!--Input Markup-->
       <div class="row headings">
         <div class="col-md-4"><strong>Markup</strong></div>
@@ -51,10 +51,10 @@
           <v-input label="My Floating Label"></v-input>
         </div>
       </div>
-    </Card>
+    </v-card>
 
     <!--Textarea Demo-->
-    <Card title="Textarea" class="col-xs-12">
+    <v-card title="Textarea" class="col-xs-12">
       <!--Input Markup-->
       <div class="row headings">
         <div class="col-md-4"><strong>Markup</strong></div>
@@ -101,10 +101,29 @@
           <v-textarea rows="5" :auto-grow="false" value="This text area has 5 rows"></v-textarea>
         </div>
       </div>
-    </Card>
+    </v-card>
 
+    <!--Select Demo-->
+    <v-card title="Select" class="col-xs-12">
+      <!--Select Markup-->
+      <div class="row headings">
+        <div class="col-md-4"><strong>Markup</strong></div>
+        <div class="col-md-8"><strong>Output</strong></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="selector">
+            {{ selectMarkup }}
+          </div>
+        </div>
+        <div class="col-md-8">
+          <v-select :options="options" placeholder="Select Option"></v-select>
+        </div>
+      </div>
+    </v-card>
     <!--Checkbox Demo-->
-    <Card title="Checkbox" class="col-xs-12">
+    <v-card title="Checkbox" class="col-xs-12">
       <!--Input Markup-->
       <div class="row headings">
         <div class="col-md-4"><strong>Markup</strong></div>
@@ -118,7 +137,7 @@
           </span>
         </div>
         <div class="col-md-8">
-          <checkbox :value="true"></checkbox>
+          <v-checkbox :value="true"></v-checkbox>
         </div>
       </div>
 
@@ -136,57 +155,19 @@
           </div>
         </div>
         <div class="col-md-8">
-          <checkbox :value="true" :secondary-color="true"></checkbox>
+          <v-checkbox :value="true" :secondary-color="true"></v-checkbox>
         </div>
       </div>
-    </Card>
-
-    <!--Select Demo-->
-    <Card title="Select" class="col-xs-12">
-      <!--Select Markup-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Markup</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="selector">
-            {{ selectMarkup }}
-          </div>
-        </div>
-        <div class="col-md-8">
-          <v-select :options="options" placeholder="Select Option"></v-select>
-        </div>
-      </div>
-
-      <!--Select Properties-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Property</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
-
-      <!--Select with Placeholder-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">:secondary-color="true"</span>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <checkbox :value="true" :secondary-color="true"></checkbox>
-        </div>
-      </div>
-    </Card>
+    </v-card>
   </div>
 </template>
 
 <script>
   // Imports
-  import Card from '../vex/Card.vue';
+  import VCard from '../vex/Card.vue';
   import VInput from '../vex/Input.vue';
   import VTextarea from '../vex/Textarea.vue';
-  import Checkbox from '../vex/Checkbox.vue';
+  import VCheckbox from '../vex/Checkbox.vue';
   import VSelect from '../vex/Select.vue';
 
   // Exports
@@ -194,9 +175,9 @@
 
     // Components
     components: {
-      Card,
+      VCard,
       VInput,
-      Checkbox,
+      VCheckbox,
       VTextarea,
       VSelect
     },
@@ -205,10 +186,10 @@
     data () {
       return {
         inputMarkup: '<v-input value="Demo Input"></v-input>',
-        checkboxMarkup: '<checkbox :value="true"></checkbox>',
+        checkboxMarkup: '<v-checkbox :value="true"></v-checkbox>',
         textareaMarkup: '<v-textarea value="Demo Input"></v-textarea>',
         selectMarkup: '<v-select :options="options" placeholder="Select Option"></v-select>',
-        options: ['option 1', 'option 2', 'option 3', 'option 4', 'option 5', 'option 6', 'option 7']
+        options: ['option 1', 'option 2', 'option 3']
       }
     },
 

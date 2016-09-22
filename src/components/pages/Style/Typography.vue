@@ -138,6 +138,9 @@
   export default {
     components: {
       Card
+    },
+    ready () {
+      console.log('ready');
     }
 
 
@@ -146,9 +149,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  .typography-demo > div {
-    margin: 16px 0;
-  }
   .headings {
     border-bottom: 1px solid rgba(0,0,0,.12);
     padding: 16px 0;

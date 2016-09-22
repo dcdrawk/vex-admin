@@ -2,7 +2,7 @@
   <div class="row page-content">
     <!--Title-->
     <h1 class="col-md-12 display-1">Lists</h1>
-    <Card title="List Properties" class="col-md-12">
+    <v-card title="List Properties" class="col-md-12">
 
       <!--List Markup-->
       <div class="row headings">
@@ -19,11 +19,11 @@
           </div>
         </div>
         <div class="col-md-8">
-            <list>
-              <list-item text="List Item 1"></list-item>
-              <list-item text="List Item 2"></list-item>
-              <list-item text="List Item 3"></list-item>
-            </list>
+            <v-list>
+              <v-list-item text="List Item 1"></v-list-item>
+              <v-list-item text="List Item 2"></v-list-item>
+              <v-list-item text="List Item 3"></v-list-item>
+            </v-list>
         </div>
       </div>
 
@@ -41,18 +41,18 @@
           </div>
         </div>
         <div class="col-md-8">
-          <list dense="true">
-            <list-item text="List Item 1"></list-item>
-            <list-item text="List Item 2"></list-item>
-            <list-item text="List Item 3"></list-item>
-          </list>
+          <v-list dense="true">
+            <v-list-item text="List Item 1"></v-list-item>
+            <v-list-item text="List Item 2"></v-list-item>
+            <v-list-item text="List Item 3"></v-list-item>
+          </v-list>
         </div>
       </div>
 
-    </Card>
+    </v-card>
 
 
-    <Card title="List Item Properties" class="col-md-12">
+    <v-card title="List Item Properties" class="col-md-12">
 
       <!--List Properties-->
       <div class="row headings">
@@ -68,11 +68,11 @@
           </div>
         </div>
         <div class="col-md-8">
-          <list>
-            <list-item icon="person" text="List Item 1"></list-item>
-            <list-item icon="person" text="List Item 2"></list-item>
-            <list-item icon="person" text="List Item 3"></list-item>
-          </list>
+          <v-list>
+            <v-list-item icon="person" text="List Item 1"></v-list-item>
+            <v-list-item icon="person" text="List Item 2"></v-list-item>
+            <v-list-item icon="person" text="List Item 3"></v-list-item>
+          </v-list>
         </div>
       </div>
 
@@ -84,11 +84,11 @@
           </div>
         </div>
         <div class="col-md-8">
-          <list>
-            <list-item text="List Item 1" secondary-text="Secondary Text"></list-item>
-            <list-item text="List Item 2" secondary-text="Secondary Text"></list-item>
-            <list-item text="List Item 3" secondary-text="Secondary Text"></list-item>
-          </list>
+          <v-list>
+            <v-list-item text="List Item 1" secondary-text="Secondary Text"></v-list-item>
+            <v-list-item text="List Item 2" secondary-text="Secondary Text"></v-list-item>
+            <v-list-item text="List Item 3" secondary-text="Secondary Text"></v-list-item>
+          </v-list>
         </div>
       </div>
 
@@ -100,38 +100,38 @@
           </div>
         </div>
         <div class="col-md-8">
-          <list>
-            <list-item icon="person" text="List Item 1" :avatar="true"></list-item>
-            <list-item icon="person" text="List Item 2" :avatar="true"></list-item>
-            <list-item icon="person" text="List Item 3" :avatar="true"></list-item>
-          </list>
+          <v-list>
+            <v-list-item icon="person" text="List Item 1" :avatar="true"></v-list-item>
+            <v-list-item icon="person" text="List Item 2" :avatar="true"></v-list-item>
+            <v-list-item icon="person" text="List Item 3" :avatar="true"></v-list-item>
+          </v-list>
         </div>
       </div>
 
-    </Card>
+    </v-card>
   </div>
 </template>
 
 <script>
-  import Card from '../vex/Card.vue';
-  import Button from '../vex/Button.vue';
-  import IconButton from '../vex/IconButton.vue';
-  import List from '../vex/List.vue';
-  import ListItem from '../vex/ListItem.vue';
+  import VCard from '../vex/Card.vue';
+  import VButton from '../vex/Button.vue';
+  import VIconButton from '../vex/IconButton.vue';
+  import VList from '../vex/List.vue';
+  import VListItem from '../vex/ListItem.vue';
   export default {
     components: {
-      Card,
-      List,
-      ListItem
+      VCard,
+      VList,
+      VListItem
     },
     data () {
       return {
         listMarkup:
-`<list>
-  <list-item text="List Item 1"></list-item>
-  <list-item text="LiList Item 2"></list-item>
-  <list-item text="List Item 1"></list-item>
-</list>`
+`<v-list>
+  <v-list-item text="List Item 1"></v-list-item>
+  <v-list-item text="LiList Item 2"></v-list-item>
+  <v-list-item text="List Item 1"></v-list-item>
+</v-list>`
       }
     }
 
