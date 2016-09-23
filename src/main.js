@@ -19,6 +19,7 @@ import Buttons from './components/pages/Buttons.vue';
 import Lists from './components/pages/Lists.vue';
 import Cards from './components/pages/Cards.vue';
 import Forms from './components/pages/Forms.vue';
+import Toasts from './components/pages/Toasts.vue';
 
 // Style
 import Typography from './components/pages/Style/Typography.vue';
@@ -56,6 +57,9 @@ router.map({
   },
   '/components/forms': {
     component: Forms
+  },
+  '/components/toasts': {
+    component: Toasts
   },
 
   //Style Pages

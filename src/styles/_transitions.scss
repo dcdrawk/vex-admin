@@ -1,3 +1,5 @@
+@import './variables';
+
 /* always present */
 .fade-transition {
   transition: opacity .3s ease;
@@ -17,4 +19,22 @@
 
 .visibility-hidden {
   visibility: hidden;
+}
+
+/* always present */
+.toast-transition {
+  transition: transform .4s $swift-in;
+  transform: translateY(0px);
+  span {
+    transition: opacity .4s $swift-in .1s;
+    opacity: 1;
+  }
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.toast-enter, .toast-leave {
+  transform: translateY(48px);
+  span {
+    opacity: 0;
+  }
 }

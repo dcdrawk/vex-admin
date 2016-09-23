@@ -142,8 +142,6 @@
     ready () {
       console.log('ready');
     }
-
-
   }
 </script>
 
