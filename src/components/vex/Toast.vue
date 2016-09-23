@@ -2,7 +2,7 @@
   <div class="v-toast-container" v-show="show" transition="toast">
     <div class="v-toast">
       <span>{{ text }}</span>
-      <v-button v-if="action" @click="function">{{ action }}</v-button>
+      <v-button v-if="action" @click="action">{{ actionText }}</v-button>
     </div>
   </div>
 </template>
@@ -22,8 +22,8 @@
 
     props: [
       'text',
+      'actionText',
       'action',
-      'function',
       'toggle',
     ],
 

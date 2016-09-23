@@ -21,7 +21,7 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <v-button @click="toggleToast('1')">toggle toast</v-button>
+            <v-button @click="toggleToast('1')">show basic toast</v-button>
           </div>
         </div>
       </div>
@@ -41,14 +41,14 @@
         </div>
         <div class="col-xs-8">
           <div>
-            <v-button @click="toggleToast('2')">Button</v-button>
+            <v-button @click="toggleToast('2')">show toast with action</v-button>
           </div>
         </div>
       </div>
 
       <v-toast :toggle.sync="show1" text="Simple Toast"></v-toast>
 
-      <v-toast :toggle.sync="show2" text="Toast with Action" action="undo" :function="testAlert"></v-toast>
+      <v-toast :toggle.sync="show2" text="Toast with Action" action-text="undo" :action="testAlert"></v-toast>
 
     </v-card>
   </div>
