@@ -29,20 +29,16 @@
       var mouseUpEvent = function () {
         ripple.upAction();
         window.removeEventListener('mouseup', mouseUpEvent);
-        window.removeEventListener('touchend', mouseUpEvent);
       };
 
       var mouseDownEvent = function(ev) {
-        ev.preventDefault();
         if (ripple._waves.length > 0) {
           ripple.upAction();
         }
         ripple.downAction(ev);
         window.addEventListener('mouseup', mouseUpEvent);
-        window.addEventListener('touchend', mouseUpEvent);
       };
 
-      button.addEventListener('touchstart', mouseDownEvent);
       button.addEventListener('mousedown', mouseDownEvent);
 
       button.addEventListener('mouseup', function () {
