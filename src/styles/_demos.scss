@@ -5,22 +5,39 @@
   border-bottom: 1px solid rgba(0,0,0,.12);
   padding: 0 0 16px 0;
 }
-.selector {
-  background-color: rgba(0,0,0,.12);
-  padding: 8px;
-  font-family: 'Roboto Mono', monospace;
-  color: rgb(63, 81, 181);
-  font-size: 12px;
-  display: inline-block;
-  span {
-    white-space: pre-wrap;
-    display: flex;
-  }
-}
+//.selector {
+//  background-color: rgba(0,0,0,.12);
+//  padding: 8px;
+//  font-family: 'Roboto Mono', monospace;
+//  color: rgb(63, 81, 181);
+//  font-size: 12px;
+//  display: inline-block;
+//  span {
+//    white-space: pre-wrap;
+//    display: flex;
+//  }
+//}
 .no-margin {
   margin: 0 0 0 0;
 }
 
 .typography-demo .row {
   margin-bottom: 16px;
+}
+pre[class*=language-] {
+  margin-top: 0;
+  border-radius: 0;
+}
+
+//.demo-tabs {
+//  > .v-tab-content {
+//    border-left: 1px solid #EEEEEE;
+//    border-right: 1px solid #EEEEEE;
+//    border-bottom: 1px solid #EEEEEE;
+//  }
+//}
+
+h3 {
+  //margin: 32px 16px 16px 16px;
+  padding: 16px 0;
 }

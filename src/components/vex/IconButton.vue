@@ -1,9 +1,10 @@
 <template>
-
-  <span class="icon-button-wrapper" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised, 'square': square }">
-    <button class="material-button icon-button paper-button" v-bind:class="{ 'primary': primary, 'raised': raised }">
-      <i class="material-icons">{{ icon }}</i>
-    </button>
+  <span class="icon-button-container" :class="{'icon-button-shadow': raised}">
+    <span v-el:button class="icon-button-wrapper" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised, 'square': square }">
+      <button class="material-button icon-button paper-button">
+        <i class="material-icons">{{ icon }}</i>
+      </button>
+    </span>
   </span>
 
 </template>
@@ -22,7 +23,7 @@
 
     ],
     ready () {
-      var button = this.$el;
+      var button = this.$els.button;
 
       // New PaperRipple for the button
       var ripple = new PaperRipple();

@@ -29,6 +29,7 @@
         <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
         <list-item v-el:toasts text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
         <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
+        <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
       </list>
 
       <!--<list dense="true">-->

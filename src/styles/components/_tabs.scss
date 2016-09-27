@@ -1,0 +1,93 @@
+@import '../variables';
+
+.v-tabs {
+  width: 100%;
+  &.primary > {
+    .active-tab-bar {
+      background-color: #fff;
+    }
+    .v-tab-items {
+      background-color: $primary-color;
+      button {
+        color: #fff;
+      }
+    }
+  }
+
+  &.secondary > {
+    .active-tab-bar {
+      background-color: #fff;
+    }
+    .v-tab-items {
+      background-color: $secondary-color;
+      button {
+        color: #fff;
+      }
+    }
+  }
+  span {
+    line-height: 24px;
+  }
+  &.icons > .v-tab-items >  {
+    button,
+    button span {
+      line-height: 14px;
+    }
+  }
+
+  &.icons-only i {
+    margin-bottom: 0;
+  }
+
+  i {
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.v-tab-items {
+  background-color: #fff;
+  //display: flex;
+
+  button {
+    margin: 0;
+    padding: 12px 24px;
+    border-radius: 0;
+    //flex-grow: 1;
+  }
+  position: relative;
+  &.primary > {
+    background-color: $primary-color;
+    button {
+      color: #fff;
+    }
+  }
+
+  &.secondary > {
+    background-color: $secondary-color;
+    button {
+      color: #fff;
+    }
+  }
+  i {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.active-tab-bar {
+  width: 100px;
+  height: 2px;
+  background-color: $secondary-color;
+  position: relative;
+  top:-2px;
+  transform-origin: 0px 0px 0px;
+  transition: all .3s $swift-in;
+  z-index: 5;
+  margin-bottom: -2px;
+
+}
+
+.v-tab-content {
+  //padding: 16px;
+}
