@@ -3,107 +3,49 @@
     <!--Title-->
     <h1 class="col-xs-12 display-1">Cards</h1>
 
-    <!--Card Content-->
-    <!--<div class="col-xs-12">-->
-      <v-card title="Basic Cards" class="col-xs-12">
-        <!--Card Markup-->
-        <div class="row headings">
-          <div class="col-xs-4"><strong>Markup</strong></div>
-          <div class="col-xs-8"><strong>Output</strong></div>
-        </div>
 
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="selector">
-              <span>
-                {{ cardMarkup }}
-              </span>
+    <v-card title="Cards" class="col-md-12">
+
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
+
+          <!-- Basic Card -->
+          <h3 class="title">Basic Card</h3>
+          <v-card title="Card Title">
+            Supporting Text Goes Here
+          </v-card>
+
+          <!-- Card with Subtitle -->
+          <h3 class="title">Card with Subtitle</h3>
+          <v-card title="Card Title" subtitle="Here is the Subtitle">
+            Supporting Text Goes Here
+          </v-card>
+
+          <!-- Card with Actions -->
+          <h3 class="title">Card with Actions</h3>
+          <v-card title="Card Title">
+            Supporting Text Goes Here
+            <div slot="actions">
+              <v-button primary="true">Action 1</v-button>
+              <v-button primary="true">Action 2</v-button>
             </div>
-          </div>
-          <div class="col-xs-4">
-            <v-card title="Card Title">
-              Supporting Text Goes Here
-            </v-card>
-          </div>
-        </div>
+          </v-card>
 
-        <!--Card Properties-->
-        <div class="row headings">
-          <div class="col-xs-4"><strong>Property</strong></div>
-          <div class="col-xs-8"><strong>Output</strong></div>
-        </div>
+          <!-- Card with Media -->
+          <h3 class="title">Card with Media</h3>
+          <v-card title="Card Title" media="http://placehold.it/640x360">
+            I know, the image is a bit large on desktop...
+          </v-card>
 
-        <!--Subheader Card-->
-        <div class="row centered">
-          <div class="col-xs-4">
-            <div class="no-margin">
-              <span class="selector">subtitle="Here is the Subtitle"</span>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <v-card title="Card Title" subtitle="Here is the Subtitle">
-              Supporting Text Goes Here
-            </v-card>
-          </div>
         </div>
-      </v-card>
-    <!--</div>-->
-
-    <!--Card With Actions-->
-    <!--<div >-->
-      <v-card title="Card with Actions" class="col-xs-12">
-        <!--Card Markup-->
-        <div class="row headings">
-          <div class="col-xs-4"><strong>Markup</strong></div>
-          <div class="col-xs-8"><strong>Output</strong></div>
+        <div slot="template">
+          <pre><code class="language-html">{{ cardMarkup }}</code></pre>
         </div>
-
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="selector">
-              <span>
-                {{ cardWithActionsMarkup }}
-              </span>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <v-card title="Card Title">
-              Supporting Text Goes Here
-              <div slot="actions">
-                <v-button primary="true">Action 1</v-button>
-                <v-button primary="true">Action 2</v-button>
-              </div>
-            </v-card>
-          </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ cardScript }}</code></pre>
         </div>
-      </v-card>
-    <!--</div>-->
-
-    <!--Card With Media-->
-    <!--<div class="col-xs-12">-->
-      <v-card title="Card with Media" class="col-xs-12">
-        <!--Card Markup-->
-        <div class="row headings">
-          <div class="col-xs-4"><strong>Markup</strong></div>
-          <div class="col-xs-8"><strong>Output</strong></div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="selector">
-              <span>
-                {{ cardWithMediaMarkup }}
-              </span>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <v-card title="Card Title" media="http://placehold.it/640x360">
-              Supporting Text Goes Here
-            </v-card>
-          </div>
-        </div>
-      </v-card>
-    <!--</div>-->
+      </v-tabs>
+    </v-card>
   </div>
 </template>
 
@@ -111,40 +53,70 @@
   // Imports
   import VCard from '../vex/Card.vue';
   import VButton from '../vex/Button.vue';
-  
+  import VTabs from '../vex/VTabs.vue';
+  import Prism from 'prismjs';
   // Exports
   export default {
 
     // Components
     components: {
       VCard,
-      VButton
+      VButton,
+      VTabs
     },
-
+    ready () {
+      // Syntax Highlighting
+      Prism.highlightAll();
+    },
+    methods: {
+      testAlert(ev) {
+        console.log('test');
+      }
+    },
     // Data
     data () {
       return {
-        cardMarkup: `<v-card title="Card Title">
+        cardMarkup: `<!-- Basic Card -->
+<h3 class="title">Basic Card</h3>
+<v-card title="Card Title">
   Supporting Text Goes Here
-</v-card>`,
-        cardWithActionsMarkup: `<v-card title="Card Title">
+</v-card>
+
+<!-- Card with Subtitle -->
+<h3 class="title">Card with Subtitle</h3>
+<v-card title="Card Title" subtitle="Here is the Subtitle">
+  Supporting Text Goes Here
+</v-card>
+
+<!-- Card with Actions -->
+<h3 class="title">Card with Actions</h3>
+<v-card title="Card Title">
   Supporting Text Goes Here
   <div slot="actions">
     <v-button primary="true">Action 1</v-button>
     <v-button primary="true">Action 2</v-button>
   </div>
-</v-card>`,
-        cardWithMediaMarkup: `<v-card title="Card Title" media="http://placehold.it/640x360">
-  Supporting Text Goes Here
-</v-card>`
-      }
-    },
+</v-card>
 
-    methods: {
-      testAlert(ev) {
-        console.log('test');
+<!-- Card with Media -->
+<h3 class="title">Card with Media</h3>
+<v-card title="Card Title" media="http://placehold.it/640x360">
+  I know, the image is a bit large on desktop...
+</v-card>`,
+        cardScript:
+`import VCard from '../vex/Card.vue';
+import VButton from '../vex/Button.vue';
+
+export default {
+  components: {
+    VCard,
+    VButton
+  }
+}`
       }
     }
+
+
 
   }
 </script>

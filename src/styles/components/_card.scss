@@ -24,6 +24,8 @@
   .card-supporting-text {
     font-size: 14px;
     margin: 16px;
+    display: inline-block;
+    //width: 100%;
   }
 
   .card-actions {
@@ -38,4 +40,12 @@
     padding: 32px 16px 16px 16px;
     display: block;
   }
+}
+
+.card
+
+ &.col-md-12,
+ &.col-xs-12,
+ &.col-md-12 {
+  padding: 0;
 }

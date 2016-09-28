@@ -8,8 +8,9 @@
     position: absolute;
     transform: translateY(4px);
     transition: $transition-timing;
-    color: rgba(0, 0, 0, .38);
+    color: rgba(0, 0, 0, .54);
     pointer-events: none;
+    font-size: 16px;
   }
 
   input,
@@ -47,4 +48,11 @@
       margin-bottom: 15px;
     }
   }
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: rgba(0,0,0,.54);
 }

@@ -3,161 +3,101 @@
     <!--Title-->
     <h1 class="col-xs-12 display-1">Forms</h1>
 
-    <!--Input Demo-->
-    <v-card title="Inputs" class="col-xs-12">
-      <!--Input Markup-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Markup</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
+    <v-card title="Input Fields" class="col-md-12">
 
-      <div class="row">
-        <div class="col-md-4">
-          <span class="selector">
-            {{ inputMarkup }}
-          </span>
-        </div>
-        <div class="col-md-8">
-          <v-input value="Demo Input"></v-input>
-        </div>
-      </div>
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
 
-      <!--Input Properties-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Property</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
+          <!-- Basic Input -->
+          <h3 class="title">Basic Input</h3>
+          <v-input value="Basic Input"></v-input>
 
-      <!--Input with Placeholder-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">placeholder="My Placeholder"</span>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <v-input placeholder="My Placeholder"></v-input>
-        </div>
-      </div>
+          <!-- Input with Placeholder -->
+          <h3 class="title">Input with Placeholder</h3>
+          <v-input placeholder="Input with Placeholder"></v-input>
 
-      <!--Input with Label-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">label="My Floating Label"</span>
-          </div>
+          <!-- Input with Placeholder -->
+          <h3 class="title">Input with Floating Label</h3>
+          <v-input label="Input with Floating Label"></v-input>
+
         </div>
-        <div class="col-md-8">
-          <v-input label="My Floating Label"></v-input>
+        <div slot="template">
+          <pre><code class="language-html">{{ inputMarkup }}</code></pre>
         </div>
-      </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ inputScript }}</code></pre>
+        </div>
+      </v-tabs>
     </v-card>
 
     <!--Textarea Demo-->
-    <v-card title="Textarea" class="col-xs-12">
-      <!--Input Markup-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Markup</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
+    <v-card title="Textarea" class="col-md-12">
 
-      <div class="row">
-        <div class="col-md-4">
-          <span class="selector">
-            {{ textareaMarkup }}
-          </span>
-        </div>
-        <div class="col-md-8">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
+
+          <!-- Basic Textarea -->
+          <h3 class="title">Basic Textarea</h3>
           <v-textarea value="Demo Input"></v-textarea>
-        </div>
-      </div>
 
-      <!--Input Properties-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Property</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
-
-      <!--Input with Placeholder-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">:auto-grow="false"</span>
-          </div>
-        </div>
-        <div class="col-md-8">
+          <!-- Textarea with fixed height -->
+          <h3 class="title">Textarea with fixed height</h3>
           <v-textarea :auto-grow="false" value="This textarea won't grow as the user types"></v-textarea>
-        </div>
-      </div>
 
-      <!--Input with Label-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">rows="5" :auto-grow="false"</span>
-          </div>
-        </div>
-        <div class="col-md-8">
+          <!-- Textarea with rows / fixed height -->
+          <h3 class="title">Textarea with rows / fixed height</h3>
           <v-textarea rows="5" :auto-grow="false" value="This text area has 5 rows"></v-textarea>
+
         </div>
-      </div>
+        <div slot="template">
+          <pre><code class="language-html">{{ textareaMarkup }}</code></pre>
+        </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ textareaScript }}</code></pre>
+        </div>
+      </v-tabs>
     </v-card>
 
     <!--Select Demo-->
-    <v-card title="Select" class="col-xs-12">
-      <!--Select Markup-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Markup</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
+    <v-card title="Select" class="col-md-12">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="selector">
-            {{ selectMarkup }}
-          </div>
-        </div>
-        <div class="col-md-8">
+          <!-- Basic Select -->
+          <h3 class="title">Basic Select</h3>
           <v-select :options="options" placeholder="Select Option"></v-select>
+
         </div>
-      </div>
+        <div slot="template">
+          <pre><code class="language-html">{{ selectMarkup }}</code></pre>
+        </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ selectScript }}</code></pre>
+        </div>
+      </v-tabs>
     </v-card>
+
     <!--Checkbox Demo-->
-    <v-card title="Checkbox" class="col-xs-12">
-      <!--Input Markup-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Markup</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
+    <v-card title="Checkbox" class="col-md-12">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
 
-      <div class="row">
-        <div class="col-md-4">
-          <span class="selector">
-            {{ checkboxMarkup }}
-          </span>
-        </div>
-        <div class="col-md-8">
+          <!-- Basic Checkbox -->
+          <h3 class="title">Basic Checkbox</h3>
           <v-checkbox :value="true"></v-checkbox>
-        </div>
-      </div>
 
-      <!--Input Properties-->
-      <div class="row headings">
-        <div class="col-md-4"><strong>Property</strong></div>
-        <div class="col-md-8"><strong>Output</strong></div>
-      </div>
-
-      <!--Input with Placeholder-->
-      <div class="row centered">
-        <div class="col-md-4">
-          <div class="no-margin">
-            <span class="selector">:secondary-color="true"</span>
-          </div>
-        </div>
-        <div class="col-md-8">
+          <!-- Secondary Color Checkbox -->
+          <h3 class="title">Secondary Color Checkbox</h3>
           <v-checkbox :value="true" :secondary-color="true"></v-checkbox>
+
         </div>
-      </div>
+        <div slot="template">
+          <pre><code class="language-html">{{ checkboxMarkup }}</code></pre>
+        </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ checkboxScript }}</code></pre>
+        </div>
+      </v-tabs>
     </v-card>
   </div>
 </template>
@@ -169,6 +109,8 @@
   import VTextarea from '../vex/Textarea.vue';
   import VCheckbox from '../vex/Checkbox.vue';
   import VSelect from '../vex/Select.vue';
+  import VTabs from '../vex/VTabs.vue';
+  import Prism from 'prismjs';
 
   // Exports
   export default {
@@ -179,24 +121,92 @@
       VInput,
       VCheckbox,
       VTextarea,
-      VSelect
+      VSelect,
+      VTabs,
     },
-
-    // Data
-    data () {
-      return {
-        inputMarkup: '<v-input value="Demo Input"></v-input>',
-        checkboxMarkup: '<v-checkbox :value="true"></v-checkbox>',
-        textareaMarkup: '<v-textarea value="Demo Input"></v-textarea>',
-        selectMarkup: '<v-select :options="options" placeholder="Select Option"></v-select>',
-        options: ['option 1', 'option 2', 'option 3']
-      }
+    ready () {
+      // Syntax Highlighting
+      Prism.highlightAll();
     },
-
     methods: {
 
     },
+    // Data
+    data () {
+      return {
+        inputMarkup: `<!-- Basic Input -->
+<h3 class="title">Basic Input</h3>
+<v-input value="Basic Input"></v-input>
 
+<!-- Input with Placeholder -->
+<h3 class="title">Input with Placeholder</h3>
+<v-input placeholder="Input with Placeholder"></v-input>
+
+<!-- Input with Floating Label -->
+<h3 class="title">Input with Floating Label</h3>
+<v-input label="Input with Floating Label"></v-input>`,
+        inputScript:
+`import VInput from '../vex/Input.vue';
+
+export default {
+  components: {
+    VInput
+  }
+}`,
+        checkboxMarkup: `<!-- Basic Checkbox -->
+<h3 class="title">Basic Checkbox</h3>
+<v-checkbox :value="true"></v-checkbox>
+
+<!-- Secondary Color Checkbox -->
+<h3 class="title">Secondary Color Checkbox</h3>
+<v-checkbox :value="true" :secondary-color="true"></v-checkbox>`,
+        checkboxScript:
+`import VCheckbox from '../vex/Checkbox.vue';
+
+export default {
+  components: {
+    VCheckbox
+  }
+}`,
+        textareaMarkup: `<!-- Basic Textarea -->
+<h3 class="title">Basic Textarea</h3>
+<v-textarea value="Demo Input"></v-textarea>
+
+<!-- Textarea with fixed height -->
+<h3 class="title">Textarea with fixed height</h3>
+<v-textarea :auto-grow="false" value="This textarea won't grow as the user types"></v-textarea>
+
+<!-- Textarea with rows / fixed height -->
+<h3 class="title">Textarea with rows / fixed height</h3>
+<v-textarea rows="5" :auto-grow="false" value="This text area has 5 rows"></v-textarea>`,
+        textareaScript:
+`import VTextarea from '../vex/Textarea.vue';
+
+export default {
+  components: {
+    VTextarea
+  }
+}`,
+        selectMarkup: `<!-- Basic Select -->
+<h3 class="title">Basic Select</h3>
+<v-select :options="options" placeholder="Select Option"></v-select>`,
+        selectScript:
+`import VSelect from '../vex/Select.vue';
+
+export default {
+  components: {
+    VSelect
+  },
+  
+  data () {
+    return {
+      options: ['option 1', 'option 2', 'option 3']
+    }
+  }
+}`,
+        options: ['option 1', 'option 2', 'option 3']
+      }
+    }
   }
 </script>
 

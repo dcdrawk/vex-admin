@@ -65,6 +65,7 @@
   import VButton from '../vex/Button.vue';
   import VIconButton from '../vex/IconButton.vue';
   import VTabs from '../vex/VTabs.vue';
+  import Prism from 'prismjs';
 
   export default {
     components: {
@@ -73,19 +74,25 @@
       VIconButton,
       VTabs
     },
+    ready () {
+      this.showTabs = true;
+
+      // Syntax Highlighting
+      Prism.highlightAll();
+    },
     data () {
       return {
         buttonMarkup: `<!-- Flat Buttons -->
 <h3 class="title">Flat Buttons</h3>
-<v-button>Basic Button</v-button>
-<v-button :primary="true">Basic Button</v-button>
-<v-button :secondary="true">Basic Button</v-button>
+<v-button>Button</v-button>
+<v-button :primary="true">Button</v-button>
+<v-button :secondary="true">Button</v-button>
 
 <!-- Raised Buttons -->
 <h3 class="title">Raised Buttons</h3>
-<v-button :raised="true">Basic Button</v-button>
-<v-button :raised="true" :primary="true">Basic Button</v-button>
-<v-button :raised="true" :secondary="true">Basic Button</v-button>`,
+<v-button :raised="true">Button</v-button>
+<v-button :raised="true" :primary="true">Button</v-button>
+<v-button :raised="true" :secondary="true">Button</v-button>`,
         buttonScript: `import VButton from '../vex/Button.vue';
 
 export default {

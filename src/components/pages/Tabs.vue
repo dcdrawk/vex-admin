@@ -76,6 +76,13 @@
       VTabs
     },
 
+    ready () {
+      this.showTabs = true;
+
+      // Syntax Highlighting
+      Prism.highlightAll();
+    },
+
     // Data
     data () {
       return {
@@ -129,16 +136,8 @@ export default {
   components: {
     VTabs
   }
-}
-`,
+}`
       }
-    },
-
-    ready () {
-      this.showTabs = true;
-
-      // Syntax Highlighting
-      Prism.highlightAll();
     }
 
   }
