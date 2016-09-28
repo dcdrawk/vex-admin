@@ -1,7 +1,7 @@
 <template>
   <div class="v-chip-container" v-bind:class="{ 'focused': focused }">
-    <span class="v-chip" v-for="chip in chips">{{ chip }}<i class="material-icons chip-remove" @click="removeChip($index);">close</i></span>
-    <input v-model="value" v-focus-model="focused" :placeholder="placeholder" @keyup.enter="addChip(value)" @keydown.delete="removeLastChip(value);"/>
+    <span class="v-chip" v-for="chip in chips">{{ chip }}<i v-if="!readOnly" class="material-icons chip-remove" @click="removeChip($index);">close</i></span>
+    <input v-if="!readOnly" v-model="value" v-focus-model="focused" :placeholder="placeholder" @keyup.enter="addChip(value)" @keydown.delete="removeLastChip(value);"/>
   </div>
 </template>
 
@@ -34,7 +34,8 @@
     props: [
       'label',
       'chips',
-      'placeholder'
+      'placeholder',
+      'readOnly'
     ],
 
     data () {
