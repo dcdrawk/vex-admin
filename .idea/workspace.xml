@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.eea7afedd62e8f50c27e5469ba56034c.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.eea7afedd62e8f50c27e5469ba56034c.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.39360c631db9539b8017.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.39360c631db9539b8017.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4309c9e8099441f125ee.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4309c9e8099441f125ee.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.50d063aafea934e8d4a2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.50d063aafea934e8d4a2.js.map" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Cards.vue" afterPath="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Chips.vue" afterPath="$PROJECT_DIR$/src/components/pages/Chips.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Forms.vue" afterPath="$PROJECT_DIR$/src/components/pages/Forms.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Lists.vue" afterPath="$PROJECT_DIR$/src/components/pages/Lists.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Tabs.vue" afterPath="$PROJECT_DIR$/src/components/pages/Tabs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Toasts.vue" afterPath="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/VTabs.vue" afterPath="$PROJECT_DIR$/src/components/vex/VTabs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_layout.scss" afterPath="$PROJECT_DIR$/src/styles/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_tabs.scss" afterPath="$PROJECT_DIR$/src/styles/components/_tabs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Dialog.vue" afterPath="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_dialog.scss" afterPath="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,100 +28,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Buttons.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Buttons.vue">
+      <file leaf-file-name="_transitions.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="420">
+              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Forms.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Forms.vue">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="753">
+              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lists.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Lists.vue">
+      <file leaf-file-name="AppBar.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-              <folding>
-                <marker date="1475084986974" expanded="true" signature="2906:3063" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="3140:3297" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="3369:3568" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="3660:3913" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="3989:4233" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="4225:4233" ph="..." />
-                <marker date="1475084986974" expanded="true" signature="4229:4233" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cards.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Cards.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="39" />
-              <folding>
-                <marker date="1475084930940" expanded="true" signature="2138:2176" ph="..." />
-                <marker date="1475084930940" expanded="true" signature="2307:2345" ph="..." />
-                <marker date="1475084930940" expanded="true" signature="2442:2610" ph="..." />
-                <marker date="1475084930940" expanded="true" signature="2493:2600" ph="..." />
-                <marker date="1475084930940" expanded="true" signature="2739:2798" ph="..." />
-                <marker date="1475084930940" expanded="true" signature="2790:2798" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chips.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="393">
+              <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tabs.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Tabs.vue">
+      <file leaf-file-name="Dialogs.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/Dialogs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-              <folding>
-                <marker date="1475092504529" expanded="true" signature="2599:2753" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="2623:2646" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="2670:2694" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="2720:2743" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="2905:3107" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="2942:2965" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3010:3034" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3074:3097" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3286:3488" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3323:3346" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3391:3415" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3455:3478" ph="..." />
-                <marker date="1475092504529" expanded="true" signature="3480:3488" ph="..." />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VTabs.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/vex/VTabs.vue">
+      <file leaf-file-name="Dialog.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/Dialog.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+            <state relative-caret-position="30">
+              <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -145,8 +81,28 @@
       <file leaf-file-name="_tabs.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/components/_tabs.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
+            <state relative-caret-position="1770">
               <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dialog.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/Card.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -160,9 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/vex/List.vue" />
         <option value="$PROJECT_DIR$/src/styles/core.scss" />
         <option value="$PROJECT_DIR$/src/styles/_variables.scss" />
         <option value="$PROJECT_DIR$/src/styles/components/_toolbar.scss" />
@@ -187,8 +140,6 @@
         <option value="$PROJECT_DIR$/src/components/vex/Button.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/ListItem.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_chips.scss" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Tabs.vue" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/src/styles/_demos.scss" />
@@ -211,6 +162,11 @@
         <option value="$PROJECT_DIR$/src/components/pages/Tabs.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_tabs.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/VTabs.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
+        <option value="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
+        <option value="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
       </list>
     </option>
   </component>
@@ -593,12 +549,12 @@
       <workItem from="1474322731757" duration="27074000" />
       <workItem from="1474494491108" duration="36133000" />
       <workItem from="1474914668738" duration="29830000" />
-      <workItem from="1475077958624" duration="26891000" />
+      <workItem from="1475077958624" duration="30620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256456000" />
+    <option name="totallyTimeSpent" value="260185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -640,21 +596,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/components/_sidebar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/CardActions.vue" />
-    <entry file="file://$PROJECT_DIR$/src/styles/components/_appbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/components/_checkbox.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -673,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -740,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Template.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LogIn.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -790,22 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/Card.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-          <caret line="31" column="110" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Select.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -819,13 +730,6 @@
         <state relative-caret-position="855">
           <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -940,30 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Forms.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Lists.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-          <folding>
-            <marker date="1475084986974" expanded="true" signature="2906:3063" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="3140:3297" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="3369:3568" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="3660:3913" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="3989:4233" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="4225:4233" ph="..." />
-            <marker date="1475084986974" expanded="true" signature="4229:4233" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1017,22 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/components/_tabs.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Buttons.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1043,8 +907,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/VTabs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+        <state relative-caret-position="499">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Forms.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Template.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Lists.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding>
+            <marker date="1475084986974" expanded="true" signature="2906:3063" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="3140:3297" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="3369:3568" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="3660:3913" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="3989:4233" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="4225:4233" ph="..." />
+            <marker date="1475084986974" expanded="true" signature="4229:4233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/_tabs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Dialog.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Card.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Dialogs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>

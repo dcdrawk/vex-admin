@@ -30,14 +30,8 @@
         <list-item v-el:toasts text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
         <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
         <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
+        <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
       </list>
-
-      <!--<list dense="true">-->
-        <!--<list-item text="Layout" bold="true" @click="expand('layout')"></list-item>-->
-      <!--</list>-->
-      <!--<list dense="true" v-ref:layout style="height: 0px; overflow: hidden;" class="secondary-list">-->
-        <!--<list-item v-el:grid text="Grid" v-link="'login'" :no-ripple="true" @click="setActive('grid')"></list-item>-->
-      <!--</list>-->
 
       <list dense="true">
         <list-item text="Style" bold="true" @click="expand('style')"></list-item>
@@ -58,7 +52,6 @@
     cursor: pointer;
   }
   .sidebar-nav {
-    /*margin: 8px 0;*/
     .list {
       margin: 0;
     }

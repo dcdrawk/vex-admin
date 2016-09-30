@@ -9,6 +9,16 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  //z-index: -1;
+  z-index: 11;
+  pointer-events: none;
+  &.show {
+    pointer-events: auto;
+  },
+  //z-index: 11;
+  //&.show {
+  //  z-index: -1;
+  //}
   //pointer-events: none;
   &.dialog-transition {
     opacity: 1;
@@ -43,6 +53,7 @@
   }
 
   .material-dialog-backdrop {
+    z-index: 10;
     position: fixed;
     height: 100vh;
     width: 100vw;

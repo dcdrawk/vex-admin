@@ -1,12 +1,12 @@
 <template>
 
-  <div class="material-dialog-container">
-    <div class="material-dialog-backdrop" @click="hideDialog();" v-if="show" transition="backdrop"></div>
+  <div class="material-dialog-container" :class="{'show':show}">
+    <div class="material-dialog-backdrop" @click="hideDialog();" v-if="show" transition="fade"></div>
     <div class="material-dialog" v-if="show" transition="dialog">
 
       <h3 class="material-dialog-title">{{ title }}</h3>
       <slot></slot>
-
+      {{ show }}
     </div>
 
   </div>
@@ -28,14 +28,15 @@
     },
     props: [
       'title',
-      'size'
+      'size',
+      'show'
     ],
 
-    data () {
-      return {
-        show: false
-      }
-    },
+//    data () {
+//      return {
+//        show: false
+//      }
+//    },
     methods: {
       hideDialog() {
         console.log(this);
