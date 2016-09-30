@@ -4,7 +4,7 @@
     <h1 class="col-xs-12 display-1">Toasts</h1>
 
     <!--Card Content-->
-    <v-card title="Toasts" class="col-md-12">
+    <v-card title="Toasts" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">

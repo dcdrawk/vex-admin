@@ -2,7 +2,7 @@
   <div class="row page-content">
     <!--Title-->
     <h1 class="col-md-12 display-1">Lists</h1>
-    <v-card title="Lists and List Items" class="col-md-12">
+    <v-card title="Lists and List Items" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">

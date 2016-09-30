@@ -5,8 +5,8 @@
 
     <!--Card Content-->
     <v-card title="Tabs" class="col-xs-12">
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+      <v-tabs default-tab="result test" :primary="true" class="demo-tabs">
+        <div slot="result test">
 
           <!-- Basic Tabs -->
           <h3 class="title">Basic Tabs</h3>
@@ -19,6 +19,9 @@
             </div>
             <div slot="Item Three">
               Third Tab
+            </div>
+            <div slot="Item Four">
+              Fourth Tab
             </div>
           </v-tabs>
 
@@ -88,7 +91,8 @@
       return {
         focused: false,
         showTabs: false,
-        tabMarkup: `<!-- Basic Tabs -->
+        tabMarkup:
+`<!-- Basic Tabs -->
 <h3 class="title">Basic Tabs</h3>
 <v-tabs default-tab="Item One" v-if="showTabs">
   <div slot="Item One">

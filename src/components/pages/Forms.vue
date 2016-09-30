@@ -3,7 +3,7 @@
     <!--Title-->
     <h1 class="col-xs-12 display-1">Forms</h1>
 
-    <v-card title="Input Fields" class="col-md-12">
+    <v-card title="Input Fields" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
@@ -31,7 +31,7 @@
     </v-card>
 
     <!--Textarea Demo-->
-    <v-card title="Textarea" class="col-md-12">
+    <v-card title="Textarea" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
@@ -59,7 +59,7 @@
     </v-card>
 
     <!--Select Demo-->
-    <v-card title="Select" class="col-md-12">
+    <v-card title="Select" class="col-xs-12">
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 
@@ -78,7 +78,7 @@
     </v-card>
 
     <!--Checkbox Demo-->
-    <v-card title="Checkbox" class="col-md-12">
+    <v-card title="Checkbox" class="col-xs-12">
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 

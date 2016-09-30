@@ -5,7 +5,7 @@
 
     <!--Card Content-->
 
-    <v-card title="Chips" class="col-md-12">
+    <v-card title="Chips" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">

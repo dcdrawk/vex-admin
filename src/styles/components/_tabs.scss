@@ -3,11 +3,12 @@
 .v-tabs {
   width: 100%;
   &.primary > {
-    .active-tab-bar {
-      background-color: #fff;
-    }
-    .v-tab-items {
+
+    .v-tab-items-container {
       background-color: $primary-color;
+      .active-tab-bar {
+        background-color: #fff;
+      }
       button {
         color: #fff;
       }
@@ -15,11 +16,14 @@
   }
 
   &.secondary > {
-    .active-tab-bar {
-      background-color: #fff;
-    }
-    .v-tab-items {
+
+    .v-tab-items-container {
       background-color: $secondary-color;
+
+      .active-tab-bar {
+        background-color: #fff;
+      }
+
       button {
         color: #fff;
       }
@@ -27,35 +31,26 @@
   }
   span {
     line-height: 24px;
+    white-space: nowrap;
   }
-  &.icons > .v-tab-items >  {
+  &.icons > .v-tab-items-container .v-tab-items >  {
     button,
     button span {
       line-height: 14px;
     }
   }
 
-  &.icons-only i {
+  &.icons-only .v-tab-items-container .v-tab-items i {
     margin-bottom: 0;
   }
 
-  .v-tab-items i {
+  .v-tab-items-container .v-tab-items i {
     min-width: 24px;
     min-height: 24px;
   }
 }
-
-.v-tab-items {
-  background-color: #fff;
-  //display: flex;
-
-  button {
-    margin: 0;
-    padding: 12px 24px;
-    border-radius: 0;
-    //flex-grow: 1;
-  }
-  position: relative;
+.v-tab-items-container {
+  overflow: hidden;
   &.primary > {
     background-color: $primary-color;
     button {
@@ -69,12 +64,46 @@
       color: #fff;
     }
   }
+}
+
+.v-tab-items-container .v-tab-items {
+  //background-color: #fff;
+  display: flex;
+  transition: transform .2s $swift-in;
+
+  button {
+    margin: 0;
+    padding: 12px 24px;
+    border-radius: 0;
+    //flex-grow: 1;
+  }
+
+  &.panning {
+    transition: none;
+  }
+  position: relative;
+  //&.primary > {
+  //  background-color: $primary-color;
+  //  button {
+  //    color: #fff;
+  //  }
+  //}
+  //
+  //&.secondary > {
+  //  background-color: $secondary-color;
+  //  button {
+  //    color: #fff;
+  //  }
+  //}
   i {
     display: block;
     margin-bottom: 10px;
   }
 }
 
+.v-tab-items {
+  display: inline-block;
+}
 .active-tab-bar {
   width: 100px;
   height: 2px;
@@ -82,10 +111,12 @@
   position: relative;
   top:-2px;
   transform-origin: 0px 0px 0px;
-  transition: all .3s $swift-in;
+  transition: all .2s $swift-in;
   z-index: 5;
   margin-bottom: -2px;
-
+  &.panning {
+    transition: none;
+  }
 }
 
 .v-tab-content {
