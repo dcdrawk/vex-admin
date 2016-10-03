@@ -31,6 +31,7 @@
         <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
         <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
         <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
+        <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
       </list>
 
       <list dense="true">
@@ -129,7 +130,7 @@
     ready () {
       console.log(this);
       var path = this.$route.path;
-      var pathArray = path.replace(/\/+/, '').split('/');
+      var pathArray = path.replace(/-+/, '').replace(/\/+/, '').split('/');
 
       this.expand(pathArray[0]);
       this.setActive(pathArray[1]);

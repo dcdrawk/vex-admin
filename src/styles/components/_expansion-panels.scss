@@ -1,0 +1,52 @@
+@import '../variables';
+@import '../whiteframe';
+
+.v-expansion-panel {
+  @extend .whiteframe-z1;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: all .3s $swift-out;
+  overflow: hidden;
+  margin: 0 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  width: 100%;
+
+  &.closed {
+    height: 48px;
+  }
+
+  &.open {
+    margin: 16px 0;
+  }
+
+  i {
+    width: 24px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    transition: transform .3s $swift-out;
+  }
+  .col-xs-3 {
+    margin-top: 14px;
+  }
+  i.closed {
+    transform: rotate(0deg);
+  }
+
+  i.open {
+    transform: rotate(180deg);
+  }
+}
+
+.v-expansion-title {
+  color: rgba(0,0,0,.87);
+  font-size: 15px;
+}
+
+.v-expansion-secondary {
+  color: rgba(0,0,0,.54);
+  font-size: 15px;
+  position: relative;
+}
+
