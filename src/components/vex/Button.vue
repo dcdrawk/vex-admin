@@ -1,5 +1,5 @@
 <template>
-  <button class="material-button paper-button" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised }">
+  <button class="v-button paper-button" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised }">
     <slot></slot>
   </button>
 </template>

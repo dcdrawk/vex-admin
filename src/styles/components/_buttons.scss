@@ -1,7 +1,7 @@
 @import '../variables';
 @import '../whiteframe';
 
-.material-button {
+.v-button {
   padding: 8px 16px;
   position: relative;
   outline: none;
@@ -47,7 +47,7 @@
       background-color: $secondary-color;
     }
   }
-  &.icon-button {
+  &.v-icon-button {
     border-radius: 50%;
     margin: 0;
     height: 40px;
@@ -70,18 +70,18 @@
     }
   }
 }
-.icon-button-container {
+.v-icon-button-container {
   display: inline-block;
   border-radius: 50%;
   height: 40px;
   width: 40px;
   margin: 4px;
 }
-.icon-button-shadow {
+.v-icon-button-shadow {
   @extend .whiteframe-z2;
 }
 
-.icon-button-wrapper {
+.v-icon-button-wrapper {
   border-radius: 50%;
   height: 40px;
   width: 40px;

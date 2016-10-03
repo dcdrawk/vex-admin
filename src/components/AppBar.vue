@@ -98,19 +98,18 @@
         this.open = !this.open;
       },
       expand (list) {
-//        this.collapseAll();
         if (this.$refs[list].$el.style.height === '0px') {
           this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
         } else {
           this.$refs[list].$el.style.height = 0;
         }
       },
-      collapseAll() {
+      collapseAll () {
         for (var i in this.$refs) {
           this.$refs[i].$el.style.height = 0;
         }
       },
-      setActive(listItem) {
+      setActive (listItem) {
         for (var i in this.$els) {
           this.$els[i].classList.remove('active');
         }

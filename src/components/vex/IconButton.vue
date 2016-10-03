@@ -1,7 +1,7 @@
 <template>
-  <span class="icon-button-container" :class="{'icon-button-shadow': raised}">
-    <span v-el:button class="icon-button-wrapper" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised, 'square': square }">
-      <button class="material-button icon-button paper-button">
+  <span class="v-icon-button-container" :class="{'icon-button-shadow': raised}">
+    <span v-el:button class="v-icon-button-wrapper" v-bind:class="{ 'primary': primary, 'secondary': secondary, 'raised': raised, 'flat': !raised, 'square': square }">
+      <button class="v-button icon-button paper-button">
         <i class="material-icons">{{ icon }}</i>
       </button>
     </span>

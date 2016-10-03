@@ -1,29 +1,59 @@
 <template>
   <div class="row page-content">
     <!--Title-->
-    <h1 class="col-xs-12 display-1">Chips</h1>
+    <h1 class="col-xs-12 display-1">Dialogs</h1>
 
     <!--Card Content-->
-    <v-card title="Chips" class="col-xs-12">
+    <v-card title="Dialogs" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 
-          <!-- Basic Chips -->
-          <h3 class="title">Basic Chips</h3>
-          <v-button @click="showDialog = !showDialog">Toggle Dialog</v-button>
+          <!-- Small Dialog -->
+          <h3 class="title">Small Dialog</h3>
+          <v-button @click="showDialog.small = !showDialog.small">Show Small Dialog</v-button>
 
-          <v-dialog :show.sync="showDialog" title="Dialog Title">
-            Test
+          <v-dialog :show.sync="showDialog.small" title="Small Dialog" :small="true">
+            <p>Confirm you opened the dialog</p>
+            <div slot="actions">
+              <v-button @click="showDialog.small = false">Cancel</v-button>
+              <v-button @click="showAlert('you clicked confirm', 'small')">Confirm</v-button>
+            </div>
           </v-dialog>
-          <!--<v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>-->
+
+          <!-- Medium Dialog -->
+          <h3 class="title">Medium Dialog</h3>
+          <v-button @click="showDialog.medium = !showDialog.medium">Show Medium Dialog</v-button>
+
+          <v-dialog :show.sync="showDialog.medium" title="Medium Dialog" :medium="true">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
+            <div slot="actions">
+              <v-button @click="showDialog.medium = false">Cancel</v-button>
+              <v-button @click="showAlert('you clicked confirm', 'medium');">Confirm</v-button>
+            </div>
+          </v-dialog>
+
+          <!-- Large Dialog -->
+          <h3 class="title">Large Dialog</h3>
+          <v-button @click="showDialog.large = !showDialog.large">Show Large Dialog</v-button>
+
+          <v-dialog :show.sync="showDialog.large" title="Large Dialog" :large="true">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
+            <p>Proin finibus aliquam ante, id convallis lectus aliquam ut. Ut porttitor felis sed vestibulum volutpat. In a tristique odio. Praesent velit leo, finibus in eleifend sed, faucibus a justo. Pellentesque cursus ultrices sem vitae ultricies. Maecenas porta accumsan accumsan. In congue dignissim eros vel fermentum. Curabitur nibh nunc, feugiat quis leo non, eleifend euismod nulla. Aenean pretium eu diam auctor viverra.</p>
+            <p>Vivamus eu odio gravida, tincidunt nulla et, interdum augue. Aenean in risus ut lectus pretium semper. Aliquam erat volutpat. Fusce dapibus rutrum justo et suscipit. Quisque nec tempus eros, id sollicitudin augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tellus eu commodo suscipit. Duis eget turpis erat. Ut dui velit, scelerisque id efficitur at, aliquam non erat. Aenean scelerisque faucibus cursus.</p>
+            <div slot="actions">
+              <v-button @click="showDialog.large = false" :primary="true">Cancel</v-button>
+              <v-button @click="showAlert('you clicked confirm', 'large');" :primary="true">Confirm</v-button>
+            </div>
+          </v-dialog>
           
+
         </div>
         <div slot="template">
-          <!--<pre><code class="language-html">{{ chipMarkup }}</code></pre>-->
+          <pre><code class="language-html">{{ dialogMarkup }}</code></pre>
         </div>
         <div slot="script">
-          <!--<pre><code class="language-javascript">{{ chipScript }}</code></pre>-->
+          <pre><code class="language-javascript">{{ dialogScript }}</code></pre>
         </div>
       </v-tabs>
     </v-card>
@@ -55,32 +85,86 @@
       Prism.highlightAll();
     },
 
+    methods: {
+      showAlert (alert, size) {
+        window.alert(alert);
+        this.showDialog[size] = false;
+      }
+    },
+
     // Data
     data () {
       return {
-        showDialog: false,
-        readOnlyChips: ['Chip 1', 'Chip 2', 'Chip 3'],
-        chipMarkup: `<!-- Basic Chips -->
-                <h3 class="title">Basic Chips</h3>
-                <v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>
+        showDialog: {
+          small: false,
+          medium: false,
+          large: false,
+        },
+        dialogMarkup: `<!-- Small Dialog -->
+<h3 class="title">Small Dialog</h3>
+<v-button @click="showDialog.small = !showDialog.small">Show Small Dialog</v-button>
 
-                <!-- Read-only Chips -->
-                <h3 class="title">Read-only Chips</h3>
-                <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>`,
-        chipScript:
-`import VChips from '../vex/VChips.vue';
+<v-dialog :show.sync="showDialog.small" title="Small Dialog" :small="true">
+  <p>Confirm you opened the dialog</p>
+  <div slot="actions">
+    <v-button @click="showDialog.small = false">Cancel</v-button>
+    <v-button @click="showAlert('you clicked confirm', 'small')">Confirm</v-button>
+  </div>
+</v-dialog>
+
+<!-- Medium Dialog -->
+<h3 class="title">Medium Dialog</h3>
+<v-button @click="showDialog.medium = !showDialog.medium">Show Medium Dialog</v-button>
+
+<v-dialog :show.sync="showDialog.medium" title="Medium Dialog" :medium="true">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
+  <div slot="actions">
+    <v-button @click="showDialog.medium = false">Cancel</v-button>
+    <v-button @click="showAlert('you clicked confirm', 'medium');">Confirm</v-button>
+  </div>
+</v-dialog>
+
+<!-- Large Dialog -->
+<h3 class="title">Large Dialog</h3>
+<v-button @click="showDialog.large = !showDialog.large">Show Large Dialog</v-button>
+
+<v-dialog :show.sync="showDialog.large" title="Large Dialog" :large="true">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
+  <p>Proin finibus aliquam ante, id convallis lectus aliquam ut. Ut porttitor felis sed vestibulum volutpat. In a tristique odio. Praesent velit leo, finibus in eleifend sed, faucibus a justo. Pellentesque cursus ultrices sem vitae ultricies. Maecenas porta accumsan accumsan. In congue dignissim eros vel fermentum. Curabitur nibh nunc, feugiat quis leo non, eleifend euismod nulla. Aenean pretium eu diam auctor viverra.</p>
+  <p>Vivamus eu odio gravida, tincidunt nulla et, interdum augue. Aenean in risus ut lectus pretium semper. Aliquam erat volutpat. Fusce dapibus rutrum justo et suscipit. Quisque nec tempus eros, id sollicitudin augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tellus eu commodo suscipit. Duis eget turpis erat. Ut dui velit, scelerisque id efficitur at, aliquam non erat. Aenean scelerisque faucibus cursus.</p>
+  <div slot="actions">
+    <v-button @click="showDialog.large = false" :primary="true">Cancel</v-button>
+    <v-button @click="showAlert('you clicked confirm', 'large');" :primary="true">Confirm</v-button>
+  </div>
+</v-dialog>`,
+            dialogScript:
+`import VDialog from '../vex/Dialog.vue';
+import VButton from '../vex/Button.vue';
 
 export default {
   components: {
-    VChips
+    VDialog,
+    VButton
   },
 
+  // Data
   data () {
     return {
-      basicChips: ['Chip 1', 'Chip 2', 'Chip 3'],
-      readOnlyChips: ['Chip 1', 'Chip 2', 'Chip 3'],
+      showDialog: {
+        small: false,
+        medium: false,
+        large: false,
+      }
     }
   }
+
+  // Methods
+  methods: {
+    showAlert (alert, size) {
+      window.alert(alert);
+      this.showDialog[size] = false;
+    }
+  }    
 }`,
       }
     }
