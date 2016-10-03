@@ -5,20 +5,12 @@
   @extend .whiteframe-z1;
   padding: 0 24px;
   cursor: pointer;
-  transition: all .3s $swift-out;
   overflow: hidden;
   margin: 0 0;
   background-color: #fff;
   border-bottom: 1px solid rgba(0,0,0,.12);
   width: 100%;
-
-  &.closed {
-    height: 48px;
-  }
-
-  &.open {
-    margin: 16px 0;
-  }
+  height: 48px;
 
   i {
     width: 24px;
@@ -27,9 +19,11 @@
     top: -2px;
     transition: transform .3s $swift-out;
   }
+
   .col-xs-3 {
     margin-top: 14px;
   }
+  
   i.closed {
     transform: rotate(0deg);
   }

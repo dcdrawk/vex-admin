@@ -2,7 +2,7 @@
 
   <div v-el:panel class="v-expansion-panel" @click="togglePanel();" :class="{ 'closed': !open, 'open': open}">
     <!--<slot></slot>-->
-    <div class="row">
+    <div v-el:container class="row">
       <div class="col-xs-3 v-expansion-title">
         <strong>{{ title }}</strong>
       </div>
@@ -19,7 +19,7 @@
         <i class="material-icons" :class="{ 'closed': !open, 'open': open}">keyboard_arrow_down</i>
       </div>
 
-      <div v-el:content v-if="open" class="col-xs-12" transition="fade">
+      <div v-el:content v-show="open" class="col-xs-12" transition="fade">
         <slot></slot>
       </div>
     </div>
@@ -33,6 +33,9 @@
 
 </style>
 <script>
+  import gsap from 'gsap';
+  // import TweenMax from 'gsap';
+
   export default{
     props: [
       'open',
@@ -48,12 +51,9 @@
       }
     },
 
-    ready () {
-      setTimeout(() => {
-        // this.startHeight = this.$els.panel.clientHeight;
-        this.$els.panel.style.height = this.startHeight + 'px';
-      }, 0);
-    },
+    // ready () {
+
+    // },
 
     methods: {
       togglePanel () {
@@ -62,9 +62,9 @@
         setTimeout(() => {
           if (this.open) {
             var contentHeight = this.$els.content.clientHeight;
-            this.$els.panel.style.height = this.startHeight + contentHeight + 'px';
+            gsap.TweenLite.to(this.$els.panel, 0.3, { height: this.startHeight + contentHeight + "px", margin: '16px 0', ease: gsap.Power1.easeOut });
           } else {
-            this.$els.panel.style.height = this.startHeight + 'px';
+            gsap.TweenLite.to(this.$els.panel, 0.3, { height: "48px", margin: '0 0', ease: gsap.Power1.easeOut });
           }
         }, 0);
       }
