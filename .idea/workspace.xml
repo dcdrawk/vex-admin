@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Dialogs.vue" afterPath="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
@@ -11,6 +12,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_typography.scss" afterPath="$PROJECT_DIR$/src/styles/_typography.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_buttons.scss" afterPath="$PROJECT_DIR$/src/styles/components/_buttons.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_dialog.scss" afterPath="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> divider
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,6 +27,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -34,8 +40,13 @@
       <file leaf-file-name="_transitions.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="420">
               <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+=======
+            <state relative-caret-position="90">
+              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="59" />
+>>>>>>> divider
               <folding />
             </state>
           </provider>
@@ -44,8 +55,13 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="990">
               <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+=======
+            <state relative-caret-position="1440">
+              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+>>>>>>> divider
               <folding />
             </state>
           </provider>
@@ -54,11 +70,17 @@
       <file leaf-file-name="AppBar.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1695">
               <caret line="113" column="31" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
               <folding>
                 <marker date="1475507919338" expanded="true" signature="3496:3498" ph="{...}" />
               </folding>
+=======
+            <state relative-caret-position="72">
+              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+              <folding />
+>>>>>>> divider
             </state>
           </provider>
         </entry>
@@ -66,18 +88,31 @@
       <file leaf-file-name="Dialogs.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/pages/Dialogs.vue">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="555">
               <caret line="110" column="40" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+=======
+            <state relative-caret-position="108">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="39" />
+>>>>>>> divider
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Dialog.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Dialog.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+=======
+      <file leaf-file-name="Chips.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="914">
+              <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+>>>>>>> divider
               <folding />
             </state>
           </provider>
@@ -86,20 +121,56 @@
       <file leaf-file-name="_dialog.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="615">
               <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
               <folding>
                 <marker date="1475512889154" expanded="true" signature="1993:1996" ph="{...}" />
+=======
+            <state relative-caret-position="414">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <marker date="1475441693035" expanded="true" signature="2599:2753" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="2623:2646" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="2670:2694" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="2720:2743" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="2905:3107" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="2942:2965" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3010:3034" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3074:3097" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3286:3488" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3323:3346" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3391:3415" placeholder="..." />
+                <marker date="1475441693035" expanded="true" signature="3455:3478" placeholder="..." />
+>>>>>>> divider
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Card.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Card.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+=======
+      <file leaf-file-name="VTabs.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/VTabs.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_tabs.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/_tabs.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2124">
+              <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+>>>>>>> divider
               <folding />
             </state>
           </provider>
@@ -151,7 +222,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-        <option value="$PROJECT_DIR$/src/components/pages/Chips.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Forms.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Lists.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
@@ -159,28 +229,34 @@
         <option value="$PROJECT_DIR$/src/components/pages/Tabs.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_tabs.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/VTabs.vue" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
+=======
+        <option value="$PROJECT_DIR$/src/components/pages/Chips.vue" />
+>>>>>>> divider
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true">
     <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -199,37 +275,19 @@
             <id>Bitwise operation issuesJavaScript</id>
           </State>
           <State>
-            <id>Code quality toolsJavaScript</id>
-          </State>
-          <State>
-            <id>Code style issuesJavaScript</id>
+            <id>CoffeeScript</id>
           </State>
           <State>
             <id>Control flow issuesJavaScript</id>
           </State>
           <State>
-            <id>DOM issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Data flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>ECMAScript 6 migration aidsJavaScript</id>
-          </State>
-          <State>
-            <id>Error handlingJavaScript</id>
-          </State>
-          <State>
             <id>GeneralJavaScript</id>
           </State>
           <State>
-            <id>HTML</id>
+            <id>GeneralPHP</id>
           </State>
           <State>
             <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript function metricsJavaScript</id>
           </State>
           <State>
             <id>JavaScript validity issuesJavaScript</id>
@@ -238,13 +296,13 @@
             <id>Naming conventionsJavaScript</id>
           </State>
           <State>
-            <id>Node.jsJavaScript</id>
-          </State>
-          <State>
             <id>PHP</id>
           </State>
           <State>
             <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCoffeeScript</id>
           </State>
           <State>
             <id>Probable bugsJavaScript</id>
@@ -256,12 +314,12 @@
             <id>TypeScript</id>
           </State>
           <State>
-            <id>UndefinedPHP</id>
+            <id>XPath</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>HtmlFormInputWithoutLabel</id>
+            <id>BadExpressionStatementJS</id>
           </State>
         </selected-state>
       </profile-state>
@@ -292,6 +350,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> divider
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,6 +372,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="vex-admin" />
@@ -421,12 +484,16 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+=======
+        </subPane>
+      </pane>
+>>>>>>> divider
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -445,9 +512,6 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -475,19 +539,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -524,13 +575,21 @@
       <workItem from="1474322731757" duration="27074000" />
       <workItem from="1474494491108" duration="36133000" />
       <workItem from="1474914668738" duration="29830000" />
+<<<<<<< HEAD
       <workItem from="1475077958624" duration="31589000" />
       <workItem from="1475505726796" duration="1295000" />
       <workItem from="1475513497900" duration="234000" />
+=======
+      <workItem from="1475077958624" duration="26891000" />
+      <workItem from="1475457342395" duration="88000" />
+      <workItem from="1475459428899" duration="27000" />
+      <workItem from="1475459463124" duration="797000" />
+>>>>>>> divider
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="262683000" />
   </component>
   <component name="ToolWindowManager">
@@ -538,6 +597,15 @@
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="257368000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17004265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> divider
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -640,6 +708,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Template.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+>>>>>>> divider
         </state>
       </provider>
     </entry>
@@ -682,6 +760,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Card.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+          <caret line="31" column="110" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
+>>>>>>> divider
         </state>
       </provider>
     </entry>
@@ -696,6 +793,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+>>>>>>> divider
         </state>
       </provider>
     </entry>
@@ -766,6 +873,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -773,9 +881,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="46" />
+=======
+>>>>>>> divider
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git-gh-deploy" />
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -787,6 +898,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -836,12 +948,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+=======
+>>>>>>> divider
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gh-pages.js" />
     <entry file="file://$PROJECT_DIR$/src/components/pages/Forms.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
+        <state relative-caret-position="1440">
           <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
         </state>
       </provider>
@@ -855,28 +970,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Lists.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="72">
           <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> divider
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="525">
           <caret line="35" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+=======
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+>>>>>>> divider
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="990">
           <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+=======
+        <state relative-caret-position="108">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="39" />
+>>>>>>> divider
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="420">
           <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding />
@@ -897,12 +1027,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
+=======
+        <state relative-caret-position="90">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/components/_tabs.scss">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2124">
+          <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Buttons.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="59" />
+>>>>>>> divider
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/VTabs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1770">
           <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
         </state>
@@ -937,6 +1087,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="110" column="40" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+=======
+        <state relative-caret-position="630">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Tabs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <marker date="1475441693035" expanded="true" signature="2599:2753" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="2623:2646" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="2670:2694" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="2720:2743" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="2905:3107" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="2942:2965" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3010:3034" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3074:3097" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3286:3488" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3323:3346" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3391:3415" placeholder="..." />
+            <marker date="1475441693035" expanded="true" signature="3455:3478" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Chips.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+>>>>>>> divider
           <folding />
         </state>
       </provider>

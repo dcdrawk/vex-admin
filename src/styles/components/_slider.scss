@@ -14,6 +14,48 @@
   background-color: rgba(0,0,0,.26);
   height: 2px;
   margin: 16px 0;
+  position: relative;
+}
+
+.v-slider-bubble {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  color: #fff;
+  padding: 8px 0;
+  text-align: center;
+  left: 0px;
+  top: -26px;
+  background-color: $primary-color;
+  z-index: 5;
+  cursor: pointer;
+  transition: all .25s $swift-in;
+  opacity: 0;
+  &.focus {
+    transition: opacity .25s $swift-in;
+    opacity: 1;
+    // transition: none;
+  }
+
+  &::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #3f51b5;
+    content: " ";
+    opacity: 1;
+    top: -12px;
+    right: -6px;
+    z-index: -1;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  
+  &.has-value {
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
 }
 
 .v-slider-circle {
@@ -27,13 +69,14 @@
   background-color: #fff;
   z-index: 5;
   cursor: pointer;
-  transition: width .25s $swift-in, height .25s $swift-in, left .25s $swift-in, top .25s $swift-in;
+  transition: all .25s $swift-in;
 
   &.focus {
     width: 24px;
     height: 24px;
     left: 4px;
     top: 12px;
+    transition: none;
   }
   
   &.has-value {
@@ -49,7 +92,21 @@
   height: 2px;
   margin: 16px 0;
   top: 8px;
-  left: 8px;
+  left: 16px;
   transform-origin: 0 0;
+  transition: all .25s $swift-in;
   // transition: all .25s $swift-in;
+  &.focus {
+    transition: none;
+  }
+}
+
+.slider-dot {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0,0,0,.54);
+  display: inline-block;
+  position: absolute;
+  // transform: translateY(-2px);
 }

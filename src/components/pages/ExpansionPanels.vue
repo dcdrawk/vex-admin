@@ -28,31 +28,7 @@
           <pre><code class="language-javascript">{{ panelScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
-    
-    
-  </div>
-
-  <div class="row page-content">
-    <div class="col-xs-12">
-      <div>
-        <v-expansion-panel title="Expansion Panel 1" summary-text="Summary" secondary-text="Secondary">
-          <p>Expansion Panel Content</p>
-        </v-expansion-panel>
-      </div>
-      <div>
-        <v-expansion-panel title="Expansion Panel 2" summary-text="Summary" secondary-text="Secondary">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
-        </v-expansion-panel>
-      </div>
-      <div>
-        <v-expansion-panel title="Expansion Panel 3" summary-text="Summary" secondary-text="Secondary">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
-          <p>Proin finibus aliquam ante, id convallis lectus aliquam ut. Ut porttitor felis sed vestibulum volutpat. In a tristique odio. Praesent velit leo, finibus in eleifend sed, faucibus a justo. Pellentesque cursus ultrices sem vitae ultricies. Maecenas porta accumsan accumsan. In congue dignissim eros vel fermentum. Curabitur nibh nunc, feugiat quis leo non, eleifend euismod nulla. Aenean pretium eu diam auctor viverra.</p>
-          <p>Vivamus eu odio gravida, tincidunt nulla et, interdum augue. Aenean in risus ut lectus pretium semper. Aliquam erat volutpat. Fusce dapibus rutrum justo et suscipit. Quisque nec tempus eros, id sollicitudin augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tellus eu commodo suscipit. Duis eget turpis erat. Ut dui velit, scelerisque id efficitur at, aliquam non erat. Aenean scelerisque faucibus cursus.</p>
-        </v-expansion-panel>
-      </div>
-    </div>
+    </v-card>  
   </div>
 </template>
 

@@ -9,10 +9,21 @@
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 
-          <!-- Basic Toast -->
-          <h3 class="title">Basic Slider {{ value }}</h3>
-          <v-slider :value.sync="value"></v-slider>
+          <!-- Basic Slider -->
+          <h3 class="title">Basic Slider ({{ Math.round(value1) }})</h3>
+          <v-slider :value.sync="value1"></v-slider>
 
+          <!-- Basic Slider -->
+          <h3 class="title">Min Value of 10 ({{ Math.round(value2) }})</h3>
+          <v-slider :value.sync="value2" :min="10"></v-slider>
+
+          <!-- Basic Slider -->
+          <h3 class="title">Max Value of 50 ({{ Math.round(value3) }})</h3>
+          <v-slider :value.sync="value3" :max="50"></v-slider>
+
+          <!-- Basic Slider -->
+          <h3 class="title">Slider With Steps and Bubble ({{ Math.round(value4) }})</h3>
+          <v-slider :value.sync="value4" :steps="6" :show-bubble="true" :min="0" :max="5"></v-slider>
         </div>
         <div slot="template">
           <pre><code class="language-html">{{ toastMarkup }}</code></pre>
@@ -59,7 +70,10 @@
     // Data
     data () {
       return {
-        value: 0,
+        value1: 50,
+        value2: 20,
+        value3: 25,
+        value4: 0,
         showToast: {
           basic: false,
           action: false
@@ -104,6 +118,8 @@ export default {
       }
     }
   }
+
+  
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
