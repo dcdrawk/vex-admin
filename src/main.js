@@ -24,6 +24,7 @@ import Chips from './components/pages/Chips.vue';
 import Tabs from './components/pages/Tabs.vue';
 import Dialogs from './components/pages/Dialogs.vue';
 import ExpansionPanels from './components/pages/ExpansionPanels.vue';
+import Dividers from './components/pages/Dividers.vue';
 
 // Style
 import Typography from './components/pages/Style/Typography.vue';
@@ -76,6 +77,9 @@ router.map({
   },
   '/components/expansion-panels': {
     component: ExpansionPanels
+  },
+  '/components/dividers': {
+    component: Dividers
   },
 
   //Style Pages

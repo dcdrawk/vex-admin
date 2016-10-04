@@ -32,6 +32,7 @@
         <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
         <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
         <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
+        <list-item v-el:dividers text="Dividers" v-link="'/components/dividers'" :no-ripple="true" @click="setActive('dividers')"></list-item>
       </list>
 
       <list dense="true">
