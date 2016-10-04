@@ -1,23 +1,17 @@
 <template>
   <div class="row page-content">
     <!--Title-->
-    <h1 class="col-xs-12 display-1">Toasts</h1>
+    <h1 class="col-xs-12 display-1">Sliders</h1>
 
     <!--Card Content-->
-    <v-card title="Toasts" class="col-xs-12">
+    <v-card title="Sliders" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 
           <!-- Basic Toast -->
-          <h3 class="title">Basic Toast</h3>
-          <v-button @click="toggleToast('basic')">show basic toast</v-button>
-          <v-toast :toggle.sync="showToast.basic" text="Simple Toast"></v-toast>
-
-          <!-- Toast with Action -->
-          <h3 class="title">Toast With Action</h3>
-          <v-button @click="toggleToast('action')">Toast with Action</v-button>
-          <v-toast :toggle.sync="showToast.action" text="Toast with Action" action-text="undo" :action="undoAction"></v-toast>
+          <h3 class="title">Basic Slider {{ value }}</h3>
+          <v-slider :value.sync="value"></v-slider>
 
         </div>
         <div slot="template">
@@ -34,7 +28,7 @@
 <script>
   // Imports
   import VCard from '../vex/Card.vue';
-  import VToast from '../vex/Toast.vue';
+  import VSlider from '../vex/Slider.vue';
   import VButton from '../vex/Button.vue';
   import VTabs from '../vex/VTabs.vue';
   import Prism from 'prismjs';
@@ -45,7 +39,7 @@
     // Components
     components: {
       VCard,
-      VToast,
+      VSlider,
       VButton,
       VTabs,
     },
@@ -65,6 +59,7 @@
     // Data
     data () {
       return {
+        value: 0,
         showToast: {
           basic: false,
           action: false

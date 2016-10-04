@@ -31,6 +31,7 @@
         <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
         <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
         <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
+        <list-item v-el:sliders text="Sliders" v-link="'/components/sliders'" :no-ripple="true" @click="setActive('sliders')"></list-item>
         <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
       </list>
 

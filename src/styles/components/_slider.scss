@@ -1,0 +1,55 @@
+@import '../variables';
+
+.v-slider-container {
+  width: 100%;
+  padding: 8px 16px;
+  position: relative;
+
+  * {
+    user-select: none;
+  }
+}
+.v-slider {
+  width: 100%;
+  background-color: rgba(0,0,0,.26);
+  height: 2px;
+  margin: 16px 0;
+}
+
+.v-slider-circle {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border: 2px solid rgba(0,0,0,.26);
+  left: 8px;
+  top: 17px;
+  background-color: #fff;
+  z-index: 5;
+  cursor: pointer;
+  transition: width .25s $swift-in, height .25s $swift-in, left .25s $swift-in, top .25s $swift-in;
+
+  &.focus {
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 12px;
+  }
+  
+  &.has-value {
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
+}
+
+.v-slider-indicator {
+  position: absolute;
+  width: calc(100% - 32px);
+  background-color: $primary-color;
+  height: 2px;
+  margin: 16px 0;
+  top: 8px;
+  left: 8px;
+  transform-origin: 0 0;
+  // transition: all .25s $swift-in;
+}

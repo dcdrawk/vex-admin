@@ -23,6 +23,7 @@ import Toasts from './components/pages/Toasts.vue';
 import Chips from './components/pages/Chips.vue';
 import Tabs from './components/pages/Tabs.vue';
 import Dialogs from './components/pages/Dialogs.vue';
+import Sliders from './components/pages/Sliders.vue';
 import ExpansionPanels from './components/pages/ExpansionPanels.vue';
 
 // Style
@@ -76,6 +77,9 @@ router.map({
   },
   '/components/expansion-panels': {
     component: ExpansionPanels
+  },
+  '/components/sliders': {
+    component: Sliders
   },
 
   //Style Pages
