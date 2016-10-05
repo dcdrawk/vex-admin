@@ -81,6 +81,41 @@
       </v-tabs>
     </v-card>
 
+    <!--Radio Button Demo-->
+    <v-card title="Radio Button" class="col-xs-12">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
+
+          <!-- Basic Radio Buttons -->
+          <h3 class="title">Basic Radio Buttons</h3>
+          <v-radio-group :value.sync="radioValue1">
+            <v-radio-button value="Stan"></v-radio-button>
+            <v-radio-button value="Kyle"></v-radio-button>
+            <v-radio-button value="Cartman"></v-radio-button>
+            <v-radio-button value="Kenny"></v-radio-button>
+          </v-radio-group>
+          <p>Value: {{ radioValue1 }}</p>
+
+          <!-- Secondary Color Radio Buttons -->
+          <h3 class="title">Secondary Color Radio Buttons</h3>
+          <v-radio-group :value.sync="radioValue2">
+            <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
+            <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
+            <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>
+            <v-radio-button value="Kenny" :secondary-color="true"></v-radio-button>
+          </v-radio-group>
+          <p>Value: {{ radioValue2 }}</p>
+
+        </div>
+        <div slot="template">
+          <pre><code class="language-html">{{ radioButtonMarkup }}</code></pre>
+        </div>
+        <div slot="script">
+          <pre><code class="language-javascript">{{ radioButtonScript }}</code></pre>
+        </div>
+      </v-tabs>
+    </v-card>
+
     <!--Checkbox Demo-->
     <v-card title="Checkbox" class="col-xs-12">
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
@@ -113,7 +148,10 @@
   import VTextarea from '../vex/Textarea.vue';
   import VCheckbox from '../vex/Checkbox.vue';
   import VSelect from '../vex/Select.vue';
+  import VRadioGroup from '../vex/RadioGroup.vue';
+  import VRadioButton from '../vex/RadioButton.vue';
   import VTabs from '../vex/VTabs.vue';
+
   import Prism from 'prismjs';
 
   // Exports
@@ -126,6 +164,8 @@
       VCheckbox,
       VTextarea,
       VSelect,
+      VRadioGroup,
+      VRadioButton,
       VTabs,
     },
     ready () {
@@ -214,6 +254,44 @@ export default {
     }
   }
 }`,
+        radioButtonMarkup: `<!-- Basic Radio Buttons -->
+<h3 class="title">Basic Radio Buttons</h3>
+<v-radio-group :value.sync="radioValue1">
+  <v-radio-button value="Stan"></v-radio-button>
+  <v-radio-button value="Kyle"></v-radio-button>
+  <v-radio-button value="Cartman"></v-radio-button>
+  <v-radio-button value="Kenny"></v-radio-button>
+</v-radio-group>
+<p>Value: {{ radioValue1 }}</p>
+
+<!-- Secondary Color Radio Buttons -->
+<h3 class="title">Secondary Color Radio Buttons</h3>
+<v-radio-group :value.sync="radioValue2">
+  <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
+  <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
+  <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>
+  <v-radio-button value="Kenny" :secondary-color="true"></v-radio-button>
+</v-radio-group>
+<p>Value: {{ radioValue2 }}</p>`,
+        radioButtonScript:
+`import VRadioGroup from '../vex/RadioGroup.vue';
+import VRadioButton from '../vex/RadioButton.vue';
+
+export default {
+  components: {
+    VRadioGroup,
+    VRadioButton
+  },
+
+  data () {
+    return {
+      radioValue1: 'Kyle',
+      radioValue2: 'Cartman'
+    }
+  }
+}`,
+        radioValue1: 'Kyle',
+        radioValue2: 'Cartman',
         options: ['option 1', 'option 2', 'option 3']
       }
     }
