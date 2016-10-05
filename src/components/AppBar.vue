@@ -1,51 +1,47 @@
 <template>
   <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
+    <toolbar title="Vex Admin">
+      <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
+    </toolbar>
 
+    <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
-  <toolbar title="Vex Admin">
-    <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
-  </toolbar>
-
-  <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
-
-  <sidebar :open="open" class="locked-open">
-    <!--<div class="avatar-container" v-if="user">-->
-      <!--<div class="avatar" v-if="!user.photoURL"></div>-->
-      <!--<img class="avatar" v-else :src="user.photoURL">-->
-      <!--<div class="user-info">-->
-        <!--<p class="body-1">{{ user.displayName }}</p>-->
-        <!--<p class="body-1 secondary-text">{{ user.email}}</p>-->
+    <sidebar :open="open" class="locked-open">
+      <!--<div class="avatar-container" v-if="user">-->
+        <!--<div class="avatar" v-if="!user.photoURL"></div>-->
+        <!--<img class="avatar" v-else :src="user.photoURL">-->
+        <!--<div class="user-info">-->
+          <!--<p class="body-1">{{ user.displayName }}</p>-->
+          <!--<p class="body-1 secondary-text">{{ user.email}}</p>-->
+        <!--</div>-->
       <!--</div>-->
-    <!--</div>-->
 
-    <nav class="sidebar-nav">
-      <list dense="true">
-        <list-item text="Components" bold="true" @click="expand('components')"></list-item>
-      </list>
-      <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item v-el:buttons text="Buttons" v-link="'/components/buttons'" :no-ripple="true" @click="setActive('buttons')"></list-item>
-        <list-item v-el:lists text="Lists" v-link="'/components/lists'" :no-ripple="true" @click="setActive('lists')"></list-item>
-        <list-item v-el:cards text="Cards" v-link="'/components/cards'" :no-ripple="true" @click="setActive('cards')"></list-item>
-        <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
-        <list-item v-el:toasts text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
-        <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
-        <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
-        <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
-        <list-item v-el:sliders text="Sliders" v-link="'/components/sliders'" :no-ripple="true" @click="setActive('sliders')"></list-item>
-        <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
-        <list-item v-el:dividers text="Dividers" v-link="'/components/dividers'" :no-ripple="true" @click="setActive('dividers')"></list-item>
-      </list>
+      <nav class="sidebar-nav">
+        <list dense="true">
+          <list-item text="Components" bold="true" @click="expand('components')"></list-item>
+        </list>
+        <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
+          <list-item v-el:buttons text="Buttons" v-link="'/components/buttons'" :no-ripple="true" @click="setActive('buttons')"></list-item>
+          <list-item v-el:lists text="Lists" v-link="'/components/lists'" :no-ripple="true" @click="setActive('lists')"></list-item>
+          <list-item v-el:cards text="Cards" v-link="'/components/cards'" :no-ripple="true" @click="setActive('cards')"></list-item>
+          <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
+          <list-item v-el:toasts text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
+          <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
+          <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
+          <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
+          <list-item v-el:sliders text="Sliders" v-link="'/components/sliders'" :no-ripple="true" @click="setActive('sliders')"></list-item>
+          <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
+          <list-item v-el:dividers text="Dividers" v-link="'/components/dividers'" :no-ripple="true" @click="setActive('dividers')"></list-item>
+        </list>
 
-      <list dense="true">
-        <list-item text="Style" bold="true" @click="expand('style')"></list-item>
-      </list>
-      <list dense="true" v-ref:style style="height: 0px; overflow: hidden;" class="secondary-list">
-        <list-item v-el:typography text="Typography" v-link="'/style/typography'" :no-ripple="true" @click="setActive('typography')"></list-item>
-      </list>
-    </nav>
-  </sidebar>
-
-    <!--TEST-->
+        <list dense="true">
+          <list-item text="Style" bold="true" @click="expand('style')"></list-item>
+        </list>
+        <list dense="true" v-ref:style style="height: 0px; overflow: hidden;" class="secondary-list">
+          <list-item v-el:typography text="Typography" v-link="'/style/typography'" :no-ripple="true" @click="setActive('typography')"></list-item>
+        </list>
+      </nav>
+    </sidebar>
   </div>
 </template>
 
@@ -130,15 +126,19 @@
       }
     },
     ready () {
-      console.log(this);
       var path = this.$route.path;
       var pathArray = path.replace(/-+/, '').replace(/\/+/, '').split('/');
 
       this.expand(pathArray[0]);
       this.setActive(pathArray[1]);
 
-
-      console.log(pathArray);
+      window.onpopstate = (event) => {
+        setTimeout(() => {
+          var path = this.$route.path;
+          var pathArray = path.replace(/-+/, '').replace(/\/+/, '').split('/');
+          this.setActive(pathArray[1]);
+        }, 0);
+      };
     }
   }
 
