@@ -11,7 +11,7 @@ s<template>
 
           <!-- Basic Divider -->
           <h3 class="title">Basic Divider</h3>
-          <v-divider :toggle.sync="showToast.basic" text="Simple Toast"></v-divider>
+          <v-divider></v-divider>
 
           <!-- Divider in List -->
           <h3 class="title">Divider in a List</h3>
@@ -19,7 +19,7 @@ s<template>
             <v-list-item text="List Item 1"></v-list-item>
             <v-list-item text="List Item 2"></v-list-item>
             <v-list-item text="List Item 3"></v-list-item>
-            <v-divider :toggle.sync="showToast.basic" text="Simple Toast"></v-divider>
+            <v-divider></v-divider>
             <v-list-item text="List Item 4"></v-list-item>
             <v-list-item text="List Item 5"></v-list-item>
             <v-list-item text="List Item 6"></v-list-item>
@@ -66,7 +66,7 @@ s<template>
       return {
         dividerMarkup: `<!-- Basic Divider -->
 <h3 class="title">Basic Divider</h3>
-<v-divider :toggle.sync="showToast.basic" text="Simple Toast"></v-divider>
+<v-divider></v-divider>
 
 <!-- Divider in List -->
 <h3 class="title">Divider in a List</h3>
@@ -74,7 +74,7 @@ s<template>
   <v-list-item text="List Item 1"></v-list-item>
   <v-list-item text="List Item 2"></v-list-item>
   <v-list-item text="List Item 3"></v-list-item>
-  <v-divider :toggle.sync="showToast.basic" text="Simple Toast"></v-divider>
+  <v-divider></v-divider>
   <v-list-item text="List Item 4"></v-list-item>
   <v-list-item text="List Item 5"></v-list-item>
   <v-list-item text="List Item 6"></v-list-item>

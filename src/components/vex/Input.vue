@@ -1,6 +1,6 @@
 <template>
   <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
-    <label>{{label}}</label>
+    <label v-if="label">{{label}}</label>
     <input v-model="value" v-focus-model="focused" :placeholder="placeholder" :type="type"/>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
-  <div class="material-select-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
+  <div class="material-select-container" v-bind:class="{ 'has-value': value, 'focus': focused || open}">
     <div class="material-select" @click="openSelect()">
+      <label v-if="label">{{label}}</label>
       <span v-if="value">{{value}}</span>
       <span v-if="placeholder && !value">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
@@ -19,7 +20,6 @@
 
 <style lang="scss">
   @import '../../styles/components/_select.scss';
-
 </style>
 <script>
   import { focusModel } from 'vue-focus';

@@ -65,7 +65,11 @@
 
           <!-- Basic Select -->
           <h3 class="title">Basic Select</h3>
-          <v-select :options="options" placeholder="Select Option"></v-select>
+          <v-select :options="options" placeholder="Select Option" :value.sync="selectValue"></v-select>
+
+          <!-- Select -->
+          <h3 class="title">Select with Floating Label</h3>
+          <v-select :options="options" label="Select Label"></v-select>
 
         </div>
         <div slot="template">
@@ -134,6 +138,7 @@
     // Data
     data () {
       return {
+        selectValue: '',
         inputMarkup: `<!-- Basic Input -->
 <h3 class="title">Basic Input</h3>
 <v-input value="Basic Input"></v-input>
@@ -189,7 +194,11 @@ export default {
 }`,
         selectMarkup: `<!-- Basic Select -->
 <h3 class="title">Basic Select</h3>
-<v-select :options="options" placeholder="Select Option"></v-select>`,
+<v-select :options="options" placeholder="Select Option" :value.sync="selectValue"></v-select>
+
+<!-- Select -->
+<h3 class="title">Select with Floating Label</h3>
+<v-select :options="options" label="Select Label"></v-select>`,
         selectScript:
 `import VSelect from '../vex/Select.vue';
 
@@ -200,6 +209,7 @@ export default {
 
   data () {
     return {
+      selectValue: '',
       options: ['option 1', 'option 2', 'option 3']
     }
   }

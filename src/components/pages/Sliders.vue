@@ -13,23 +13,23 @@
           <h3 class="title">Basic Slider ({{ Math.round(value1) }})</h3>
           <v-slider :value.sync="value1"></v-slider>
 
-          <!-- Basic Slider -->
+          <!-- Slider with Min Value -->
           <h3 class="title">Min Value of 10 ({{ Math.round(value2) }})</h3>
           <v-slider :value.sync="value2" :min="10"></v-slider>
 
-          <!-- Basic Slider -->
+          <!-- Slider with Max Value-->
           <h3 class="title">Max Value of 50 ({{ Math.round(value3) }})</h3>
           <v-slider :value.sync="value3" :max="50"></v-slider>
 
-          <!-- Basic Slider -->
-          <h3 class="title">Slider With Steps and Bubble ({{ Math.round(value4) }})</h3>
+          <!-- Slider with Steps / Bubble -->
+          <h3 class="title">Slider With Steps / Bubble ({{ Math.round(value4) }})</h3>
           <v-slider :value.sync="value4" :steps="6" :show-bubble="true" :min="0" :max="5"></v-slider>
         </div>
         <div slot="template">
-          <pre><code class="language-html">{{ toastMarkup }}</code></pre>
+          <pre><code class="language-html">{{ sliderMarkup }}</code></pre>
         </div>
         <div slot="script">
-          <pre><code class="language-javascript">{{ toastScript }}</code></pre>
+          <pre><code class="language-javascript">{{ sliderScript }}</code></pre>
         </div>
       </v-tabs>
     </v-card>
@@ -59,13 +59,7 @@
       Prism.highlightAll();
     },
     methods: {
-      toggleToast (toast) {
-        this.showToast[toast] = true;
-      },
 
-      undoAction () {
-        window.alert('You Clicked Undo');
-      }
     },
     // Data
     data () {
@@ -74,52 +68,41 @@
         value2: 20,
         value3: 25,
         value4: 0,
-        showToast: {
-          basic: false,
-          action: false
-        },
+        sliderMarkup: `<!-- Basic Slider -->
+<h3 class="title">Basic Slider ({{ Math.round(value1) }})</h3>
+<v-slider :value.sync="value1"></v-slider>
 
-        toastMarkup: `<!-- Basic Toast -->
-<h3 class="title">Basic Toast</h3>
-<v-button @click="toggleToast('basic')">show basic toast</v-button>
-<v-toast :toggle.sync="showToast.basic" text="Simple Toast"></v-toast>
+<!-- Slider with Min Value -->
+<h3 class="title">Min Value of 10 ({{ Math.round(value2) }})</h3>
+<v-slider :value.sync="value2" :min="10"></v-slider>
 
-<!-- Toast with Action -->
-<h3 class="title">Basic Toast</h3>
-<v-button @click="toggleToast('action')">Toast with Action</v-button>
-<v-toast :toggle.sync="showToast.action" text="Toast with Action" action-text="undo" :action="undoAction"></v-toast>`,
-        toastScript:
-`import VToast from '../vex/Toast.vue';
+<!-- Slider with Max Value-->
+<h3 class="title">Max Value of 50 ({{ Math.round(value3) }})</h3>
+<v-slider :value.sync="value3" :max="50"></v-slider>
+
+<!-- Slider with Steps / Bubble -->
+<h3 class="title">Slider With Steps / Bubble ({{ Math.round(value4) }})</h3>
+<v-slider :value.sync="value4" :steps="6" :show-bubble="true" :min="0" :max="5"></v-slider>`,
+        sliderScript:
+`import VSlider from '../vex/Slider.vue';
 
 export default {
   components: {
-    VToast
+    VSlider
   },
 
   data () {
     return {
-      showToast: {
-        basic: false,
-        action: false
-      }
-    }
-  },
-
-  methods {
-    toggleToast (toast) {
-      this.showToast[toast] = true;
-    },
-
-    undoAction () {
-      window.alert('You Clicked Undo');
+      value1: 50,
+      value2: 20,
+      value3: 25,
+      value4: 0,
     }
   }
 }`,
       }
     }
   }
-
-  
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
