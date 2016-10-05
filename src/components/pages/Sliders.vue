@@ -39,7 +39,7 @@
 <script>
   // Imports
   import VCard from '../vex/Card.vue';
-  import VSlider from '../vex/Slider.vue';
+//  import VSlider from '../vex/Slider.vue';
   import VButton from '../vex/Button.vue';
   import VTabs from '../vex/VTabs.vue';
   import Prism from 'prismjs';
@@ -50,7 +50,7 @@
     // Components
     components: {
       VCard,
-      VSlider,
+//      VSlider,
       VButton,
       VTabs,
     },

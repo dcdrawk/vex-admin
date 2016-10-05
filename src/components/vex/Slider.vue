@@ -1,5 +1,5 @@
 <template>
-  <div v-el:container class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }"  @mousedown="clickSlider($event)">
+  <div v-el:container class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }" @mousedown="clickSlider($event)">
     <div v-el:slider class="v-slider"></div>
     <div v-el:circle class="v-slider-circle" :class="{ 'has-value': hasValue, 'focus': focused }"></div>
 
