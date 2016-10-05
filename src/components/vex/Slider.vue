@@ -1,7 +1,9 @@
 <template>
-  <div v-el:container class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }" @mousedown="clickSlider($event)">
+  <div v-el:container class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }"  v-focus="focused" @focus="focused = true"  @blur="focused = false" @mousedown="clickSlider($event)">
     <div v-el:slider class="v-slider"></div>
-    <div v-el:circle class="v-slider-circle" :class="{ 'has-value': hasValue, 'focus': focused }"></div>
+    <div v-el:circle class="v-slider-circle-container" :class="{ 'has-value': hasValue, 'focus': focused }">
+      <div class="v-slider-circle"></div>
+    </div>
 
     <div v-el:bubble class="v-slider-bubble" :class="{ 'focus': focused }" v-show="showBubble">
       {{ Math.round(value) }}
@@ -15,12 +17,12 @@
   @import '../../styles/components/slider';
 </style>
 <script>
-  import { focusModel } from 'vue-focus';
+  import { focus } from 'vue-focus';
   import Hammer from 'hammerjs';
   import gsap from 'gsap';
 
   export default {
-    directives: { focusModel: focusModel },
+    directives: { focus: focus },
     name: 'MaterialButton',
     props: [
       'value',
@@ -110,7 +112,6 @@
             }
           }
         }
-        console.log(steps);
       }
     },
 
@@ -173,12 +174,8 @@
               this.setPosition((this.value - this.min) / (this.max - this.min));
             }, 0);
           }
-
-          if (Math.round(val * 100) > 0) {
-            this.hasValue = true;
-          } else {
-            this.hasValue = false;
-          }
+//          this.hasValue = Math.round(val * 100) > 0;
+          this.hasValue = Math.round(this.value) > this.min;
         }
       }
     }
