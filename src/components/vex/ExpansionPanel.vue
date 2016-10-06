@@ -28,9 +28,6 @@
 </template>
 <style lang="scss">
   @import '../../styles/components/expansion-panels';
-
-  
-
 </style>
 <script>
   import gsap from 'gsap';
