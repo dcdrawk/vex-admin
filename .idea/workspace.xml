@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/components/_dropdowns.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/ExpansionPanel.vue" afterPath="$PROJECT_DIR$/src/components/vex/ExpansionPanel.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_layout.scss" afterPath="$PROJECT_DIR$/src/styles/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_dividers.scss" afterPath="$PROJECT_DIR$/src/styles/components/_dividers.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_lists.scss" afterPath="$PROJECT_DIR$/src/styles/components/_lists.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_select.scss" afterPath="$PROJECT_DIR$/src/styles/components/_select.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_dialog.scss" afterPath="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,21 +35,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dropdowns.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dropdowns.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="148" column="12" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+            <state relative-caret-position="543">
+              <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
               <folding>
-                <marker date="1475797032307" expanded="true" signature="3416:3943" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="3427:3631" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="3668:3820" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="3857:3929" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="4186:4713" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="4197:4401" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="4438:4590" ph="..." />
-                <marker date="1475797032307" expanded="true" signature="4627:4699" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="3416:3943" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="3427:3631" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="3668:3820" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="3857:3929" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="4186:4713" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="4197:4401" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="4438:4590" ph="..." />
+                <marker date="1475797103701" expanded="true" signature="4627:4699" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,6 +69,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="633">
               <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="422" selection-start-line="0" selection-start-column="422" selection-end-line="0" selection-end-column="422" />
               <folding />
             </state>
           </provider>
@@ -108,6 +119,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
               <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dialog.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="102" column="3" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -163,10 +184,8 @@
         <option value="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Tabs.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/VTabs.vue" />
-        <option value="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/styles/components/_toasts.scss" />
         <option value="$PROJECT_DIR$/src/styles/components/_slider.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/Slider.vue" />
@@ -181,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/components/vex/RadioButton.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/RadioGroup.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Forms.vue" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/vex/ExpansionPanel.vue" />
@@ -192,6 +210,9 @@
         <option value="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_dropdowns.scss" />
         <option value="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
       </list>
     </option>
   </component>
@@ -578,12 +599,12 @@
       <workItem from="1475505726796" duration="1295000" />
       <workItem from="1475513497900" duration="234000" />
       <workItem from="1475683495814" duration="388000" />
-      <workItem from="1475683965091" duration="22507000" />
+      <workItem from="1475683965091" duration="24422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285578000" />
+    <option name="totallyTimeSpent" value="287493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -739,14 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Dialog.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -798,14 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-551">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="367" selection-start-line="0" selection-start-column="367" selection-end-line="0" selection-end-column="367" />
           <folding />
         </state>
       </provider>
@@ -888,14 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1009,6 +1006,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+          <folding>
+            <marker date="1475797103701" expanded="true" signature="3416:3943" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="3427:3631" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="3668:3820" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="3857:3929" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="4186:4713" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="4197:4401" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="4438:4590" ph="..." />
+            <marker date="1475797103701" expanded="true" signature="4627:4699" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="422" selection-start-line="0" selection-start-column="422" selection-end-line="0" selection-end-column="422" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/components/_dropdowns.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1025,20 +1047,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="148" column="12" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
-          <folding>
-            <marker date="1475797032307" expanded="true" signature="3416:3943" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="3427:3631" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="3668:3820" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="3857:3929" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="4186:4713" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="4197:4401" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="4438:4590" ph="..." />
-            <marker date="1475797032307" expanded="true" signature="4627:4699" ph="..." />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/_dialog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="102" column="3" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
