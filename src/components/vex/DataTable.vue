@@ -1,18 +1,21 @@
 <template>
-  <div class="material-data-table">
+  <div class="material-data-table" :class="{ 'responsive': responsive, 'bordered': border, 'striped': striped, 'hover': hover }">
     <!--TABLE-->
     <div class="material-data-table-container">
       <table>
         <thead>
           <tr>
-            <th v-for="column in columns">
-              <i class="material-icons" v-if="$index !== 0"
-                 v-bind:class="{'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+            <th v-if="selection" class="v-selection v-select-all">
+              <v-checkbox value="true"></v-checkbox>
+            </th>
+            <th v-for="column in columns" :class="{ 'v-first-col': $index === 0 }">
+              <i class="material-icons v-order-by" v-if="$index !== 0"
+                 v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
                 arrow_downward
               </i>
               <span @click="orderBy(column.key);">{{ column.head }}</span>
-              <i class="material-icons" v-if="$index === 0"
-                 v-bind:class="{'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+              <i class="material-icons v-order-by" v-if="$index === 0"
+                 v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
                 arrow_downward
               </i>
             </th>
@@ -21,7 +24,10 @@
         <tbody>
         <!--<tr v-for="row in rows | filterBy filter in 'name' | orderBy order direction | testLength 'count'" >-->
           <tr v-for="row in rows | filterBy filter in 'name' | orderBy order direction | numRows 'count'">
-            <td v-for="column in columns">
+            <td v-if="selection" class="v-selection">
+              <v-checkbox value="true"></v-checkbox>
+            </td>
+            <td v-for="column in columns" data-title="{{[column.head]}}" :class="{ 'v-first-col': $index === 0 }">
               {{row[column.key]}}
             </td>
           </tr>
@@ -47,11 +53,14 @@
 </style>
 
 <script>
-  import Button from './Button'
+  import Button from './Button';
+  import VCheckbox from './Checkbox.vue';
 
-  export default{
+  export default {
+
     components: {
-      Button
+      Button,
+      VCheckbox
     },
 
     props: [
@@ -60,7 +69,12 @@
       'order',
       'direction',
       'filter',
-      'count'
+      'count',
+      'responsive',
+      'border',
+      'striped',
+      'hover',
+      'selection'
     ],
     methods: {
       orderBy(property) {

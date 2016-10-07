@@ -1,7 +1,5 @@
 <template>
   <div class="row page-content">
-    <!--Title-->
-    <h1 class="col-xs-12 display-1">Forms</h1>
 
     <v-card title="Input Fields" class="col-xs-12">
 

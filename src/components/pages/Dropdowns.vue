@@ -1,7 +1,5 @@
 <template>
   <div class="row page-content">
-    <!--Title-->
-    <h1 class="col-xs-12 display-1">Dropdowns</h1>
 
     <!--Select Demo-->
     <v-card title="Dropdowns" class="col-xs-12">
