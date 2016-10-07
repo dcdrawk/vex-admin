@@ -1,7 +1,7 @@
 @import '../whiteframe';
 @import '../variables';
 
-.material-select-container {
+.v-select-container {
   position: relative;
   margin: 16px 0;
 
@@ -37,7 +37,7 @@
   }
 
 }
-.material-select {
+.v-select {
   align-items: center;
   display: inline-flex;
   padding: 4px 4px;
@@ -56,7 +56,7 @@
   }
 }
 
-.material-select-option-container {
+.v-select-option-container {
   @extend .whiteframe-z2;
   position: absolute;
   top: -19px;
@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-.material-select-option {
+.v-select-option {
   font-size: 16px;
   height: 48px;
   display: flex;
@@ -84,7 +84,7 @@
   }
 }
 
-.material-select-backdrop {
+.v-select-backdrop {
   position: fixed;
   height: 100vh;
   width: 100vw;

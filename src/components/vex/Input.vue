@@ -1,7 +1,7 @@
 <template>
-  <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
+  <div class="v-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label v-if="label">{{label}}</label>
-    <input v-model="value" v-focus-model="focused" :placeholder="placeholder" :type="type"/>
+    <input v-el:input v-model="value" v-focus-model="focused" :placeholder="placeholder" :type="type"/>
   </div>
 </template>
 
