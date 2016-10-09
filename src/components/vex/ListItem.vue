@@ -37,7 +37,7 @@
       'bold',
       'noRipple'
     ],
-    ready () {
+    mounted () {
       if (!this.noRipple) {
         var button = this.$el;
 

@@ -116,10 +116,10 @@
         }
       },
       setActive (listItem) {
-        for (var i in this.$els) {
-          this.$els[i].classList.remove('active');
+        for (var i in this.$refs) {
+          this.$refs[i].classList.remove('active');
         }
-        this.$els[listItem].classList.add('active');
+        this.$refs[listItem].classList.add('active');
       }
     },
     vuex: {
@@ -132,7 +132,7 @@
         return store.state.user
       }
     },
-    ready () {
+    mounted () {
       var path = this.$route.path;
       var pathArray = path.replace(/-+/, '').replace(/\/+/, '').split('/');
 

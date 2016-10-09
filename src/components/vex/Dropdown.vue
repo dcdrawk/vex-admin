@@ -25,13 +25,13 @@
     methods: {
       openDropdown () {
         console.log(this);
-        var container = this.$els.container;
+        var container = this.$refs.container;
         gsap.TweenLite.to(container, 0.25, { height: this.totalHeight + "px", opacity: 1, ease: gsap.Power1.easeOut });
       },
 
       closeDropdown () {
         this.open = false;
-        var container = this.$els.container;
+        var container = this.$refs.container;
         gsap.TweenLite.to(container, 0.25, { height: '0px', opacity: 0, ease: gsap.Power1.easeOut });
       },
     },
@@ -42,9 +42,9 @@
       }
     },
 
-    ready () {
+    mounted () {
       setTimeout(() => {
-        var container = this.$els.container;
+        var container = this.$refs.container;
         this.totalHeight = container.clientHeight;
 
         console.log(this.totalHeight);

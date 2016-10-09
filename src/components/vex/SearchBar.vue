@@ -40,7 +40,7 @@
       }
     },
 
-    ready () {
+    mounted () {
       this.searchResults = [];
     },
 

@@ -139,8 +139,8 @@
     components: {
       Card
     },
-    ready () {
-      console.log('ready');
+    mounted () {
+      console.log('mounted');
     }
   }
 </script>

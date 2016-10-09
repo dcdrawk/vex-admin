@@ -85,7 +85,7 @@
       VDivider,
       VIconButton
     },
-    ready () {
+    mounted () {
       // Syntax Highlighting
       Prism.highlightAll();
     },

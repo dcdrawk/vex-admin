@@ -36,7 +36,7 @@ export default {
       actions: ['test', 'test2']
     }
   },
-  ready () {
+  mounted () {
     // Initialize Firebase
     var config = {
       apiKey: 'AIzaSyACdSfcm596fdnyoIFiovJWlq_15g0Vuag',
@@ -44,7 +44,7 @@ export default {
       databaseURL: 'https://codex-9bc8c.firebaseio.com',
       storageBucket: 'codex-9bc8c.appspot.com',
     };
-    console.log('App is Ready');
+    console.log('App is mounted');
     firebase.initializeApp(config);
 
     firebase.auth().onAuthStateChanged((user) => {

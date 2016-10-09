@@ -48,7 +48,7 @@
       }
     },
 
-    // ready () {
+    // mounted () {
 
     // },
 
@@ -58,10 +58,10 @@
 
         setTimeout(() => {
           if (this.open) {
-            var contentHeight = this.$els.content.clientHeight;
-            gsap.TweenLite.to(this.$els.panel, 0.3, { height: this.startHeight + contentHeight + "px", margin: '16px 0', ease: gsap.Power1.easeOut });
+            var contentHeight = this.$refs.content.clientHeight;
+            gsap.TweenLite.to(this.$refs.panel, 0.3, { height: this.startHeight + contentHeight + "px", margin: '16px 0', ease: gsap.Power1.easeOut });
           } else {
-            gsap.TweenLite.to(this.$els.panel, 0.3, { height: "48px", margin: '0 0', ease: gsap.Power1.easeOut });
+            gsap.TweenLite.to(this.$refs.panel, 0.3, { height: "48px", margin: '0 0', ease: gsap.Power1.easeOut });
           }
         }, 0);
       }

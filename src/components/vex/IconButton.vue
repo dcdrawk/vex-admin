@@ -22,8 +22,8 @@
       'icon',
 
     ],
-    ready () {
-      var button = this.$els.button;
+    mounted () {
+      var button = this.$refs.button;
 
       // New PaperRipple for the button
       var ripple = new PaperRipple();

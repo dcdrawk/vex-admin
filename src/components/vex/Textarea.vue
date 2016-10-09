@@ -32,7 +32,7 @@
 
     methods: {
       auto_grow() {
-        var element = this.$els.textarea;
+        var element = this.$refs.textarea;
         element.style.height = '16px';
         element.style.height = (element.scrollHeight + 21) + 'px';
       }

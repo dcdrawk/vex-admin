@@ -39,7 +39,7 @@
         this.open = true;
 
         setTimeout(() => {
-          var container = this.$els.container;
+          var container = this.$refs.container;
           var offset = this.selectedIndex ? this.selectedIndex * 48 : 0;
           var scrollOffset = this.selectedIndex > 4 ? (this.options.length - 5) * 48 : 0;
 
@@ -77,7 +77,7 @@
       }
     },
 
-    ready () {
+    mounted () {
       this.getSelectedIndex();
     }
   }

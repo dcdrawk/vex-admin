@@ -45,7 +45,7 @@
       }
     },
 
-    ready () {
+    mounted () {
       if (!this.chips) {
         this.chips = [];
       }

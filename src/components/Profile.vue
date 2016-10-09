@@ -49,9 +49,9 @@
       MaterialCard,
     },
 
-    ready () {
+    mounted () {
       console.log(store);
-      console.log('profile is ready');
+      console.log('profile is mounted');
     },
 
     data () {

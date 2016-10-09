@@ -55,16 +55,16 @@
       }
     },
 
-    ready () {
+    mounted () {
       this.updateBar(this.defaultTab);
       this.active = this.defaultTab;
       if (this.icons) {
         this.getIcons();
       }
 
-      var tabHammer = new Hammer(this.$els.tabItems);
-      var tabItems = this.$els.tabItems;
-      var activeTabBar = this.$els.activeTabBar;
+      var tabHammer = new Hammer(this.$refs.tabItems);
+      var tabItems = this.$refs.tabItems;
+      var activeTabBar = this.$refs.activeTabBar;
 
       // Let the user pan the tabs back and forth if they are too big for their container.
       tabHammer.on('pan', (ev) => {
@@ -116,7 +116,7 @@
 
       updateBar (index) {
         var button = this.$refs.tabs[index].$el;
-        var tabBar = this.$els.activeTabBar;
+        var tabBar = this.$refs.activeTabBar;
         var tabs = this._slotContents;
 
         this.scale = button.clientWidth / 100;
@@ -134,7 +134,7 @@
       },
 
       scrollTabs (index) {
-        var tabItems = this.$els.tabItems;
+        var tabItems = this.$refs.tabItems;
         var tabs = this._slotContents;
         var button = this.$refs.tabs[index].$el;
         this.activeOffset = button.offsetLeft;
@@ -142,7 +142,7 @@
 
         if (button.clientWidth + button.offsetLeft > tabItems.clientWidth) {
           this.offset = (tabItems.clientWidth - button.offsetLeft - button.clientWidth);
-          if (button !== this.$els.tabItems.lastElementChild) {
+          if (button !== this.$refs.tabItems.lastElementChild) {
             this.offset -= 64;
           }
           tabItems.style.transform = `translateX(${this.offset}px)`;

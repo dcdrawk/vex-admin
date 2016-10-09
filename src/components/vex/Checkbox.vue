@@ -15,7 +15,7 @@
       'value',
       'secondaryColor'
     ],
-    ready () {
+    mounted () {
       var checkbox = this.$el;
 
       // New PaperRipple for the button

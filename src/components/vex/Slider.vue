@@ -42,16 +42,16 @@
 
     methods: {
       clickSlider (ev) {
-        var value = (ev.clientX - this.$els.container.offsetLeft - 16) / this.$els.slider.clientWidth * (+this.max - +this.min) + +this.min;
+        var value = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.max - +this.min) + +this.min;
 
         if (value > this.min && value < this.max) {
-          this.value = (ev.clientX - this.$els.container.offsetLeft - 16) / this.$els.slider.clientWidth * (+this.max - +this.min) + +this.min;
+          this.value = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.max - +this.min) + +this.min;
         } else if (value <= this.min) {
           this.value = this.min;
         } else {
           this.value = this.max;
         }
-        this.translate = ev.clientX - this.$els.container.offsetLeft - 16;
+        this.translate = ev.clientX - this.$refs.container.offsetLeft - 16;
         if (this.steps) {
           this.stepSnap(this.value);
         }
@@ -62,33 +62,33 @@
 
       // Takes a value from 0 - 1
       setPosition (value) {
-        var translate = (this.$els.slider.clientWidth * value);
-        this.$els.circle.style.transform = `translateX(${translate}px)`;
-        this.$els.bubble.style.transform = `translateX(${translate}px)`;
-        this.$els.indicator.style.transform = `scaleX(${value})`;
+        var translate = (this.$refs.slider.clientWidth * value);
+        this.$refs.circle.style.transform = `translateX(${translate}px)`;
+        this.$refs.bubble.style.transform = `translateX(${translate}px)`;
+        this.$refs.indicator.style.transform = `scaleX(${value})`;
       },
 
       createSteps () {
         var steps = [];
         // Set up the steps array
         for (var i = 0; i < this.steps; i++) {
-          steps[i] = i * this.$els.slider.clientWidth / (this.steps - 1);
+          steps[i] = i * this.$refs.slider.clientWidth / (this.steps - 1);
           var sliderDot = document.createElement('span');
           sliderDot.classList.add('slider-dot');
           console.dir(steps[i]);
           sliderDot.style.transform = `translate3d(${steps[i] - 4}px, -2px, 0px)`;
-          this.$els.slider.append(sliderDot);
+          this.$refs.slider.append(sliderDot);
         }
       },
 
       // Snap to steps
       stepSnap (value) {
         var steps = [];
-        var position = ((value - this.min) / (this.max - this.min)) * this.$els.slider.clientWidth;
+        var position = ((value - this.min) / (this.max - this.min)) * this.$refs.slider.clientWidth;
 
         // Set up the steps array
         for (var i = 0; i < this.steps; i++) {
-          steps[i] = i * this.$els.slider.clientWidth / (this.steps - 1);
+          steps[i] = i * this.$refs.slider.clientWidth / (this.steps - 1);
         }
 
         // Go through each step, determine where the value is closest to.
@@ -97,17 +97,17 @@
             if (position >= steps[j] && position < steps[+j + 1]) {
               // If it's between the two steps
               if (position <= (steps[j] + steps[+j + 1]) / 2) {
-                this.value = ((steps[j] / this.$els.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.value = ((steps[j] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
               } else {
-                this.value = ((steps[+j + 1] / this.$els.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.value = ((steps[+j + 1] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
               }
             }
           } else {
             if (position >= steps[+j - 1] && position <= steps[j]) {
               if (position <= (steps[j] + steps[+j - 1]) / 2) {
-                this.value = ((steps[+j - 1] / this.$els.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.value = ((steps[+j - 1] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
               } else {
-                this.value = ((steps[j] / this.$els.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.value = ((steps[j] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
               }
             }
           }
@@ -115,9 +115,9 @@
       }
     },
 
-    ready () {
-      var circle = new Hammer(this.$els.circle);
-      var container = this.$els.container;
+    mounted () {
+      var circle = new Hammer(this.$refs.circle);
+      var container = this.$refs.container;
 
       setTimeout(() => {
         if (!this.min) {
@@ -136,14 +136,14 @@
           this.createSteps();
         }
 
-        this.translate = (this.value / (this.max - this.min)) * this.$els.slider.clientWidth;
+        this.translate = (this.value / (this.max - this.min)) * this.$refs.slider.clientWidth;
         this.setPosition(this.value / (this.max - this.min));
       }, 0);
 
       circle.on('pan', (ev) => {
-        var value = (this.translate + ev.deltaX) / this.$els.slider.clientWidth;
+        var value = (this.translate + ev.deltaX) / this.$refs.slider.clientWidth;
         if (value > 0 && value < 1) {
-          this.value = ((this.translate + ev.deltaX) / this.$els.slider.clientWidth * (+this.max - +this.min)) + +this.min;
+          this.value = ((this.translate + ev.deltaX) / this.$refs.slider.clientWidth * (+this.max - +this.min)) + +this.min;
         } else if (value <= 0) {
           this.value = this.min;
           this.hasValue = false;

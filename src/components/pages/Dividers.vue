@@ -57,7 +57,7 @@ s<template>
       VList,
       VListItem
     },
-    ready () {
+    mounted () {
       // Syntax Highlighting
       Prism.highlightAll();
     },

@@ -18,7 +18,7 @@
         radioButtons: []
       }
     },
-    ready () {
+    mounted () {
       setTimeout(() => {
         this.radioButtons = this.$el.querySelectorAll('.v-radio-button-container');
 

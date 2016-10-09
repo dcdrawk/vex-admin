@@ -39,8 +39,8 @@
       MaterialSelect
     },
 
-    ready () {
-      console.log('character list is ready!!!!');
+    mounted () {
+      console.log('character list is mounted!!!!');
       console.log(this);
     },
 

@@ -74,7 +74,7 @@
       VIconButton,
       VTabs
     },
-    ready () {
+    mounted () {
       this.showTabs = true;
 
       // Syntax Highlighting

@@ -15,7 +15,7 @@
       'primary',
       'secondary'
     ],
-    ready () {
+    mounted () {
       var button = this.$el;
 
       // New PaperRipple for the button

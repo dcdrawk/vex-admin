@@ -80,7 +80,7 @@
       VButton
     },
 
-    ready () {
+    mounted () {
       // Syntax Highlighting
       Prism.highlightAll();
     },
