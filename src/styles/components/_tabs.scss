@@ -2,6 +2,9 @@
 
 .v-tabs {
   width: 100%;
+
+
+
   &.primary > {
 
     .v-tab-items-container {
@@ -11,7 +14,11 @@
       }
       button {
         color: #fff;
+
+
       }
+
+
     }
   }
 
@@ -51,6 +58,14 @@
 }
 .v-tab-items-container {
   overflow: hidden;
+
+  span {
+    width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+
   &.primary > {
     background-color: $primary-color;
     button {

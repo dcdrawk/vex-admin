@@ -5,14 +5,14 @@
 
     <!--Card Content-->
     <v-card title="Tabs" class="col-xs-12">
-      <v-tabs default-tab="result test" :primary="true" class="demo-tabs">
-        <div slot="result test">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+        <div slot="result">
 
           <!-- Basic Tabs -->
           <h3 class="title">Basic Tabs</h3>
           <v-tabs default-tab="Item One" v-if="showTabs">
             <div slot="Item One">
-              First Tab
+              First Tab!
             </div>
             <div slot="Item Two">
               Second Tab

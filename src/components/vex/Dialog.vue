@@ -57,6 +57,12 @@
 //        show: false
 //      }
 //    },
+
+// if (this.open) {
+//   document.body.classList.add('sidebar-open');
+// } else {
+//   document.body.classList.remove('sidebar-open');
+// }
     methods: {
       hideDialog() {
         console.log(this);
