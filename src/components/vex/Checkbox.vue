@@ -30,11 +30,23 @@
 
       // Subscribing to 'mousedown' and 'mouseup' button events to activate ripple effect
       // when a user clicks on the button.
-      checkbox.addEventListener('mousedown', function (ev) {
-        ripple.downAction(ev);
-      });
-      checkbox.addEventListener('mouseup', function () {
+      var mouseUpEvent = function () {
         ripple.upAction();
+        window.removeEventListener('mouseup', mouseUpEvent);
+      };
+
+      var mouseDownEvent = function(ev) {
+        if (ripple._waves.length > 0) {
+          ripple.upAction();
+        }
+        ripple.downAction(ev);
+        window.addEventListener('mouseup', mouseUpEvent);
+      };
+
+      checkbox.addEventListener('mousedown', mouseDownEvent);
+
+      checkbox.addEventListener('mouseup', function () {
+        ripple.upAction()
       });
     },
 

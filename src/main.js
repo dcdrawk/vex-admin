@@ -20,6 +20,7 @@ import Sliders from './components/pages/Sliders.vue';
 import ExpansionPanels from './components/pages/ExpansionPanels.vue';
 import Dividers from './components/pages/Dividers.vue';
 import Dropdowns from './components/pages/Dropdowns.vue';
+import DataTables from './components/pages/DataTables.vue';
 
 // Style
 import Typography from './components/pages/Style/Typography.vue';
@@ -80,7 +81,9 @@ var router = new VueRouter({
     '/components/dropdowns': {
       component: Dropdowns
     },
-
+    '/components/datatables': {
+      component: DataTables
+    },
     //Style Pages
     '/style/typography': {
       component: Typography

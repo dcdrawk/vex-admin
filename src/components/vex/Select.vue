@@ -1,20 +1,18 @@
 <template>
-  <div class="material-select-container" v-bind:class="{ 'has-value': value, 'focus': focused || open}">
-    <div class="material-select" @click="openSelect()">
+  <div class="v-select-container" v-bind:class="{ 'has-value': value, 'focus': focused || open}">
+    <div class="v-select" @click="openSelect()">
       <label v-if="label">{{label}}</label>
       <span v-if="value">{{value}}</span>
       <span v-if="placeholder && !value">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
     </div>
-    <transition name="fade">
-      <div class="material-select-option-container" v-show="open" ref=container>
-        <div class="material-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
-          <span>{{option}}</span>
-        </div>
+    <div class="v-select-option-container" v-show="open" transition="fade" v-el:container>
+      <div class="v-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
+        <span>{{option}}</span>
       </div>
     </transition>
 
-    <div class="material-select-backdrop" v-if="open" @click="closeSelect()"></div>
+    <div class="v-select-backdrop" v-if="open" @click="closeSelect()"></div>
 
   </div>
 </template>

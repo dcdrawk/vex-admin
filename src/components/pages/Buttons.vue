@@ -1,7 +1,5 @@
 <template>
   <div class="row page-content">
-    <!--Title-->
-    <h1 class="col-xs-12 col-sm-12 col-xs12 display-1">Buttons</h1>
 
     <v-card title="Flat / Raised Buttons" class="col-xs-12">
 

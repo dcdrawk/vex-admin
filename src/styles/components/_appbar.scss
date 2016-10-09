@@ -38,5 +38,9 @@ body.sidebar-open {
     color: $primary-color;
     font-weight: 500;
   }
+  
+  .title {
+    text-transform: capitalize;
+  }
 
 }
