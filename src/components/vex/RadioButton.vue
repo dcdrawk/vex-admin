@@ -48,7 +48,7 @@
       toggleCheckbox () {
         this.selected = true;
         console.log('evendsadadast');
-        this.$dispatch('selected', this.$el);
+        this.$emit('selected', this.$el);
       }
     }
 
