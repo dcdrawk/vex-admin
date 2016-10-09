@@ -1,5 +1,7 @@
 @import '../variables';
-
+body.sidebar-open {
+  overflow: hidden;
+}
 .app-bar {
   position: fixed;
   width: 100%;
@@ -8,7 +10,7 @@
   right: 0;
   z-index: 10;
   .toolbar {
-    z-index: 10;
+    z-index: 11;
   }
   &.open {
     //z-index: 10;

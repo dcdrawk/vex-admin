@@ -1,5 +1,5 @@
 <template>
-  <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
+  <div class="app-bar locked-open" v-bind:class="{ 'open': open }"  v-cloak>
     <toolbar title="Vex Admin">
       <icon-button class="app-bar-menu" icon="menu" @click="toggleSidenav"></icon-button>
     </toolbar>
@@ -96,6 +96,12 @@
     methods: {
       toggleSidenav () {
         this.open = !this.open;
+
+        if (this.open) {
+          document.body.classList.add('sidebar-open');
+        } else {
+          document.body.classList.remove('sidebar-open');
+        }
       },
       expand (list) {
         if (this.$refs[list].$el.style.height === '0px') {

@@ -34,21 +34,29 @@
   &.closed {
     transform: translateX(-280px);
   }
+  
   &.locked-open {
     position: relative;
     transform: translateX(0px);
     top: -40px;
     height: 100vh;
+    overflow: auto;
   }
 
   @media only screen and (max-width: $small-breakpoint) {
+    height: calc(100vh - 40px);
+    overflow: auto;
+
     &.locked-open {
       transform: translateX(0px);
       top: 0;
-
+      height: calc(100vh - 40px);
+      // height: calc(100vh - 40px);
+      // overflow: auto;
     }
     &.closed {
       transform: translateX(-280px);
+      height: calc(100vh - 40px);
     }
   }
 
