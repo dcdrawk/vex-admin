@@ -1,5 +1,5 @@
 <template>
-  <div v-el:container class="v-dropdown-container" v-bind:class="{ 'open': open, 'closed': !open }">
+  <div ref="container" class="v-dropdown-container" v-bind:class="{ 'open': open, 'closed': !open }">
     <div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>
     <slot></slot>
   </div>

@@ -10,7 +10,7 @@
 
           <!-- Basic Dropdown -->
           <h3 class="title">Basic Dropdown</h3>
-          <v-icon-button v-el:button1 icon="more_vert" @click="open1 = !open1"></v-icon-button>
+          <v-icon-button ref="button1" icon="more_vert" @click="open1 = !open1"></v-icon-button>
           <v-dropdown :open.sync="open1" :target="$els.button1">
             <v-list>
               <v-list-item text="Preview" icon="remove_red_eye"></v-list-item>
@@ -30,7 +30,7 @@
 
           <!-- Right Positioned Dropdown -->
           <h3 class="title">Right Positioned Dropdown</h3>
-          <v-icon-button v-el:button2 icon="more_vert" @click="open2 = !open2"></v-icon-button>
+          <v-icon-button ref="button2" icon="more_vert" @click="open2 = !open2"></v-icon-button>
           <v-dropdown :open.sync="open2" :target="$els.button2" position="right">
             <v-list>
               <v-list-item text="Preview" icon="remove_red_eye"></v-list-item>
@@ -96,7 +96,7 @@
         open2: false,
         dropdownMarkup: `<!-- Basic Dropdown -->
 <h3 class="title">Basic Dropdown</h3>
-<v-icon-button v-el:button1 icon="more_vert" @click="open1 = !open1"></v-icon-button>
+<v-icon-button ref="button1" icon="more_vert" @click="open1 = !open1"></v-icon-button>
 <v-dropdown :open.sync="open1" :target="$els.button1">
   <v-list>
     <v-list-item text="Preview" icon="remove_red_eye"></v-list-item>
@@ -116,7 +116,7 @@
 
 <!-- Right Positioned Dropdown -->
 <h3 class="title">Right Positioned Dropdown</h3>
-<v-icon-button v-el:button2 icon="more_vert" @click="open2 = !open2"></v-icon-button>
+<v-icon-button ref="button2" icon="more_vert" @click="open2 = !open2"></v-icon-button>
 <v-dropdown :open.sync="open2" :target="$els.button2" position="right">
   <v-list>
     <v-list-item text="Preview" icon="remove_red_eye"></v-list-item>

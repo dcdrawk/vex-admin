@@ -1,7 +1,7 @@
 <template>
   <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label>{{label}}</label>
-    <textarea v-el:textarea v-model="value" v-focus-model="focused" :placeholder="placeholder" :rows="rows"></textarea>
+    <textarea ref="textarea" v-model="value" v-focus-model="focused" :placeholder="placeholder" :rows="rows"></textarea>
   </div>
 </template>
 

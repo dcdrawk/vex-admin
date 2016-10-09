@@ -1,15 +1,15 @@
 <template>
-  <div v-el:container class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }"  v-focus="focused" @focus="focused = true"  @blur="focused = false" @mousedown="clickSlider($event)">
-    <div v-el:slider class="v-slider"></div>
-    <div v-el:circle class="v-slider-circle-container" :class="{ 'has-value': hasValue, 'focus': focused }">
+  <div ref="container" class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }"  v-focus="focused" @focus="focused = true"  @blur="focused = false" @mousedown="clickSlider($event)">
+    <div ref="slider" class="v-slider"></div>
+    <div ref="circle" class="v-slider-circle-container" :class="{ 'has-value': hasValue, 'focus': focused }">
       <div class="v-slider-circle"></div>
     </div>
 
-    <div v-el:bubble class="v-slider-bubble" :class="{ 'focus': focused }" v-show="showBubble">
+    <div ref="bubble" class="v-slider-bubble" :class="{ 'focus': focused }" v-show="showBubble">
       {{ Math.round(value) }}
     </div>
 
-    <div v-el:indicator class="v-slider-indicator" v-bind:class="{ 'focus': focused }"></div>
+    <div ref="indicator" class="v-slider-indicator" v-bind:class="{ 'focus': focused }"></div>
   </div>
 </template>
 

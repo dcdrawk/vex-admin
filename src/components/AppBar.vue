@@ -20,26 +20,26 @@
         <list dense="true">
           <list-item text="Components" bold="true" @click="expand('components')"></list-item>
         </list>
-        <list dense="true" v-ref:components style="height: 0px; overflow: hidden;" class="secondary-list">
-          <list-item v-el:buttons text="Buttons" v-link="'/components/buttons'" :no-ripple="true" @click="setActive('buttons')"></list-item>
-          <list-item v-el:lists text="Lists" v-link="'/components/lists'" :no-ripple="true" @click="setActive('lists')"></list-item>
-          <list-item v-el:cards text="Cards" v-link="'/components/cards'" :no-ripple="true" @click="setActive('cards')"></list-item>
-          <list-item v-el:forms text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
-          <list-item v-el:toasts text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
-          <list-item v-el:chips text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
-          <list-item v-el:tabs text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
-          <list-item v-el:dialogs text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
-          <list-item v-el:sliders text="Sliders" v-link="'/components/sliders'" :no-ripple="true" @click="setActive('sliders')"></list-item>
-          <list-item v-el:expansionpanels text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
-          <list-item v-el:dividers text="Dividers" v-link="'/components/dividers'" :no-ripple="true" @click="setActive('dividers')"></list-item>
-          <list-item v-el:dropdowns text="Dropdowns" v-link="'/components/dropdowns'" :no-ripple="true" @click="setActive('dropdowns')"></list-item>
+        <list dense="true" ref="components" style="height: 0px; overflow: hidden;" class="secondary-list">
+          <list-item ref="buttons" text="Buttons" v-link="'/components/buttons'" :no-ripple="true" @click="setActive('buttons')"></list-item>
+          <list-item ref="lists" text="Lists" v-link="'/components/lists'" :no-ripple="true" @click="setActive('lists')"></list-item>
+          <list-item ref="cards" text="Cards" v-link="'/components/cards'" :no-ripple="true" @click="setActive('cards')"></list-item>
+          <list-item ref="forms" text="Forms" v-link="'/components/forms'" :no-ripple="true" @click="setActive('forms')"></list-item>
+          <list-item ref="toasts" text="Toasts" v-link="'/components/toasts'" :no-ripple="true" @click="setActive('toasts')"></list-item>
+          <list-item ref="chips" text="Chips" v-link="'/components/chips'" :no-ripple="true" @click="setActive('chips')"></list-item>
+          <list-item ref="tabs" text="Tabs" v-link="'/components/tabs'" :no-ripple="true" @click="setActive('tabs')"></list-item>
+          <list-item ref="dialogs" text="Dialogs" v-link="'/components/dialogs'" :no-ripple="true" @click="setActive('dialogs')"></list-item>
+          <list-item ref="sliders" text="Sliders" v-link="'/components/sliders'" :no-ripple="true" @click="setActive('sliders')"></list-item>
+          <list-item ref="expansionpanels" text="Expansion Panels" v-link="'/components/expansion-panels'" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
+          <list-item ref="dividers" text="Dividers" v-link="'/components/dividers'" :no-ripple="true" @click="setActive('dividers')"></list-item>
+          <list-item ref="dropdowns" text="Dropdowns" v-link="'/components/dropdowns'" :no-ripple="true" @click="setActive('dropdowns')"></list-item>
         </list>
 
         <list dense="true">
           <list-item text="Style" bold="true" @click="expand('style')"></list-item>
         </list>
-        <list dense="true" v-ref:style style="height: 0px; overflow: hidden;" class="secondary-list">
-          <list-item v-el:typography text="Typography" v-link="'/style/typography'" :no-ripple="true" @click="setActive('typography')"></list-item>
+        <list dense="true" ref="style" style="height: 0px; overflow: hidden;" class="secondary-list">
+          <list-item ref="typography" text="Typography" v-link="'/style/typography'" :no-ripple="true" @click="setActive('typography')"></list-item>
         </list>
       </nav>
     </sidebar>

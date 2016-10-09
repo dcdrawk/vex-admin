@@ -2,7 +2,7 @@
   <div class="row space-around character-list">
     {{characters}} {{$refs.search.value}}
     <!--<input v-model="searchText">-->
-    <material-search-bar v-ref:search placeholder="Search" :value="searchText" key="name"></material-search-bar>
+    <material-search-bar ref="search" placeholder="Search" :value="searchText" key="name"></material-search-bar>
     <data-table :columns="columns" :rows="characters" :filter="$refs.search.value">
 
     </data-table>

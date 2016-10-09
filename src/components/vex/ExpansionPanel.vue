@@ -1,8 +1,8 @@
 <template>
 
-  <div v-el:panel class="v-expansion-panel" @click="togglePanel();" :class="{ 'closed': !open, 'open': open}">
+  <div ref="panel" class="v-expansion-panel" @click="togglePanel();" :class="{ 'closed': !open, 'open': open}">
     <!--<slot></slot>-->
-    <div v-el:container class="row">
+    <div ref="container" class="row">
       <div class="col-xs-3 v-expansion-title">
         <strong>{{ title }}</strong>
       </div>
@@ -19,7 +19,7 @@
         <i class="material-icons" :class="{ 'closed': !open, 'open': open}">keyboard_arrow_down</i>
       </div>
 
-      <div v-el:content v-show="open" class="col-xs-12" transition="fade">
+      <div ref="content" v-show="open" class="col-xs-12" transition="fade">
         <slot></slot>
       </div>
     </div>

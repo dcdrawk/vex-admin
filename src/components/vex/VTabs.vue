@@ -2,16 +2,16 @@
   <div class="v-tabs" :class="{'primary': primary, 'secondary': secondary, 'icons': icons, 'icons-only': iconsOnly}" v-cloak>
     <!--Tab Items-->
     <div class="v-tab-items-container">
-      <div v-el:tab-items class="v-tab-items">
+      <div ref="tab-items" class="v-tab-items">
 
-        <v-button v-ref:tabs v-for="(index, tab) in _slotContents" @click="selectTab(index)" :class="{'active': active === index}" v-if="index !== 'default'">
+        <v-button ref="tabs" v-for="(index, tab) in _slotContents" @click="selectTab(index)" :class="{'active': active === index}" v-if="index !== 'default'">
           <i v-show="icons" class="material-icons">
             {{ iconValues[index] }}
           </i>
           <span v-if="!iconsOnly">{{ index }}</span>
         </v-button>
       </div>
-      <div v-el:active-tab-bar class="active-tab-bar"></div>
+      <div ref="active-tab-bar" class="active-tab-bar"></div>
     </div>
 
     <!--Tab Content-->

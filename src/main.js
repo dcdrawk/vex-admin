@@ -1,11 +1,4 @@
-// import Vue from 'vue'
-// import App from './App'
-//
-// /* eslint-disable no-new */
-// new Vue({
-//   el: 'body',
-//   components: { App }
-// })
+// App
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
@@ -46,54 +39,57 @@ router.beforeEach(function (transition) {
 // create Router instance
 Vue.use(VueResource);
 
-// add your routes and their components
+// Map the Routes and Components
 router.map({
-  '/': {
-    component: Dashboard
-  },
 
-  //Component Pages
-  '/components/buttons': {
-    component: Buttons
-  },
-  '/components/lists': {
-    component: Lists
-  },
-  '/components/cards': {
-    component: Cards
-  },
-  '/components/forms': {
-    component: Forms
-  },
-  '/components/toasts': {
-    component: Toasts
-  },
-  '/components/chips': {
-    component: Chips
-  },
-  '/components/tabs': {
-    component: Tabs
-  },
-  '/components/dialogs': {
-    component: Dialogs
-  },
-  '/components/expansion-panels': {
-    component: ExpansionPanels
-  },
-  '/components/sliders': {
-    component: Sliders
-  },
-  '/components/dividers': {
-    component: Dividers
-  },
-  '/components/dropdowns': {
-    component: Dropdowns
-  },
+  routes: [
+    '/': {
+      component: Dashboard
+    },
 
-  //Style Pages
-  '/style/typography': {
-    component: Typography
-  }
+    //Component Pages
+    '/components/buttons': {
+      component: Buttons
+    },
+    '/components/lists': {
+      component: Lists
+    },
+    '/components/cards': {
+      component: Cards
+    },
+    '/components/forms': {
+      component: Forms
+    },
+    '/components/toasts': {
+      component: Toasts
+    },
+    '/components/chips': {
+      component: Chips
+    },
+    '/components/tabs': {
+      component: Tabs
+    },
+    '/components/dialogs': {
+      component: Dialogs
+    },
+    '/components/expansion-panels': {
+      component: ExpansionPanels
+    },
+    '/components/sliders': {
+      component: Sliders
+    },
+    '/components/dividers': {
+      component: Dividers
+    },
+    '/components/dropdowns': {
+      component: Dropdowns
+    },
+
+    //Style Pages
+    '/style/typography': {
+      component: Typography
+    }
+  ]
 });
 
 // initialize the app

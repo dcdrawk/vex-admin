@@ -2,8 +2,8 @@
   <div class="row space-around">
     <div class="col-md-6">
       <material-card title="Log In">
-        <material-input v-ref:email value="" label="Email" type="text" @keyup.enter="logIn()">></material-input>
-        <material-input v-ref:password value="" label="Password" type="password" @keyup.enter="logIn()"></material-input>
+        <material-input ref="email" value="" label="Email" type="text" @keyup.enter="logIn()">></material-input>
+        <material-input ref="password" value="" label="Password" type="password" @keyup.enter="logIn()"></material-input>
 
         <div class="row">
           <div class="col-md-6">

@@ -7,7 +7,7 @@
       <i class="material-icons">arrow_drop_down</i>
     </div>
 
-    <div class="material-select-option-container" v-show="open" transition="fade" v-el:container>
+    <div class="material-select-option-container" v-show="open" transition="fade" ref=container>
       <div class="material-select-option" v-for="option in options" @click.stop="selectOption(option, $index)">
         <span>{{option}}</span>
       </div>
