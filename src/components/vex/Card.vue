@@ -12,7 +12,6 @@
     </div>
 
     <div class="card-actions" v-if="_slotContents.actions">
-      <!--<button v-for="item in actions" primary="true" @click="item.click">{{ item.text }}</button>-->
       <slot name="actions"></slot>
     </div>
   </div>

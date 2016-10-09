@@ -18,10 +18,11 @@
       <div class="col-xs-3 v-expansion-secondary text-right">
         <i class="material-icons" :class="{ 'closed': !open, 'open': open}">keyboard_arrow_down</i>
       </div>
-
-      <div ref="content" v-show="open" class="col-xs-12" transition="fade">
-        <slot></slot>
-      </div>
+      <transition name="fade">
+        <div ref="content" v-show="open" class="col-xs-12">
+          <slot></slot>
+        </div>
+      </transition>
     </div>
   </div>
 

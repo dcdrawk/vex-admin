@@ -6,12 +6,13 @@
       <span v-if="placeholder && !value">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
     </div>
-
-    <div class="material-select-option-container" v-show="open" transition="fade" ref=container>
-      <div class="material-select-option" v-for="option in options" @click.stop="selectOption(option, $index)">
-        <span>{{option}}</span>
+    <transition name="fade">
+      <div class="material-select-option-container" v-show="open" ref=container>
+        <div class="material-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
+          <span>{{option}}</span>
+        </div>
       </div>
-    </div>
+    </transition>
 
     <div class="material-select-backdrop" v-if="open" @click="closeSelect()"></div>
 

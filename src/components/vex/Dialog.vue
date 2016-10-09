@@ -3,26 +3,30 @@
   <div class="v-dialog-container" :class="{ 'show': show }">
 
     <!--Dialog Backdrop-->
-    <div class="v-dialog-backdrop" @click="hideDialog();" v-if="show" transition="fade"></div>
+    <transition name="fade">
+      <div class="v-dialog-backdrop" @click="hideDialog();" v-if="show"></div>
+    </transition>
 
     <!--Dialog-->
-    <div class="v-dialog" v-if="show" transition="dialog" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': _slotContents.actions }">
+    <transition name="dialog">
+      <div class="v-dialog" v-if="show" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': _slotContents.actions }">
 
-      <!--Dialog Title-->
-      <h3 class="v-dialog-title title">{{ title }}</h3>
+        <!--Dialog Title-->
+        <h3 class="v-dialog-title title">{{ title }}</h3>
 
-      <!--Dialog Content-->
-      <div class="v-dialog-content">
-        <slot name="default"></slot>
-      </div>
+        <!--Dialog Content-->
+        <div class="v-dialog-content">
+          <slot name="default"></slot>
+        </div>
 
-      <!--Dialog Actions-->
-      <div class="v-dialog-actions-container" v-if="_slotContents.actions">
-        <div class="v-dialog-actions">
-          <slot name="actions"></slot>
+        <!--Dialog Actions-->
+        <div class="v-dialog-actions-container" v-if="_slotContents.actions">
+          <div class="v-dialog-actions">
+            <slot name="actions"></slot>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
 
   </div>
 </template>

@@ -1,10 +1,12 @@
 <template>
-  <div class="v-toast-container" v-show="show" transition="toast">
-    <div class="v-toast">
-      <span>{{ text }}</span>
-      <v-button v-if="action" @click="action">{{ actionText }}</v-button>
+  <transition name="toast">
+    <div class="v-toast-container" v-show="show">
+      <div class="v-toast">
+        <span>{{ text }}</span>
+        <v-button v-if="action" @click="action">{{ actionText }}</v-button>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <style lang="scss">

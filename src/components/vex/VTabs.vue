@@ -4,7 +4,7 @@
     <div class="v-tab-items-container">
       <div ref="tab-items" class="v-tab-items">
 
-        <v-button ref="tabs" v-for="(index, tab) in _slotContents" @click="selectTab(index)" :class="{'active': active === index}" v-if="index !== 'default'">
+        <v-button ref="tabs" v-for="(tab, index) in _slotContents" @click="selectTab(index)" :class="{'active': active === index}" v-if="index !== 'default'">
           <i v-show="icons" class="material-icons">
             {{ iconValues[index] }}
           </i>
@@ -15,7 +15,7 @@
     </div>
 
     <!--Tab Content-->
-    <div class="v-tab-content" v-for="(index, tab) in _slotContents" v-show="active === index">
+    <div class="v-tab-content" v-for="(tab, index) in _slotContents" v-show="active === index">
       <slot :name="index"></slot>
     </div>
   </div>

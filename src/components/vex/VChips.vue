@@ -1,6 +1,6 @@
 <template>
   <div class="v-chip-container" v-bind:class="{ 'focused': focused }">
-    <span class="v-chip" v-for="chip in chips"><span>{{ chip }}</span><i v-if="!readOnly" class="material-icons chip-remove" @click="removeChip($index);">close</i></span>
+    <span class="v-chip" v-for="(chip, index) in chips"><span>{{ chip }}</span><i v-if="!readOnly" class="material-icons chip-remove" @click="removeChip(index);">close</i></span>
     <input v-if="!readOnly" v-model="value" v-focus-model="focused" :placeholder="placeholder" @keyup.enter="addChip(value)" @keydown.delete="removeLastChip(value);"/>
   </div>
 </template>

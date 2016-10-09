@@ -28,9 +28,6 @@ import Typography from './components/pages/Style/Typography.vue';
 // use Vue Router
 Vue.use(VueRouter);
 
-// create Router instance
-const router = new VueRouter();
-
 router.beforeEach(function (transition) {
   window.scrollTo(0, 0);
   transition.next();
@@ -40,8 +37,7 @@ router.beforeEach(function (transition) {
 Vue.use(VueResource);
 
 // Map the Routes and Components
-router.map({
-
+var router = new VueRouter({
   routes: [
     '/': {
       component: Dashboard
