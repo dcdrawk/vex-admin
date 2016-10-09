@@ -63,6 +63,7 @@
     watch: {
       'open': {
         handler: function(val, oldVal) {
+          this.$emit('open');
           if (val === true) {
             this.openDropdown();
           } else {

@@ -71,6 +71,7 @@
       hideDialog() {
         console.log(this);
         this.show = false;
+        this.$emit('show');
       }
     }
   }

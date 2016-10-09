@@ -6,7 +6,8 @@
       <span v-if="placeholder && !value">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
     </div>
-    <div class="v-select-option-container" v-show="open" transition="fade" v-el:container>
+    <transition name="fade">
+    <div class="v-select-option-container" v-show="open" ref="container">
       <div class="v-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
         <span>{{option}}</span>
       </div>
@@ -56,6 +57,7 @@
         this.value = option;
         this.selectedIndex = index;
         this.closeSelect();
+        this.$emit('value');
       },
 
       getSelectedIndex () {

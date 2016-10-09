@@ -63,7 +63,7 @@
 
           <!-- Basic Select -->
           <h3 class="title">Basic Select</h3>
-          <v-select :options="options" placeholder="Select Option" :value.sync="selectValue"></v-select>
+          <v-select :options="options" placeholder="Select Option" :value="selectValue"></v-select>
 
           <!-- Select -->
           <h3 class="title">Select with Floating Label</h3>
@@ -86,7 +86,7 @@
 
           <!-- Basic Radio Buttons -->
           <h3 class="title">Basic Radio Buttons</h3>
-          <v-radio-group :value.sync="radioValue1">
+          <v-radio-group :value="radioValue1">
             <v-radio-button value="Stan"></v-radio-button>
             <v-radio-button value="Kyle"></v-radio-button>
             <v-radio-button value="Cartman"></v-radio-button>
@@ -96,7 +96,7 @@
 
           <!-- Secondary Color Radio Buttons -->
           <h3 class="title">Secondary Color Radio Buttons</h3>
-          <v-radio-group :value.sync="radioValue2">
+          <v-radio-group :value="radioValue2">
             <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
             <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
             <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>
@@ -232,7 +232,7 @@ export default {
 }`,
         selectMarkup: `<!-- Basic Select -->
 <h3 class="title">Basic Select</h3>
-<v-select :options="options" placeholder="Select Option" :value.sync="selectValue"></v-select>
+<v-select :options="options" placeholder="Select Option" :value="selectValue"></v-select>
 
 <!-- Select -->
 <h3 class="title">Select with Floating Label</h3>
@@ -254,7 +254,7 @@ export default {
 }`,
         radioButtonMarkup: `<!-- Basic Radio Buttons -->
 <h3 class="title">Basic Radio Buttons</h3>
-<v-radio-group :value.sync="radioValue1">
+<v-radio-group :value="radioValue1">
   <v-radio-button value="Stan"></v-radio-button>
   <v-radio-button value="Kyle"></v-radio-button>
   <v-radio-button value="Cartman"></v-radio-button>
@@ -264,7 +264,7 @@ export default {
 
 <!-- Secondary Color Radio Buttons -->
 <h3 class="title">Secondary Color Radio Buttons</h3>
-<v-radio-group :value.sync="radioValue2">
+<v-radio-group :value="radioValue2">
   <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
   <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
   <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>

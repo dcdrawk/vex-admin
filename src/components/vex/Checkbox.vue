@@ -58,6 +58,7 @@
     methods: {
       toggleCheckbox () {
         this.value = !this.value;
+        this.$emit('value');
       }
     }
 

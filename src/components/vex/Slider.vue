@@ -176,6 +176,7 @@
           }
 //          this.hasValue = Math.round(val * 100) > 0;
           this.hasValue = Math.round(this.value) > this.min;
+          this.$emit('value');
         }
       }
     }

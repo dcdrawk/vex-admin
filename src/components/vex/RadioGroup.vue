@@ -38,6 +38,8 @@
             this.value = item.__vue__.value;
           }
         });
+
+        this.$emit('value');
       },
 
       getSelected () {

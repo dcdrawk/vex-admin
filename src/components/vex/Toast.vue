@@ -45,6 +45,7 @@
           if (this.toggle) {
             ToastService.queue(this);
           }
+          this.$emit('toggle');
         },
       }
     }

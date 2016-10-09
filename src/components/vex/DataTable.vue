@@ -6,15 +6,15 @@
         <thead>
           <tr>
             <th v-if="selection" class="v-selection v-select-all" >
-              <v-checkbox :value.sync="selectAll" @click="toggleSelect()"></v-checkbox>
+              <v-checkbox :value="selectAll" @click="toggleSelect()"></v-checkbox>
             </th>
-            <th v-for="column in columns" :class="{ 'v-first-col': $index === 0 }">
-              <i class="material-icons v-order-by" v-if="$index !== 0"
+            <th v-for="(column, index) in columns" :class="{ 'v-first-col': index === 0 }">
+              <i class="material-icons v-order-by" v-if="index !== 0"
                  v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
                 arrow_downward
               </i>
               <span @click="orderBy(column.key);">{{ column.head }}</span>
-              <i class="material-icons v-order-by" v-if="$index === 0"
+              <i class="material-icons v-order-by" v-if="index === 0"
                  v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
                 arrow_downward
               </i>
@@ -22,28 +22,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="row in rows | filterBy filter in 'name' | orderBy order direction | numRows 'count'">
+          <tr v-for="row in rows">
             <td v-if="selection" class="v-selection">
-              <v-checkbox :value.sync="row[selectionKey]" @click="checkSelection()"></v-checkbox>
+              <v-checkbox :value="row[selectionKey]" @click="checkSelection()"></v-checkbox>
             </td>
-            <td v-for="column in columns" data-title="{{[column.head]}}" :class="{ 'v-first-col': $index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
+            <td v-for="(column, index) in columns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
               <span v-if="!column.options">{{row[column.key]}}</span>
               <div class="v-column-options">
-                <v-select v-if="column.options" :value.sync="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
+                <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
               </div>
               <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
             </td>
           </tr>
         </tbody>
       </table>
-
-      <div v-el:editor v-show="editing" class="v-data-table-edit-container" transition="fade">
-        <v-input v-el:editinput :value.sync="editValue" :focus="true" @keyup.enter="saveEdit(editValue)" @keyup.esc="cancelEdit()"></v-input>
-        <div class="v-edit-buttons">
-          <v-button class="cancel" :primary="true" @click="cancelEdit()">cancel</v-button>
-          <v-button class="save" :primary="true" @click="saveEdit(editValue)">save</v-button>
+      <transition>
+        <div ref="editor" v-show="editing" class="v-data-table-edit-container">
+          <v-input ref="editinput" :value="editValue" :focus="true" @keyup.enter="saveEdit(editValue)" @keyup.esc="cancelEdit()"></v-input>
+          <div class="v-edit-buttons">
+            <v-button class="cancel" :primary="true" @click="cancelEdit()">cancel</v-button>
+            <v-button class="save" :primary="true" @click="saveEdit(editValue)">save</v-button>
+          </div>
         </div>
-      </div>
+      </transition>
 
       <div class="v-table-edit-backdrop" v-if="editing" @click="cancelEdit()"></div>
 
@@ -104,7 +105,7 @@
       }
     },
 
-    ready () {
+    mounted () {
       console.log('ready');
         if (this.selection) {
           this.setSelection();
@@ -163,9 +164,9 @@
           var target = ev.target.nodeName !== 'SPAN' && ev.target.nodeName !== 'I' ? ev.target : ev.target.offsetParent;
           this.editing = !this.editing;
           this.editValue = row[key];
-          this.$els.editor.style.left = target.offsetLeft + target.clientWidth - 216 + 'px';
-          this.$els.editor.style.top = target.offsetTop + target.offsetParent.offsetTop + 'px';
-          var input = this.$els.editinput.getElementsByTagName('input')[0];
+          this.$refs.editor.style.left = target.offsetLeft + target.clientWidth - 216 + 'px';
+          this.$refs.editor.style.top = target.offsetTop + target.offsetParent.offsetTop + 'px';
+          var input = this.$refs.editinput.getElementsByTagName('input')[0];
           this.$nextTick(() => {
             input.focus();
           });
@@ -183,13 +184,25 @@
     },
 
     // Filters
-    filters: {
+    // filters: {
+    //
+    //   //Get the number of rows
+    //   numRows: function (arr) {
+    //     this.$set('count', arr.length);
+    //     return arr;
+    //   }
+    // },
 
-      //Get the number of rows
-      numRows: function (arr) {
-        this.$set('count', arr.length);
-        return arr;
+    computed: {
+      filteredRows: function () {
+        return this.rows.filter((row) => {
+          return row.name.indexOf(this.searchQuery);
+        })
+      },
+      orderedRows: function () {
+        return _.orderBy(this.rows, this.order);
       }
     }
+
   }
 </script>
