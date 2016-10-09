@@ -1,33 +1,36 @@
 <template>
-  <!--Dialog Container-->
-  <div class="v-dialog-container" :class="{ 'show': show }">
+  <div class="test">
+    TEST
+    <!--Dialog Container-->
+    <div class="v-dialog-container" :class="{ 'show': show }">
 
-    <!--Dialog Backdrop-->
-    <transition name="fade">
-      <div class="v-dialog-backdrop" @click="hideDialog();" v-if="show"></div>
-    </transition>
+      <!--Dialog Backdrop-->
+      <transition name="fade">
+        <div class="v-dialog-backdrop" @click="hideDialog();" v-if="show"></div>
+      </transition>
 
-    <!--Dialog-->
-    <transition name="dialog">
-      <div class="v-dialog" v-if="show" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': _slotContents.actions }">
+      <!--Dialog-->
+      <transition name="dialog">
+        <div class="v-dialog" v-if="show" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': _slotContents.actions }">
 
-        <!--Dialog Title-->
-        <h3 class="v-dialog-title title">{{ title }}</h3>
+          <!--Dialog Title-->
+          <h3 class="v-dialog-title title">{{ title }}</h3>
 
-        <!--Dialog Content-->
-        <div class="v-dialog-content">
-          <slot name="default"></slot>
-        </div>
+          <!--Dialog Content-->
+          <div class="v-dialog-content">
+            <slot name="default"></slot>
+          </div>
 
-        <!--Dialog Actions-->
-        <div class="v-dialog-actions-container" v-if="_slotContents.actions">
-          <div class="v-dialog-actions">
-            <slot name="actions"></slot>
+          <!--Dialog Actions-->
+          <div class="v-dialog-actions-container" v-if="_slotContents.actions">
+            <div class="v-dialog-actions">
+              <slot name="actions"></slot>
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
 
+    </div>
   </div>
 </template>
 
@@ -55,18 +58,6 @@
       'medium',
       'large'
     ],
-
-//    data () {
-//      return {
-//        show: false
-//      }
-//    },
-
-// if (this.open) {
-//   document.body.classList.add('sidebar-open');
-// } else {
-//   document.body.classList.remove('sidebar-open');
-// }
     methods: {
       hideDialog() {
         console.log(this);

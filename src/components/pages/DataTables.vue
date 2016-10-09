@@ -131,12 +131,12 @@
           head: 'Age',
           key: 'age'
         }]
-        
+
     }
   }
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   //Import or add any styles here
 </style>

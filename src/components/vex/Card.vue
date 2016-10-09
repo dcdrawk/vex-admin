@@ -11,9 +11,9 @@
       <slot></slot>
     </div>
 
-    <div class="card-actions" v-if="_slotContents.actions">
+    <!-- <div class="card-actions" v-if="_slotContents.actions"> -->
       <slot name="actions"></slot>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -31,12 +31,8 @@
 </style>
 
 <script>
-  import Button from './Button'
 
   export default{
-    components: {
-      Button
-    },
     props: [
       'title',
       'subtitle',

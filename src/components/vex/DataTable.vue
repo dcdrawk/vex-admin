@@ -200,7 +200,7 @@
         })
       },
       orderedRows: function () {
-        return _.orderBy(this.rows, this.order);
+        // return _.orderBy(this.rows, this.order);
       }
     }
 

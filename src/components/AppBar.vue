@@ -149,12 +149,8 @@
         for (var i in this.$refs) {
           this.$refs[i].classList.remove('active');
         }
-<<<<<<< HEAD
-        this.$refs[listItem].classList.add('active');
-=======
         this.$refs[listItem].classList.add('active');
         this.active = listItem;
->>>>>>> origin/data-table
       }
     },
     vuex: {

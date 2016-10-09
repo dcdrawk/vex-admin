@@ -1,5 +1,6 @@
 // App
-import Vue from 'vue';
+// import Vue from 'vue';
+import Vue from 'vue/dist/vue.js'
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
@@ -29,67 +30,93 @@ import Typography from './components/pages/Style/Typography.vue';
 // use Vue Router
 Vue.use(VueRouter);
 
-router.beforeEach(function (transition) {
-  window.scrollTo(0, 0);
-  transition.next();
-});
+// router.beforeEach(function (transition) {
+//   window.scrollTo(0, 0);
+//   transition.next();
+// });
 
 // create Router instance
 Vue.use(VueResource);
 
 // Map the Routes and Components
-var router = new VueRouter({
+const router = new VueRouter({
   routes: [
-    '/': {
+    {
+      path: '/',
       component: Dashboard
     },
-
-    //Component Pages
-    '/components/buttons': {
+    {
+      path: '/components/buttons',
       component: Buttons
     },
-    '/components/lists': {
+    {
+      path: '/components/lists',
       component: Lists
     },
-    '/components/cards': {
-      component: Cards
-    },
-    '/components/forms': {
+    {
+      path: '/components/forms',
       component: Forms
     },
-    '/components/toasts': {
+    {
+      path: '/components/toasts',
       component: Toasts
     },
-    '/components/chips': {
-      component: Chips
-    },
-    '/components/tabs': {
-      component: Tabs
-    },
-    '/components/dialogs': {
-      component: Dialogs
-    },
-    '/components/expansion-panels': {
-      component: ExpansionPanels
-    },
-    '/components/sliders': {
-      component: Sliders
-    },
-    '/components/dividers': {
-      component: Dividers
-    },
-    '/components/dropdowns': {
-      component: Dropdowns
-    },
-    '/components/datatables': {
-      component: DataTables
-    },
-    //Style Pages
-    '/style/typography': {
-      component: Typography
-    }
+
+
+    // '/': {
+    //   component: Dashboard
+    // },
+    //
+    // //Component Pages
+    // '/components/buttons': {
+    //   component: Buttons
+    // },
+    // '/components/lists': {
+    //   component: Lists
+    // },
+    // '/components/cards': {
+    //   component: Cards
+    // },
+    // '/components/forms': {
+    //   component: Forms
+    // },
+    // '/components/toasts': {
+    //   component: Toasts
+    // },
+    // '/components/chips': {
+    //   component: Chips
+    // },
+    // '/components/tabs': {
+    //   component: Tabs
+    // },
+    // '/components/dialogs': {
+    //   component: Dialogs
+    // },
+    // '/components/expansion-panels': {
+    //   component: ExpansionPanels
+    // },
+    // '/components/sliders': {
+    //   component: Sliders
+    // },
+    // '/components/dividers': {
+    //   component: Dividers
+    // },
+    // '/components/dropdowns': {
+    //   component: Dropdowns
+    // },
+    // '/components/datatables': {
+    //   component: DataTables
+    // },
+    // //Style Pages
+    // '/style/typography': {
+    //   component: Typography
+    // }
   ]
 });
 
 // initialize the app
-router.start(App, '#app');
+// router.start(App, '#app');
+
+const app = new Vue({
+  router
+}).$mount('#app');

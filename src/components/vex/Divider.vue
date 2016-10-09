@@ -1,7 +1,7 @@
 <template>
 
   <div class="v-divider">
-
+    Test
   </div>
 </template>
 
@@ -12,6 +12,9 @@
 
 <script>
 
-  // export default{
-  // }
+  export default {
+    mounted () {
+      console.log('hello, divider');
+    }
+  }
 </script>
