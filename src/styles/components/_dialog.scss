@@ -46,16 +46,18 @@
     .v-dialog-title {
       margin: 24px 24px 20px 24px;
       padding: 0;
-      
+
     }
 
-    &.dialog-transition {
+    &.dialog-enter-active,
+    &.dialog-leave-active {
       opacity: 1;
       transform: translateY(0px);
       transition: all .3s $swift-in;
     }
 
-    &.dialog-enter, &.dialog-leave {
+    &.dialog-enter,
+    &.dialog-leave-active {
       opacity: 0;
       transform: translateY(50px);
     }

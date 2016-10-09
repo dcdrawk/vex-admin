@@ -1,14 +1,16 @@
 @import './variables';
 
 /* always present */
-.fade-transition {
+.fade-enter-active
+.fade-leave-active {
   transition: opacity .3s ease;
   opacity: 1;
   display: block;
 }
 /* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.fade-enter, .fade-leave {
+/* .expand-leave-active defines the ending state for leaving */
+.fade-enter,
+.fade-leave-active {
   opacity: 0;
   display: block;
 }
@@ -22,7 +24,8 @@
 }
 
 /* always present */
-.toast-transition {
+.toast-enter-active,
+.toast-leave-active {
   transition: transform .4s $swift-in;
   transform: translateY(0px);
   span {
@@ -31,8 +34,9 @@
   }
 }
 /* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.toast-enter, .toast-leave {
+/* .expand-leave-active defines the ending state for leaving */
+.toast-enter,
+.toast-leave-active {
   transform: translateY(48px);
   span {
     opacity: 0;
