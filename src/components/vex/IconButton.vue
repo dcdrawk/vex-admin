@@ -20,7 +20,7 @@
       'primary',
       'secondary',
       'icon',
-
+      'square'
     ],
     mounted () {
       var button = this.$refs.button;

@@ -104,7 +104,8 @@
   import ListItem from './vex/ListItem';
   import FirebaseService from '../services/FirebaseService';
   import store from '../services/Store';
-
+  // import RouterLink from 'vue-router';
+  // import VueRouter from 'vue-router';
   export default {
     store,
     components: {
@@ -112,7 +113,8 @@
       IconButton,
       Sidebar,
       List,
-      ListItem
+      ListItem,
+      RouterLink
     },
     props: [
       'title'
@@ -153,22 +155,16 @@
         this.active = listItem;
       }
     },
-    vuex: {
-      getters: {
-        user: state => state.user
-      }
-    },
-    computed: {
-      user: function () {
-        return store.state.user
-      }
-    },
     mounted () {
-      var path = this.$route.path;
+      console.log(window.location);
+      // var path = this.$route.path;
+      var path = window.location.hash;
       var pathArray = path.replace(/-+/, '').replace(/\/+/, '').split('/');
 
-      this.expand(pathArray[0]);
-      this.setActive(pathArray[1]);
+      this.$nextTick(() => {
+        // this.expand(pathArray[0]);
+        // this.setActive(pathArray[1]);
+      });
 
       window.onpopstate = (event) => {
         setTimeout(() => {

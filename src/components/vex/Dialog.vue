@@ -11,7 +11,7 @@
 
       <!--Dialog-->
       <transition name="dialog">
-        <div class="v-dialog" v-if="show" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': _slotContents.actions }">
+        <div class="v-dialog" v-if="show" :class="{ 'small': small, 'medium': medium, 'large': large, 'has-actions': $slots.actions }">
 
           <!--Dialog Title-->
           <h3 class="v-dialog-title title">{{ title }}</h3>
@@ -22,7 +22,7 @@
           </div>
 
           <!--Dialog Actions-->
-          <div class="v-dialog-actions-container" v-if="_slotContents.actions">
+          <div class="v-dialog-actions-container" v-if="$slots.actions">
             <div class="v-dialog-actions">
               <slot name="actions"></slot>
             </div>

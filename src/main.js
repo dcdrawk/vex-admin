@@ -5,6 +5,8 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
 
+import AppBar from './components/AppBar.vue';
+
 // Dashboard
 import Dashboard from './components/pages/Dashboard/Dashboard.vue';
 
@@ -22,13 +24,14 @@ import ExpansionPanels from './components/pages/ExpansionPanels.vue';
 import Dividers from './components/pages/Dividers.vue';
 import Dropdowns from './components/pages/Dropdowns.vue';
 import DataTables from './components/pages/DataTables.vue';
-
+import Test from './components/pages/Test.vue';
 // Style
 import Typography from './components/pages/Style/Typography.vue';
 
-
 // use Vue Router
 Vue.use(VueRouter);
+
+// Now the app has started!
 
 // router.beforeEach(function (transition) {
 //   window.scrollTo(0, 0);
@@ -39,7 +42,7 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 // Map the Routes and Components
-const router = new VueRouter({
+var router = new VueRouter({
   routes: [
     {
       path: '/',
@@ -61,6 +64,11 @@ const router = new VueRouter({
       path: '/components/toasts',
       component: Toasts
     },
+    {
+      path: '/test',
+      component: Test
+    }
+
 
 
     // '/': {
@@ -114,9 +122,7 @@ const router = new VueRouter({
   ]
 });
 
-// initialize the app
-// router.start(App, '#app');
-
 const app = new Vue({
-  router
+  router,
+  ...App
 }).$mount('#app');

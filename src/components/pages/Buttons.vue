@@ -1,14 +1,12 @@
 <template>
   <div class="row page-content">
-
-    <v-card title="Flat / Raised Buttons" class="col-xs-12">
-
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+    <v-card title="Flat / Raised Buttons" class="col-xs-12" @click="test()">
+      <v-tabs :default-tab="0" :primary="true" class="demo-tabs">
         <div slot="result">
 
           <!-- Flat Buttons -->
           <h3 class="title">Flat Buttons</h3>
-          <v-button>Button</v-button>
+          <v-button @click="test()">Button</v-button>
           <v-button :primary="true">Button</v-button>
           <v-button :secondary="true">Button</v-button>
 
@@ -64,6 +62,7 @@
   import VIconButton from '../vex/IconButton.vue';
   import VTabs from '../vex/VTabs.vue';
   import Prism from 'prismjs';
+  import VueRouter from 'vue-router';
 
   export default {
     components: {
@@ -77,6 +76,12 @@
 
       // Syntax Highlighting
       Prism.highlightAll();
+    },
+
+    methods: {
+      test () {
+        console.log('test');
+      }
     },
     data () {
       return {

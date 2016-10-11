@@ -11,7 +11,7 @@
       <slot></slot>
     </div>
 
-    <!-- <div class="card-actions" v-if="_slotContents.actions"> -->
+    <!-- <div class="card-actions" v-if="$slots.actions"> -->
       <slot name="actions"></slot>
     <!-- </div> -->
   </div>
