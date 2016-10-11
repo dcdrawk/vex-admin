@@ -46,9 +46,11 @@
     },
     methods: {
       toggleCheckbox () {
+        this.$parent.$children.forEach((item, index) => {
+          item.selected = false;
+        });
+        this.$parent.$emit('radioSelect', this.value);
         this.selected = true;
-        console.log('evendsadadast');
-        this.$emit('selected', this.$el);
       }
     }
 

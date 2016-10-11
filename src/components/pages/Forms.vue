@@ -86,7 +86,7 @@
 
           <!-- Basic Radio Buttons -->
           <h3 class="title">Basic Radio Buttons</h3>
-          <v-radio-group :value="radioValue1">
+          <v-radio-group :value="radioValue1" @select="radioEvent($event, 'radioValue1');">
             <v-radio-button value="Stan"></v-radio-button>
             <v-radio-button value="Kyle"></v-radio-button>
             <v-radio-button value="Cartman"></v-radio-button>
@@ -96,7 +96,7 @@
 
           <!-- Secondary Color Radio Buttons -->
           <h3 class="title">Secondary Color Radio Buttons</h3>
-          <v-radio-group :value="radioValue2">
+          <v-radio-group :value="radioValue2" @select="radioEvent($event, 'radioValue2');">
             <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
             <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
             <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>
@@ -171,7 +171,9 @@
       Prism.highlightAll();
     },
     methods: {
-
+      radioEvent (value, radioValue) {
+        this[radioValue] = value;
+      }
     },
     // Data
     data () {

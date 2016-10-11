@@ -1,7 +1,7 @@
 <template>
-  <div class="material-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
+  <div class="v-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label>{{label}}</label>
-    <textarea ref="textarea" v-model="value" v-focus-model="focused" :placeholder="placeholder" :rows="rows"></textarea>
+    <textarea ref="textarea" v-model="value" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :rows="rows"></textarea>
   </div>
 </template>
 
@@ -9,10 +9,10 @@
   @import '../../styles/components/_inputs.scss';
 </style>
 <script>
-  import { focusModel } from 'vue-focus';
+  import { focus } from 'vue-focus';
 
   export default {
-    directives: { focusModel: focusModel },
+    directives: { focus: focus },
     name: 'MaterialButton',
     props: [
       'label',

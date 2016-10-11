@@ -1,5 +1,5 @@
 <template>
-  <div class="v-select-container" v-bind:class="{ 'has-value': value, 'focus': focused || open}">
+  <div class="v-select-container" v-bind:class="{ 'has-value': value}">
     <div class="v-select" @click="openSelect()">
       <label v-if="label">{{label}}</label>
       <span v-if="value">{{value}}</span>
@@ -7,9 +7,10 @@
       <i class="material-icons">arrow_drop_down</i>
     </div>
     <transition name="fade">
-    <div class="v-select-option-container" v-show="open" ref="container">
-      <div class="v-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
-        <span>{{option}}</span>
+      <div class="v-select-option-container" v-show="open" ref="container">
+        <div class="v-select-option" v-for="(option, index) in options" @click.stop="selectOption(option, index)">
+          <span>{{option}}</span>
+        </div>
       </div>
     </transition>
 
@@ -22,11 +23,8 @@
   @import '../../styles/components/_select.scss';
 </style>
 <script>
-  import { focusModel } from 'vue-focus';
 
   export default {
-    directives: { focusModel: focusModel },
-    name: 'MaterialSelect',
     props: [
       'label',
       'value',

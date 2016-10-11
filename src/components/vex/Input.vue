@@ -1,7 +1,7 @@
 <template>
   <div class="v-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
     <label v-if="label">{{label}}</label>
-    <input ref="input" v-model="value" v-focus-model="focused" :placeholder="placeholder" :type="type"/>
+    <input ref="input" v-model="value" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :type="type"/>
   </div>
 </template>
 
@@ -9,10 +9,10 @@
   @import '../../styles/components/_inputs.scss';
 </style>
 <script>
-  import { focusModel } from 'vue-focus';
+  import { focus } from 'vue-focus';
 
   export default {
-    directives: { focusModel: focusModel },
+    directives: { focus: focus },
     name: 'MaterialButton',
     props: [
       'label',

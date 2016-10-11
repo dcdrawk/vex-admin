@@ -42,5 +42,12 @@
   color: rgba(0,0,0,.54);
   font-size: 15px;
   position: relative;
+  text-align: right;
 }
 
+.v-expansion-secondary,
+.v-expansion-title strong{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

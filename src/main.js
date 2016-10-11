@@ -72,7 +72,7 @@ var router = new VueRouter({
       component: Dialogs
     },
     {
-      path: '/components/expansionpanels',
+      path: '/components/expansion-panels',
       component: ExpansionPanels
     },
     {
