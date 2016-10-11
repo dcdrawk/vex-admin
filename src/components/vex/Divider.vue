@@ -1,8 +1,5 @@
 <template>
-
-  <div class="v-divider">
-    Test
-  </div>
+  <div class="v-divider"></div>
 </template>
 
 <style lang="scss">

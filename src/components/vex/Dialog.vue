@@ -1,12 +1,12 @@
 <template>
   <div class="test">
-    TEST
     <!--Dialog Container-->
     <div class="v-dialog-container" :class="{ 'show': show }">
 
       <!--Dialog Backdrop-->
       <transition name="fade">
         <div class="v-dialog-backdrop" @click="hideDialog();" v-if="show"></div>
+        <!--<p v-if="show">test</p>-->
       </transition>
 
       <!--Dialog-->
@@ -60,10 +60,9 @@
     ],
     methods: {
       hideDialog() {
-        console.log(this);
-        this.show = false;
-        this.$emit('show');
+        this.$emit('hide');
       }
     }
+
   }
 </script>

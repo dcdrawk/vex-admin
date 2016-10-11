@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../whiteframe';
+@import '../transitions';
 
 .v-dialog-container {
   display: flex;
@@ -64,8 +65,8 @@
 
     .v-dialog-actions-container {
       padding: 4px;
-      position: absolute;
-      bottom: 0;
+      //position: absolute;
+      //bottom: 0;
       width: 100%;
       background-color: #fff;
       bottom: 0;
@@ -102,5 +103,16 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(0,0,0,.56);
+
+    &.fade-enter-active,
+    &.fade-leave-active {
+      opacity: 1;
+      transition: all .3s $swift-in;
+    }
+
+    &.fade-enter,
+    &.fade-leave-active {
+      opacity: 0;
+    }
   }
 }
