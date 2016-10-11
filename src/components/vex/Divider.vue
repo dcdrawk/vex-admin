@@ -11,7 +11,7 @@
 
   export default {
     mounted () {
-      console.log('hello, divider');
+//      console.log('hello, divider');
     }
   }
 </script>

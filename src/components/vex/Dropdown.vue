@@ -1,7 +1,14 @@
 <template>
-  <div ref="container" class="v-dropdown-container" v-bind:class="{ 'open': open, 'closed': !open }">
-    <div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>
-    <slot></slot>
+  <div>
+    <slot name="target"></slot>
+    <div ref="container" class="v-dropdown-container">
+      <div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>
+      <slot name="menu"></slot>
+    </div>
+    <!--<div ref="container" class="v-dropdown-container">-->
+      <!--<div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>-->
+      <!--<slot name="target"></slot>-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -18,27 +25,27 @@
     props: [
       'options',
       'open',
-      'target',
       'position'
     ],
 
     methods: {
       openDropdown () {
-        console.log(this);
         var container = this.$refs.container;
         gsap.TweenLite.to(container, 0.25, { height: this.totalHeight + "px", opacity: 1, ease: gsap.Power1.easeOut });
+        console.log(this.target);
       },
 
       closeDropdown () {
-        this.open = false;
         var container = this.$refs.container;
         gsap.TweenLite.to(container, 0.25, { height: '0px', opacity: 0, ease: gsap.Power1.easeOut });
-      },
+        this.$emit('toggle');
+      }
     },
 
     data () {
       return {
-        totalHeight: 0
+        totalHeight: 0,
+        target: undefined
       }
     },
 
@@ -46,10 +53,8 @@
       setTimeout(() => {
         var container = this.$refs.container;
         this.totalHeight = container.clientHeight;
-
-        console.log(this.totalHeight);
         container.style.height = '0px';
-
+        this.target = this.$slots.target[0].elm;
         if (this.position === 'right') {
           container.style.left = this.target.offsetLeft + this.target.clientWidth - container.clientWidth + 'px';
           container.style.top = this.target.offsetTop + 'px';
@@ -63,14 +68,14 @@
     watch: {
       'open': {
         handler: function(val, oldVal) {
-          this.$emit('open');
+          console.log(val);
           if (val === true) {
             this.openDropdown();
           } else {
             this.closeDropdown();
           }
-        },
-      }
+        }
+      },
     }
   }
 </script>
