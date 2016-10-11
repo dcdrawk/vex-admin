@@ -59,7 +59,7 @@
       this.$nextTick(() => {
         this.offset = 0;
 
-        this.updateBar(0);
+//        this.updateBar(0);
 
         // var tabHammer = new Hammer(this.$refs.tabItems.$el);
         // var tabItems = this.$refs.tabItems;
@@ -108,6 +108,8 @@
       this.active = this.defaultTab;
       if (this.icons) {
         this.getIcons();
+      } else {
+        this.updateBar(0);
       }
     },
 
@@ -171,11 +173,11 @@
         var iconArray = {};
         for (var i in this.$slots) {
           if (i !== 'default') {
-            iconArray[i] = this.$slots[i].childNodes[0].attributes['icon'].nodeValue;
+            iconArray[i] = this.$slots[i][0].elm.attributes['icon'].nodeValue;
           }
         }
-        this.$set('iconValues', iconArray);
-        this.updateBar(this.defaultTab);
+        this.iconValues = iconArray;
+        this.updateBar(0);
       }
     },
     watch: {

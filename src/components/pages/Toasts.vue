@@ -9,13 +9,13 @@
 
           <!-- Basic Toast -->
           <h3 class="title">Basic Toast</h3>
-          <v-button @click="toggleToast('basic')">show basic toast</v-button>
-          <v-toast :toggle="showToast.basic" text="Simple Toast"></v-toast>
+          <v-button @click.native="toggleToast('basic')">show basic toast</v-button>
+          <v-toast :toggle="showToast.basic" text="Simple Toast" @hide="showToast.basic = false"></v-toast>
 
           <!-- Toast with Action -->
           <h3 class="title">Toast With Action</h3>
-          <v-button @click="toggleToast('action')">Toast with Action</v-button>
-          <v-toast :toggle="showToast.action" text="Toast with Action" action-text="undo" :action="undoAction"></v-toast>
+          <v-button @click.native="toggleToast('action')">Toast with Action</v-button>
+          <v-toast :toggle="showToast.action" text="Toast with Action" action-text="undo" :action="undoAction" @hide="showToast.action = false"></v-toast>
 
         </div>
         <div slot="template">

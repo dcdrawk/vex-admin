@@ -3,7 +3,7 @@
     <div class="v-toast-container" v-show="show">
       <div class="v-toast">
         <span>{{ text }}</span>
-        <v-button v-if="action" @click="action">{{ actionText }}</v-button>
+        <v-button v-if="action" @click.native="action">{{ actionText }}</v-button>
       </div>
     </div>
   </transition>
@@ -27,6 +27,7 @@
       'actionText',
       'action',
       'toggle',
+      'delay',
     ],
 
     methods: {
@@ -35,17 +36,21 @@
 
     data () {
       return {
-        show: false
+        show: false,
+        toastDelay: this.delay || 3000
       }
     },
 
     watch: {
       'toggle': {
         handler: function(val, oldVal) {
+          console.log(this);
           if (this.toggle) {
-            ToastService.queue(this);
+            ToastService.queue(this, this.toastDelay);
           }
-          this.$emit('toggle');
+          setTimeout(() => {
+            this.$emit('hide');
+          }, this.toastDelay);
         },
       }
     }

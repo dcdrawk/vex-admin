@@ -41,10 +41,10 @@
           <h3 class="title">Secondary Tabs</h3>
 
           <v-tabs default-tab="Item One" v-if="showTabs" :secondary="true" :icons="true" :icons-only="true" v-cloak>
-            <div slot="Item One" icon="phone">
+            <div slot="Item One" icon="person">
               First Tab
             </div>
-            <div slot="Item Two" icon="notifications">
+            <div slot="Item Two" icon="person">
               Second Tab
             </div>
             <div slot="Item Three" icon="person">
