@@ -3,19 +3,19 @@
     <!--Tab Items-->
     <div class="v-tab-items-container">
       <div ref="tabItems" class="v-tab-items">
-        <v-button v-for="(tab, index) in $slots" @click.native="selectTab(index)" :class="{'active': active === index}" v-if="index !== 'default'" ref="tabs">
+        <v-button v-for="(tab, key, index) in $slots" @click.native="selectTab(key, index)" :class="{'active': active === key}" v-if="key !== 'default'" ref="tabs">
           <i v-show="icons" class="material-icons">
-            {{ iconValues[index] }}
+            {{ iconValues[key] }}
           </i>
-          <span v-if="!iconsOnly">{{ index }}</span>
+          <span v-if="!iconsOnly">{{ key }}</span>
         </v-button>
       </div>
       <div ref="active-tab-bar" class="active-tab-bar"></div>
     </div>
 
     <!--Tab Content-->
-    <div class="v-tab-content" v-for="(tab, index) in $slots" v-show="active === index">
-      <slot :name="index"></slot>
+    <div class="v-tab-content" v-for="(tab, key, index) in $slots" v-show="active === key">
+      <slot :name="key"></slot>
     </div>
   </div>
 </template>
@@ -49,17 +49,25 @@
         scale: 0,
         deltaX: 0,
         activeOffset: 0,
-        activePosition: 0
+        activePosition: 0,
+        test: {},
+        index: 0,
       }
     },
 
     mounted () {
       console.log('mounted');
       console.log(this);
+
+      for (var i in this.$slots) {
+        console.log(this.$slots[i]);
+        console.log(this.$slots);
+      }
       this.$nextTick(() => {
         // console.log('tick');
         this.offset = 0;
-        this.updateBar(this.defaultTab);
+
+        this.updateBar(0);
 
         // var tabHammer = new Hammer(this.$refs.tabItems.$el);
         // var tabItems = this.$refs.tabItems;
@@ -104,8 +112,7 @@
         //   this.offset = 0;
         //   this.activeOffset = 0;
         // });
-      })
-      // this.updateBar(this.defaultTab);
+      });
       this.active = this.defaultTab;
       if (this.icons) {
         this.getIcons();
@@ -113,60 +120,42 @@
     },
 
     methods: {
-      selectTab (index) {
+      selectTab (key, index) {
         console.log(index);
-        this.active = index;
+        this.active = key;
+        this.index = index;
         this.scrollTabs(index);
         this.updateBar(index);
       },
 
       findTab (index) {
-        this.$refs.tabs.forEach((item, idx) => {
-          console.log(item.$el.innerText);
-          console.log(item.$el.innerText.toLowerCase());
-          console.log(index.toLowerCase());
-
-          if (index.toLowerCase() === item.$el.innerText.toLowerCase()) {
+        for (var i in this.$refs.tabs) {
+          var item = this.$refs.tabs[i];
+          if (index === +i) {
             return item.$el;
           }
-          // if (item.$el.innerText)
-        });
+        }
       },
 
       updateBar (index) {
-        // console.log('update bar');
-        // console.log(this.$refs);
-        // console.log(index);
-
-        // this.findTab();
-
         if (this.$refs.tabs) {
-          // console.log(this.$refs.tabs);
-          // var button = this.$refs.tabs[0].$el;
           var button = this.findTab(index);
           var tabBar = this.$refs['active-tab-bar'];
           var tabs = this.$slots;
           console.log(button);
-          // this.scale = button.clientWidth / 100;
+          this.scale = button.clientWidth / 100;
           this.translate = 0;
 
           for (var i in this.$refs.tabs) {
-            if (i !== 0) {
-              // console.log(this.$refs.tabs[i]);
+            console.log('translate');
+            if (+i !== this.index) {
               this.translate += this.$refs.tabs[i].$el.clientWidth;
             } else {
               break;
             }
           }
-          // console.log(tabBar);
-          // console.log(this.translate);
-          //
-          // console.log(this.offset);
-
-          // console.log(`translateX(${this.translate + this.offset}px) scaleX(${this.scale})`);
           tabBar.style.transform = `translateX(${this.translate + this.offset}px) scaleX(${this.scale})`;
           tabBar.style.color = 'red';
-          // console.dir(tabBar);
         }
       },
 

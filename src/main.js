@@ -24,7 +24,7 @@ import ExpansionPanels from './components/pages/ExpansionPanels.vue';
 import Dividers from './components/pages/Dividers.vue';
 import Dropdowns from './components/pages/Dropdowns.vue';
 import DataTables from './components/pages/DataTables.vue';
-import Test from './components/pages/Test.vue';
+// import Test from './components/pages/Test.vue';
 // Style
 import Typography from './components/pages/Style/Typography.vue';
 
@@ -64,10 +64,10 @@ var router = new VueRouter({
       path: '/components/toasts',
       component: Toasts
     },
-    {
-      path: '/test',
-      component: Test
-    }
+    // {
+    //   path: '/test',
+    //   component: Test
+    // }
 
 
 

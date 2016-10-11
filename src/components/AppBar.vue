@@ -21,54 +21,54 @@
           <list-item text="Components" bold="true" @click="expand('components')"></list-item>
         </list>
         <list dense="true" ref="components" style="height: 0px; overflow: hidden;" class="secondary-list">
-          <router-link to="/components/buttons">
+          <!--<router-link to="/components/buttons">-->
             <list-item ref="buttons" text="Buttons" :no-ripple="true" @click="setActive('buttons')"></list-item>
-          </router-link>
-          <router-link to="/components/cards">
+          <!--</router-link>-->
+          <!--<router-link to="/components/cards">-->
             <list-item ref="cards" text="Cards" :no-ripple="true" @click="setActive('cards')"></list-item>
-          </router-link>
-          <router-link to="/components/chips">
+          <!--</router-link>-->
+          <!--<router-link to="/components/chips">-->
             <list-item ref="chips" text="Chips" :no-ripple="true" @click="setActive('chips')"></list-item>
-          </router-link>
-          <router-link to="/components/datatables">
+          <!--</router-link>-->
+          <!--<router-link to="/components/datatables">-->
             <list-item ref="datatables" text="Data tables" :no-ripple="true" @click="setActive('datatables')"></list-item>
-          </router-link>
-          <router-link to="/components/dialogs">
+          <!--</router-link>-->
+          <!--<router-link to="/components/dialogs">-->
             <list-item ref="dialogs" text="Dialogs" :no-ripple="true" @click="setActive('dialogs')"></list-item>
-          </router-link>
-          <router-link to="/components/dividers">
+          <!--</router-link>-->
+          <!--<router-link to="/components/dividers">-->
             <list-item ref="dividers" text="Dividers" :no-ripple="true" @click="setActive('dividers')"></list-item>
-          </router-link>
-          <router-link to="/components/dropdowns">
+          <!--</router-link>-->
+          <!--<router-link to="/components/dropdowns">-->
             <list-item ref="dropdowns" text="Dropdowns" :no-ripple="true" @click="setActive('dropdowns')"></list-item>
-          </router-link>
-          <router-link to="/components/expansion-panels">
+          <!--</router-link>-->
+          <!--<router-link to="/components/expansion-panels">-->
             <list-item ref="expansionpanels" text="Expansion Panels" :no-ripple="true" @click="setActive('expansionpanels')"></list-item>
-          </router-link>
-          <router-link to="/components/forms">
+          <!--</router-link>-->
+          <!--<router-link to="/components/forms">-->
             <list-item ref="forms" text="Forms" :no-ripple="true" @click="setActive('forms')"></list-item>
-          </router-link>
-          <router-link to="/components/lists">
+          <!--</router-link>-->
+          <!--<router-link to="/components/lists">-->
             <list-item ref="lists" text="Lists" :no-ripple="true" @click="setActive('lists')"></list-item>
-          </router-link>
-          <router-link to="/components/toasts">
+          <!--</router-link>-->
+          <!--<router-link to="/components/toasts">-->
             <list-item ref="toasts" text="Toasts" :no-ripple="true" @click="setActive('toasts')"></list-item>
-          </router-link>
-          <router-link to="/components/tabs">
+          <!--</router-link>-->
+          <!--<router-link to="/components/tabs">-->
             <list-item ref="tabs" text="Tabs" :no-ripple="true" @click="setActive('tabs')"></list-item>
-          </router-link>
-          <router-link to="/components/sliders">
+          <!--</router-link>-->
+          <!--<router-link to="/components/sliders">-->
             <list-item ref="sliders" text="Sliders" :no-ripple="true" @click="setActive('sliders')"></list-item>
-          </router-link>
+          <!--</router-link>-->
         </list>
 
         <list dense="true">
           <list-item text="Style" bold="true" @click="expand('style')"></list-item>
         </list>
         <list dense="true" ref="style" style="height: 0px; overflow: hidden;" class="secondary-list">
-          <router-link to="/style/typography">
+          <!--<router-link to="/style/typography">-->
             <list-item ref="typography" text="Typography" :no-ripple="true" @click="setActive('typography')"></list-item>
-          </router-link>
+          <!--</router-link>-->
         </list>
       </nav>
     </sidebar>
@@ -114,7 +114,7 @@
       Sidebar,
       List,
       ListItem,
-      RouterLink
+//      RouterLink
     },
     props: [
       'title'

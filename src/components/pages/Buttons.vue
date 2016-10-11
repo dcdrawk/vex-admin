@@ -1,7 +1,7 @@
 <template>
   <div class="row page-content">
     <v-card title="Flat / Raised Buttons" class="col-xs-12" @click="test()">
-      <v-tabs :default-tab="0" :primary="true" class="demo-tabs">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">
 
           <!-- Flat Buttons -->
