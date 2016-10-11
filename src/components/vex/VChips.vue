@@ -1,7 +1,7 @@
 <template>
   <div class="v-chip-container" v-bind:class="{ 'focused': focused }">
     <span class="v-chip" v-for="(chip, index) in chips"><span>{{ chip }}</span><i v-if="!readOnly" class="material-icons chip-remove" @click="removeChip(index);">close</i></span>
-    <input v-if="!readOnly" v-model="value" v-focus-model="focused" :placeholder="placeholder" @keyup.enter="addChip(value)" @keydown.delete="removeLastChip(value);"/>
+    <input v-if="!readOnly" v-model="value" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" @keyup.enter="addChip(value)" @keydown.delete="removeLastChip(value);"/>
   </div>
 </template>
 
@@ -26,11 +26,10 @@
 
 </style>
 <script>
-  import { focusModel } from 'vue-focus';
+  import { focus } from 'vue-focus';
 
   export default {
-    directives: { focusModel: focusModel },
-    name: 'MaterialButton',
+    directives: { focus: focus },
     props: [
       'label',
       'chips',
@@ -41,7 +40,7 @@
     data () {
       return {
         focused: false,
-//        chips: this.chips ? this.chips : [],
+        value: ''
       }
     },
 

@@ -56,15 +56,7 @@
     },
 
     mounted () {
-      console.log('mounted');
-      console.log(this);
-
-      for (var i in this.$slots) {
-        console.log(this.$slots[i]);
-        console.log(this.$slots);
-      }
       this.$nextTick(() => {
-        // console.log('tick');
         this.offset = 0;
 
         this.updateBar(0);
@@ -121,7 +113,6 @@
 
     methods: {
       selectTab (key, index) {
-        console.log(index);
         this.active = key;
         this.index = index;
         this.scrollTabs(index);
@@ -142,12 +133,10 @@
           var button = this.findTab(index);
           var tabBar = this.$refs['active-tab-bar'];
           var tabs = this.$slots;
-          console.log(button);
           this.scale = button.clientWidth / 100;
           this.translate = 0;
 
           for (var i in this.$refs.tabs) {
-            console.log('translate');
             if (+i !== this.index) {
               this.translate += this.$refs.tabs[i].$el.clientWidth;
             } else {
@@ -192,7 +181,6 @@
     watch: {
       'iconsOnly': {
         handler: function(val, oldVal) {
-          console.log('icons icons icons!');
           this.updateBar(this.defaultTab);
           this.active = this.defaultTab;
         }

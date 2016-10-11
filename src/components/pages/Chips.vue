@@ -12,7 +12,7 @@
 
           <!-- Read-only Chips -->
           <h3 class="title">Read-only Chips</h3>
-          <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>
+          <!--<v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>-->
 
         </div>
         <div slot="template">

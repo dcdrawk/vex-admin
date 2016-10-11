@@ -1,6 +1,7 @@
 // App
 // import Vue from 'vue';
-import Vue from 'vue/dist/vue.js'
+// import Vue from 'vue/dist/vue.js'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
@@ -44,6 +45,8 @@ Vue.use(VueResource);
 // Map the Routes and Components
 var router = new VueRouter({
   routes: [
+
+    //Components
     {
       path: '/',
       component: Dashboard
@@ -51,6 +54,42 @@ var router = new VueRouter({
     {
       path: '/components/buttons',
       component: Buttons
+    },
+    {
+      path: '/components/cards',
+      component: Cards
+    },
+    {
+      path: '/components/chips',
+      component: Chips
+    },
+    {
+      path: '/components/tabs',
+      component: Tabs
+    },
+    {
+      path: '/components/dialogs',
+      component: Dialogs
+    },
+    {
+      path: '/components/expansionpanels',
+      component: ExpansionPanels
+    },
+    {
+      path: '/components/sliders',
+      component: Sliders
+    },
+    {
+      path: '/components/dividers',
+      component: Dividers
+    },
+    {
+      path: '/components/dropdowns',
+      component: Dropdowns
+    },
+    {
+      path: '/components/datatables',
+      component: DataTables
     },
     {
       path: '/components/lists',
@@ -64,57 +103,13 @@ var router = new VueRouter({
       path: '/components/toasts',
       component: Toasts
     },
-    // {
-    //   path: '/test',
-    //   component: Test
-    // }
 
+    //Styles
+    {
+      path: '/style/typoghraphy',
+      component: Typography
+    },
 
-
-    // '/': {
-    //   component: Dashboard
-    // },
-    //
-    // //Component Pages
-    // '/components/buttons': {
-    //   component: Buttons
-    // },
-    // '/components/lists': {
-    //   component: Lists
-    // },
-    // '/components/cards': {
-    //   component: Cards
-    // },
-    // '/components/forms': {
-    //   component: Forms
-    // },
-    // '/components/toasts': {
-    //   component: Toasts
-    // },
-    // '/components/chips': {
-    //   component: Chips
-    // },
-    // '/components/tabs': {
-    //   component: Tabs
-    // },
-    // '/components/dialogs': {
-    //   component: Dialogs
-    // },
-    // '/components/expansion-panels': {
-    //   component: ExpansionPanels
-    // },
-    // '/components/sliders': {
-    //   component: Sliders
-    // },
-    // '/components/dividers': {
-    //   component: Dividers
-    // },
-    // '/components/dropdowns': {
-    //   component: Dropdowns
-    // },
-    // '/components/datatables': {
-    //   component: DataTables
-    // },
     // //Style Pages
     // '/style/typography': {
     //   component: Typography
