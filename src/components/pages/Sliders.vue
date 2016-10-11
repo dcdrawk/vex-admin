@@ -9,19 +9,19 @@
 
           <!-- Basic Slider -->
           <h3 class="title">Basic Slider ({{ Math.round(value1) }})</h3>
-          <v-slider :value="value1"></v-slider>
+          <v-slider :value="value1" @changed="value1 = $event"></v-slider>
 
           <!-- Slider with Min Value -->
           <h3 class="title">Min Value of 10 ({{ Math.round(value2) }})</h3>
-          <v-slider :value="value2" :min="10"></v-slider>
+          <v-slider :value="value2" :min="10" @changed="value2 = $event"></v-slider>
 
           <!-- Slider with Max Value-->
           <h3 class="title">Max Value of 50 ({{ Math.round(value3) }})</h3>
-          <v-slider :value="value3" :max="50"></v-slider>
+          <v-slider :value="value3" :max="50" @changed="value3 = $event"></v-slider>
 
           <!-- Slider with Steps / Bubble -->
           <h3 class="title">Slider With Steps / Bubble ({{ Math.round(value4) }})</h3>
-          <v-slider :value="value4" :steps="6" :show-bubble="true" :min="0" :max="5"></v-slider>
+          <v-slider :value="value4" :steps="6" :show-bubble="true" :min="0" :max="5" @changed="value4 = $event"></v-slider>
         </div>
         <div slot="template">
           <pre><code class="language-html">{{ sliderMarkup }}</code></pre>
@@ -57,7 +57,11 @@
       Prism.highlightAll();
     },
     methods: {
-
+//      updateSlider (ev) {
+//        console.log('updated slider!!!!!');
+//        console.log(ev);
+//        this.value1 = ev;
+//      }
     },
     // Data
     data () {

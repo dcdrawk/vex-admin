@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="v-slider-container" v-bind:class="{ 'has-value': value, 'focus': focused }"  v-focus="focused" @focus="focused = true"  @blur="focused = false" @mousedown="clickSlider($event)">
+  <div ref="container" class="v-slider-container" v-bind:class="{ 'has-value': hasValue, 'focus': focused }"  v-focus="focused" @focus="focused = true"  @blur="focused = false" @mousedown="clickSlider($event)">
     <div ref="slider" class="v-slider"></div>
     <div ref="circle" class="v-slider-circle-container" :class="{ 'has-value': hasValue, 'focus': focused }">
       <div class="v-slider-circle"></div>
@@ -36,26 +36,33 @@
       return {
         focused: false,
         translate: 0,
-        hasValue: false
+        hasValue: false,
+        sliderValue: this.value || 0,
+        minValue: this.min || 0,
+        maxValue: this.max || 100
       }
     },
 
     methods: {
       clickSlider (ev) {
-        var value = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.max - +this.min) + +this.min;
+        var value = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.maxValue - +this.minValue) + +this.minValue;
 
-        if (value > this.min && value < this.max) {
-          this.value = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.max - +this.min) + +this.min;
-        } else if (value <= this.min) {
-          this.value = this.min;
+        if (value > this.minValue && value < this.maxValue) {
+          this.sliderValue = (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.maxValue - +this.minValue) + +this.minValue;
+//          this.$emit('changed', (ev.clientX - this.$refs.container.offsetLeft - 16) / this.$refs.slider.clientWidth * (+this.max - +this.min) + +this.min);
+        } else if (value <= this.minValue) {
+          this.sliderValue = this.minValue;
+//          this.$emit('changed', this.min);
         } else {
-          this.value = this.max;
+          this.sliderValue = this.maxValue;
+//          this.$emit('changed', this.max);
         }
         this.translate = ev.clientX - this.$refs.container.offsetLeft - 16;
         if (this.steps) {
-          this.stepSnap(this.value);
+          this.stepSnap(this.sliderValue);
         }
-        if (Math.round(this.value) <= this.min) {
+//        console.log(this.sliderValue, this.minValue, Math.round(this.sliderValue * 100) <= this.minValue);
+        if (Math.round(this.sliderValue * 100) <= this.minValue) {
           this.hasValue = false;
         }
       },
@@ -75,7 +82,6 @@
           steps[i] = i * this.$refs.slider.clientWidth / (this.steps - 1);
           var sliderDot = document.createElement('span');
           sliderDot.classList.add('slider-dot');
-          console.dir(steps[i]);
           sliderDot.style.transform = `translate3d(${steps[i] - 4}px, -2px, 0px)`;
           this.$refs.slider.append(sliderDot);
         }
@@ -84,7 +90,7 @@
       // Snap to steps
       stepSnap (value) {
         var steps = [];
-        var position = ((value - this.min) / (this.max - this.min)) * this.$refs.slider.clientWidth;
+        var position = ((value - this.minValue) / (this.maxValue - this.minValue)) * this.$refs.slider.clientWidth;
 
         // Set up the steps array
         for (var i = 0; i < this.steps; i++) {
@@ -97,17 +103,17 @@
             if (position >= steps[j] && position < steps[+j + 1]) {
               // If it's between the two steps
               if (position <= (steps[j] + steps[+j + 1]) / 2) {
-                this.value = ((steps[j] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.sliderValue = ((steps[j] / this.$refs.slider.clientWidth) * (+this.maxValue - +this.minValue) + +this.minValue);
               } else {
-                this.value = ((steps[+j + 1] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.sliderValue = ((steps[+j + 1] / this.$refs.slider.clientWidth) * (+this.maxValue - +this.minValue) + +this.minValue);
               }
             }
           } else {
             if (position >= steps[+j - 1] && position <= steps[j]) {
               if (position <= (steps[j] + steps[+j - 1]) / 2) {
-                this.value = ((steps[+j - 1] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.sliderValue = ((steps[+j - 1] / this.$refs.slider.clientWidth) * (+this.maxValue - +this.minValue) + +this.minValue);
               } else {
-                this.value = ((steps[j] / this.$refs.slider.clientWidth) * (+this.max - +this.min) + +this.min);
+                this.sliderValue = ((steps[j] / this.$refs.slider.clientWidth) * (+this.maxValue - +this.minValue) + +this.minValue);
               }
             }
           }
@@ -118,37 +124,25 @@
     mounted () {
       var circle = new Hammer(this.$refs.circle);
       var container = this.$refs.container;
-
       setTimeout(() => {
-        if (!this.min) {
-          this.min = 0;
-        }
-
-        if (!this.max) {
-          this.max = 100;
-        }
-
-        if (this.value > this.min) {
-          this.hasValue = true;
-        }
-
         if (this.steps) {
           this.createSteps();
         }
 
-        this.translate = (this.value / (this.max - this.min)) * this.$refs.slider.clientWidth;
-        this.setPosition(this.value / (this.max - this.min));
+        this.translate = (this.sliderValue / (this.maxValue - this.minValue)) * this.$refs.slider.clientWidth;
+        this.setPosition(this.sliderValue / (this.maxValue - this.minValue));
+        this.hasValue = this.sliderValue / (this.maxValue - this.minValue);
       }, 0);
 
       circle.on('pan', (ev) => {
         var value = (this.translate + ev.deltaX) / this.$refs.slider.clientWidth;
         if (value > 0 && value < 1) {
-          this.value = ((this.translate + ev.deltaX) / this.$refs.slider.clientWidth * (+this.max - +this.min)) + +this.min;
+          this.sliderValue = ((this.translate + ev.deltaX) / this.$refs.slider.clientWidth * (+this.maxValue - +this.minValue)) + +this.minValue;
         } else if (value <= 0) {
-          this.value = this.min;
+          this.sliderValue = this.minValue;
           this.hasValue = false;
         } else {
-          this.value = this.max;
+          this.sliderValue = this.maxValue;
         }
       });
 
@@ -167,16 +161,15 @@
     },
 
     watch: {
-      'value': {
+      'sliderValue': {
         handler: function(val, oldVal) {
           if (val !== oldVal) {
             setTimeout(() => {
-              this.setPosition((this.value - this.min) / (this.max - this.min));
+              this.setPosition((this.sliderValue - this.minValue) / (this.maxValue - this.minValue));
             }, 0);
           }
-//          this.hasValue = Math.round(val * 100) > 0;
-          this.hasValue = Math.round(this.value) > this.min;
-          this.$emit('value');
+          this.hasValue = this.sliderValue / (this.maxValue - this.minValue);
+          this.$emit('changed', this.sliderValue);
         }
       }
     }
