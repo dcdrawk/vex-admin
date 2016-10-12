@@ -106,7 +106,7 @@ var router = new VueRouter({
 
     //Styles
     {
-      path: '/style/typoghraphy',
+      path: '/style/typography',
       component: Typography
     },
 

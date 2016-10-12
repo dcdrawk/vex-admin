@@ -66,9 +66,9 @@
           <list-item text="Style" bold="true" @click.native.native="expand('style')"></list-item>
         </list>
         <list dense="true" ref="style" style="height: 0px; overflow: hidden;" class="secondary-list">
-          <!--<router-link to="/style/typography">-->
+          <router-link to="/style/typography">
             <list-item ref="typography" text="Typography" :no-ripple="true" @click.native="setActive('typography')"></list-item>
-          <!--</router-link>-->
+          </router-link>
         </list>
       </nav>
     </sidebar>

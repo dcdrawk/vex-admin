@@ -1,6 +1,5 @@
 <template>
   <div class="row page-content">
-    <h1 class="col-xs-12 display-1">Typography</h1>
     <Card title="Headings" class="col-xs-12 typography-demo">
 
       <div class="row headings">
