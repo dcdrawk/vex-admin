@@ -25,7 +25,7 @@
     font-size: 14px;
     margin: 16px;
     display: inline-block;
-    //width: 100%;
+    width: calc(100% - 32px);
   }
 
   .card-actions {

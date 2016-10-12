@@ -190,11 +190,6 @@
         }
       },
 
-//      updateSelection (row, col, key) {
-//        row[col[key]]
-//        console.log(row, col, key);
-//      },
-
       cancelEdit () {
         this.editing = false;
       },

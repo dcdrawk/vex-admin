@@ -27,6 +27,9 @@
           <router-link to="/components/cards">
             <list-item ref="cards" text="Cards" :no-ripple="true" @click.native="setActive('cards')"></list-item>
           </router-link>
+          <router-link to="/components/charts">
+            <list-item ref="charts" text="Charts" :no-ripple="true" @click.native="setActive('charts')"></list-item>
+          </router-link>
           <router-link to="/components/chips">
             <list-item ref="chips" text="Chips" :no-ripple="true" @click.native="setActive('chips')"></list-item>
           </router-link>
