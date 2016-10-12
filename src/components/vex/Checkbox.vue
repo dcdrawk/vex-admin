@@ -1,5 +1,5 @@
 <template>
-  <div class="checkbox-container" @click="toggleCheckbox();" v-bind:class="{ 'has-value': value, 'secondary-color': secondaryColor }">
+  <div class="checkbox-container" @click="toggleCheckbox();" v-bind:class="{ 'has-value': checkboxValue, 'secondary-color': secondaryColor }">
     <div class="checkbox"></div>
     <i class="material-icons">check</i>
   </div>
@@ -52,13 +52,17 @@
 
     data () {
       return {
-//        value: false
+        checkboxValue: this.value || false
       }
     },
     methods: {
-      toggleCheckbox () {
-        this.value = !this.value;
-        this.$emit('value');
+      toggleCheckbox (value) {
+        if (value === true || value === false) {
+          this.checkboxValue = value;
+        } else {
+          this.checkboxValue = !this.checkboxValue;
+        }
+        this.$emit('checked', this.checkboxValue);
       }
     }
 

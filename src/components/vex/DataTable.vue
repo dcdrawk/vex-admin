@@ -6,9 +6,9 @@
         <thead>
           <tr>
             <th v-if="selection" class="v-selection v-select-all" >
-              <v-checkbox :value="selectAll" @click="toggleSelect()"></v-checkbox>
+              <v-checkbox :value="selectAll" @click.native="toggleSelect()" @checked="selectAll = $event" ref="selectAll"></v-checkbox>
             </th>
-            <th v-for="(column, index) in columns" :class="{ 'v-first-col': index === 0 }">
+            <th v-for="(column, index) in tableColumns" :class="{ 'v-first-col': index === 0 }">
               <i class="material-icons v-order-by" v-if="index !== 0"
                  v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
                 arrow_downward
@@ -22,16 +22,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="row in rows">
+          <tr v-for="row in filteredRows">
             <td v-if="selection" class="v-selection">
-              <v-checkbox :value="row[selectionKey]" @click="checkSelection()"></v-checkbox>
+              <v-checkbox :value="row[selectionKey]" @click.native="checkSelection()" @checked="selectRow(row, selectionKey, $event)" ref="checkboxes"></v-checkbox>
             </td>
-            <td v-for="(column, index) in columns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
+            <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
               <span v-if="!column.options">{{row[column.key]}}</span>
               <div class="v-column-options">
                 <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
               </div>
               <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
+            </td>
+          </tr>
+
+          <tr v-if="filteredRows.length === 0">
+            <td :colspan="columns.length" class="v-results-message">
+              {{ noResults }}
             </td>
           </tr>
         </tbody>
@@ -91,12 +97,15 @@
       'hover',
       'selection',
       'selectionKey',
-      'options'
+      'options',
+      'noResults'
     ],
 
     // Data
     data () {
       return {
+        tableRows: this.rows || [],
+        tableColumns: this.columns || [],
         selectAll: false,
         editing: false,
         editValue: '',
@@ -106,7 +115,6 @@
     },
 
     mounted () {
-      console.log('ready');
         if (this.selection) {
           this.setSelection();
         }
@@ -124,37 +132,43 @@
       },
 
       toggleSelect () {
-        this.rows.forEach((item, index) => {
-          if (!this.selectAll) {
-            item[this.selectionKey] = true;
-          } else {
-            item[this.selectionKey] = false;
-          }
+        this.$nextTick(() => {
+          this.tableRows.forEach((item, index) => {
+            if (this.selectAll) {
+              console.log(this.$refs.checkboxes[index]);
+              this.$refs.checkboxes[index].toggleCheckbox(true);
+            } else {
+              this.$refs.checkboxes[index].toggleCheckbox(false);
+            }
+          });
         });
+        this.$emit('selected', this.tableRows);
       },
 
       checkSelection () {
         setTimeout(() => {
           var allSelected = true;
-          this.rows.forEach((item, index) => {
+          this.tableRows.forEach((item, index) => {
             if (!item[this.selectionKey]) {
               allSelected = false;
             }
           });
-          console.log(allSelected);
-          this.selectAll = allSelected;
+          this.$refs.selectAll.toggleCheckbox(allSelected);
         }, 0);
       },
 
       setSelection () {
-        this.rows.forEach((item, index) => {
+        this.tableRows.forEach((item, index) => {
           if (!item[this.selectionKey]) {
             item.selected = false;
           }
         });
+        this.tableRows = JSON.parse(JSON.stringify(this.tableRows));
+      },
 
-        var rows = JSON.parse(JSON.stringify(this.rows));
-        this.$set('rows', rows);
+      selectRow(row, key, ev) {
+        row[key] = ev;
+        this.$emit('selected', this.tableRows);
       },
 
       editField (ev, editable, row, key) {
@@ -195,9 +209,13 @@
 
     computed: {
       filteredRows: function () {
-        return this.rows.filter((row) => {
-          return row.name.indexOf(this.searchQuery);
-        })
+        if (this.filter) {
+          return this.tableRows.filter((row) => {
+            return row.name.toLowerCase().indexOf(this.filter) >= 0;
+          });
+        } else {
+          return this.tableRows;
+        }
       },
       orderedRows: function () {
         // return _.orderBy(this.rows, this.order);

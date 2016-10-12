@@ -13,11 +13,11 @@
           <!-- Hover Data Table -->
           <h3 class="title">Search Filter + Border {{ searchText }}</h3>
           <v-search-bar ref="search" placeholder="Search" :value="searchText" key="name" @changed="searchText = $event"></v-search-bar>
-          <v-data-table :rows="rows" :columns="columns" :border="true" :filter="searchText" ></v-data-table>
+          <v-data-table :rows="rows" :columns="columns" :border="true" :filter="searchText" no-results="No Results to Display"></v-data-table>
 
           <!-- Row Selection + Hover Data Table -->
           <h3 class="title">Row Selection + Hover</h3>
-          <!--<v-data-table :rows="rows" :columns="columns" :hover="true" :selection="true" selection-key="selected"></v-data-table>-->
+          <v-data-table :rows="rows" :columns="columns" :hover="true" :selection="true" selection-key="selected" @selected="rows = $event"></v-data-table>
 
           <!-- Striped Data Table -->
           <h3 class="title">Striped + Editable Fields</h3>

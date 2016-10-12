@@ -121,11 +121,11 @@
 
           <!-- Basic Checkbox -->
           <h3 class="title">Basic Checkbox</h3>
-          <v-checkbox :value="true"></v-checkbox>
+          <v-checkbox :value="checkboxValue1" @checked="checkboxValue1 = $event"></v-checkbox>
 
           <!-- Secondary Color Checkbox -->
           <h3 class="title">Secondary Color Checkbox</h3>
-          <v-checkbox :value="true" :secondary-color="true"></v-checkbox>
+          <v-checkbox :value="checkboxValue2" :secondary-color="true" @checked="checkboxValue2 = $event"></v-checkbox>
 
         </div>
         <div slot="template">
@@ -178,6 +178,8 @@
     // Data
     data () {
       return {
+        checkboxValue1: true,
+        checkboxValue2: true,
         selectValue: '',
         inputMarkup: `<!-- Basic Input -->
 <h3 class="title">Basic Input</h3>
