@@ -11,28 +11,28 @@
           <v-data-table :rows="rows" :columns="columns"></v-data-table>
 
           <!-- Hover Data Table -->
-          <h3 class="title">Search Filter + Border</h3>
-          <v-search-bar ref="search" placeholder="Search" :value="searchText" key="name"></v-search-bar>
-          <v-data-table :rows="rows" :columns="columns" :border="true" :filter="$refs.search.value" ></v-data-table>
+          <h3 class="title">Search Filter + Border {{ searchText }}</h3>
+          <v-search-bar ref="search" placeholder="Search" :value="searchText" key="name" @changed="searchText = $event"></v-search-bar>
+          <v-data-table :rows="rows" :columns="columns" :border="true" :filter="searchText" ></v-data-table>
 
           <!-- Row Selection + Hover Data Table -->
           <h3 class="title">Row Selection + Hover</h3>
-          <v-data-table :rows="rows" :columns="columns" :hover="true" :selection="true" selection-key="selected"></v-data-table>
+          <!--<v-data-table :rows="rows" :columns="columns" :hover="true" :selection="true" selection-key="selected"></v-data-table>-->
 
           <!-- Striped Data Table -->
           <h3 class="title">Striped + Editable Fields</h3>
-          <v-data-table :rows="rows" :columns="columnsEditable" :striped="true"></v-data-table>
+          <!--<v-data-table :rows="rows" :columns="columnsEditable" :striped="true"></v-data-table>-->
 
           <!-- Basic Dropdown -->
           <h3 class="title">Responsive</h3>
-          <v-data-table :rows="rows" :columns="columns" :responsive="true"></v-data-table>
+          <!--<v-data-table :rows="rows" :columns="columns" :responsive="true"></v-data-table>-->
 
         </div>
         <div slot="template">
-          <pre><code class="language-html">{{ dropdownMarkup }}</code></pre>
+          <!--<pre><code class="language-html">{{ dropdownMarkup }}</code></pre>-->
         </div>
         <div slot="script">
-          <pre><code class="language-javascript">{{ dropdownScript }}</code></pre>
+          <!--<pre><code class="language-javascript">{{ dropdownScript }}</code></pre>-->
         </div>
       </v-tabs>
     </v-card>
@@ -75,6 +75,7 @@
     // Data
     data () {
       return {
+        searchText: '',
         rows: [{
           name: 'Jon',
           house: 'Snow',

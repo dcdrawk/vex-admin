@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Sliders.vue" afterPath="$PROJECT_DIR$/src/components/pages/Sliders.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Slider.vue" afterPath="$PROJECT_DIR$/src/components/vex/Slider.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/DataTables.vue" afterPath="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/SearchBar.vue" afterPath="$PROJECT_DIR$/src/components/vex/SearchBar.vue" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,14 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Slider.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Slider.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Slider.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
-              <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
-              <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
-              <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataTables.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/DataTables.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,8 +80,18 @@
       <file leaf-file-name="Sliders.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/Sliders.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="101" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="101" />
+            <state relative-caret-position="405">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchBar.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/SearchBar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -109,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/styles/components/_inputs.scss" />
         <option value="$PROJECT_DIR$/src/styles/components/_select.scss" />
         <option value="$PROJECT_DIR$/src/styles/components/_datatables.scss" />
-        <option value="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/DataTable.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Buttons.vue" />
         <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
@@ -122,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/components/Profile.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
-        <option value="$PROJECT_DIR$/src/components/vex/SearchBar.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/styles/components/_expansion-panels.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/Input.vue" />
@@ -139,6 +154,8 @@
         <option value="$PROJECT_DIR$/src/components/vex/VTabs.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Sliders.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Slider.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/SearchBar.vue" />
+        <option value="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
       </list>
     </option>
   </component>
@@ -491,12 +508,12 @@
       <workItem from="1475683495814" duration="388000" />
       <workItem from="1475683965091" duration="45653000" />
       <workItem from="1475877774579" duration="6861000" />
-      <workItem from="1476198691619" duration="29167000" />
+      <workItem from="1476198691619" duration="29741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344752000" />
+    <option name="totallyTimeSpent" value="345326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -639,14 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
           <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/DataTables.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="90" selection-start-line="27" selection-start-column="90" selection-end-line="27" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -814,14 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/SearchBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="93" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Textarea.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -950,21 +951,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Sliders.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Slider.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="101" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="101" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/Slider.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/vex/SearchBar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
-          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
-          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
-          <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+        <state relative-caret-position="315">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Sliders.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/DataTables.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
