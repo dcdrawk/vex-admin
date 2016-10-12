@@ -10,12 +10,12 @@
             </th>
             <th v-for="(column, index) in tableColumns" :class="{ 'v-first-col': index === 0 }">
               <i class="material-icons v-order-by" v-if="index !== 0"
-                 v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+                 v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
                 arrow_downward
               </i>
               <span @click="orderBy(column.key);">{{ column.head }}</span>
               <i class="material-icons v-order-by" v-if="index === 0"
-                 v-bind:class="{ 'hidden': order !== column.key, 'descending': direction === 1, 'ascending': direction === -1}">
+                 v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
                 arrow_downward
               </i>
             </th>
@@ -29,7 +29,7 @@
             <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
               <span v-if="!column.options">{{row[column.key]}}</span>
               <div class="v-column-options">
-                <v-select v-if="column.options" :value="row[column.key]" :options="column.options" @selected="updateSelection(row, column, key, $event)">{{row[column.key]}}</v-select>
+                <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
               </div>
               <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
             </td>
@@ -42,7 +42,7 @@
           </tr>
         </tbody>
       </table>
-      <transition>
+      <transition name="fade">
         <div ref="editor" v-show="editing" class="v-data-table-edit-container">
           <v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue)" @keyup.native.esc="cancelEdit()" @input="editValue = $event"></v-input>
           <div class="v-edit-buttons">
@@ -67,6 +67,7 @@
   }
   table {
     width: 100%;
+    table-layout: fixed;
   }
 </style>
 
@@ -106,6 +107,8 @@
       return {
         tableRows: this.rows || [],
         tableColumns: this.columns || [],
+        tableOrder: this.order || '',
+        tableDirection: this.direction || 1,
         selectAll: false,
         editing: false,
         editValue: '',
@@ -123,12 +126,12 @@
     // Methods
     methods: {
       orderBy (property) {
-        if (this.order === property) {
-          this.direction = this.direction * -1;
+        if (this.tableOrder === property) {
+          this.tableDirection = this.tableDirection * -1;
         } else {
-          this.direction = 1;
+          this.tableDirection = 1;
         }
-        this.order = property;
+        this.tableOrder = property;
       },
 
       toggleSelect () {
@@ -187,10 +190,10 @@
         }
       },
 
-      updateSelection (row, col, key) {
+//      updateSelection (row, col, key) {
 //        row[col[key]]
-        console.log(row, col, key);
-      },
+//        console.log(row, col, key);
+//      },
 
       cancelEdit () {
         this.editing = false;
@@ -216,14 +219,22 @@
       filteredRows: function () {
         if (this.filter) {
           return this.tableRows.filter((row) => {
-            return row.name.toLowerCase().indexOf(this.filter) >= 0;
+              return row.name.toLowerCase().indexOf(this.filter) >= 0;
+          })
+          .sort((a, b) => {
+            a[this.tableOrder] < b[this.tableOrder] ? -1 : 1
           });
         } else {
-          return this.tableRows;
+          if (this.tableOrder) {
+            console.log('order?');
+            console.log(this.tableOrder);
+            return this.tableRows.sort((a, b) => {
+              return a[this.tableOrder] < b[this.tableOrder] ? -1 * this.tableDirection : 1 * this.tableDirection;
+            });
+          } else {
+            return this.tableRows;
+          }
         }
-      },
-      orderedRows: function () {
-        // return _.orderBy(this.rows, this.order);
       }
     }
 
