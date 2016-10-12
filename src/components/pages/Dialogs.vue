@@ -87,15 +87,6 @@
       showAlert (alert, size) {
         window.alert(alert);
         this.showDialog[size] = false;
-      },
-
-      test (size) {
-        console.log('toggled');
-        if (this.showDialog) {
-          console.log(this.showDialog[size]);
-          this.showDialog[size] = false;
-        }
-//        this.showdialog[size] = !this.showDialog[size];
       }
     },
 
@@ -111,7 +102,7 @@
 <h3 class="title">Small Dialog</h3>
 <v-button @click.native="showDialog.small = !showDialog.small">Show Small Dialog</v-button>
 
-<v-dialog :show="showDialog.small" title="Small Dialog" :small="true">
+<v-dialog :show="showDialog.small" @hide="showDialog.small = false" title="Small Dialog" :small="true">
   <p>Confirm you opened the dialog</p>
   <div slot="actions">
     <v-button @click.native="showDialog.small = false">Cancel</v-button>
@@ -123,7 +114,7 @@
 <h3 class="title">Medium Dialog</h3>
 <v-button @click.native="showDialog.medium = !showDialog.medium">Show Medium Dialog</v-button>
 
-<v-dialog :show="showDialog.medium" title="Medium Dialog" :medium="true">
+<v-dialog :show="showDialog.medium" @hide="showDialog.medium = false" title="Medium Dialog" :medium="true">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
   <div slot="actions">
     <v-button @click.native="showDialog.medium = false">Cancel</v-button>
@@ -135,7 +126,7 @@
 <h3 class="title">Large Dialog</h3>
 <v-button @click.native="showDialog.large = !showDialog.large">Show Large Dialog</v-button>
 
-<v-dialog :show="showDialog.large" title="Large Dialog" :large="true">
+<v-dialog :show="showDialog.large" @hide="showDialog.large = false" title="Large Dialog" :large="true">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
   <p>Proin finibus aliquam ante, id convallis lectus aliquam ut. Ut porttitor felis sed vestibulum volutpat. In a tristique odio. Praesent velit leo, finibus in eleifend sed, faucibus a justo. Pellentesque cursus ultrices sem vitae ultricies. Maecenas porta accumsan accumsan. In congue dignissim eros vel fermentum. Curabitur nibh nunc, feugiat quis leo non, eleifend euismod nulla. Aenean pretium eu diam auctor viverra.</p>
   <p>Vivamus eu odio gravida, tincidunt nulla et, interdum augue. Aenean in risus ut lectus pretium semper. Aliquam erat volutpat. Fusce dapibus rutrum justo et suscipit. Quisque nec tempus eros, id sollicitudin augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tellus eu commodo suscipit. Duis eget turpis erat. Ut dui velit, scelerisque id efficitur at, aliquam non erat. Aenean scelerisque faucibus cursus.</p>

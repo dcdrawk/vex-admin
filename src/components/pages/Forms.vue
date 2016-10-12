@@ -202,11 +202,11 @@ export default {
 }`,
         checkboxMarkup: `<!-- Basic Checkbox -->
 <h3 class="title">Basic Checkbox</h3>
-<v-checkbox :value="true"></v-checkbox>
+<v-checkbox :value="checkboxValue1" @checked="checkboxValue1 = $event"></v-checkbox>
 
 <!-- Secondary Color Checkbox -->
 <h3 class="title">Secondary Color Checkbox</h3>
-<v-checkbox :value="true" :secondary-color="true"></v-checkbox>`,
+<v-checkbox :value="checkboxValue2" :secondary-color="true" @checked="checkboxValue2 = $event"></v-checkbox>`,
         checkboxScript:
 `import VCheckbox from '../vex/Checkbox.vue';
 
@@ -258,7 +258,7 @@ export default {
 }`,
         radioButtonMarkup: `<!-- Basic Radio Buttons -->
 <h3 class="title">Basic Radio Buttons</h3>
-<v-radio-group :value="radioValue1">
+<v-radio-group :value="radioValue1" @select="radioEvent($event, 'radioValue1');">
   <v-radio-button value="Stan"></v-radio-button>
   <v-radio-button value="Kyle"></v-radio-button>
   <v-radio-button value="Cartman"></v-radio-button>
@@ -268,7 +268,7 @@ export default {
 
 <!-- Secondary Color Radio Buttons -->
 <h3 class="title">Secondary Color Radio Buttons</h3>
-<v-radio-group :value="radioValue2">
+<v-radio-group :value="radioValue2" @select="radioEvent($event, 'radioValue2');">
   <v-radio-button value="Stan" :secondary-color="true"></v-radio-button>
   <v-radio-button value="Kyle" :secondary-color="true"></v-radio-button>
   <v-radio-button value="Cartman" :secondary-color="true"></v-radio-button>
@@ -289,6 +289,11 @@ export default {
     return {
       radioValue1: 'Kyle',
       radioValue2: 'Cartman'
+    }
+  },
+  methods: {
+    radioEvent (value, radioValue) {
+      this[radioValue] = value;
     }
   }
 }`,

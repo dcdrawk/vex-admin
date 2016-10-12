@@ -6,7 +6,7 @@
 
           <!-- Flat Buttons -->
           <h3 class="title">Flat Buttons</h3>
-          <v-button @click="test()">Button</v-button>
+          <v-button>Button</v-button>
           <v-button :primary="true">Button</v-button>
           <v-button :secondary="true">Button</v-button>
 
