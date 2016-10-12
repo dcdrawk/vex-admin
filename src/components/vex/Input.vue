@@ -1,7 +1,7 @@
 <template>
-  <div class="v-input-container" v-bind:class="{ 'has-value': value, 'focus': focused }">
+  <div class="v-input-container" v-bind:class="{ 'has-value': inputValue, 'focus': focused }">
     <label v-if="label">{{label}}</label>
-    <input ref="input" v-model="value" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :type="type"/>
+    <input ref="input" v-model="inputValue" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :type="type"/>
   </div>
 </template>
 
@@ -24,14 +24,23 @@
 
     data () {
       return {
-        focused: false
+        focused: false,
+        inputValue: this.value || ''
       }
     },
 
     watch: {
+      'inputValue': {
+        handler: function(val, oldVal) {
+          console.log(val);
+          this.$emit('input', this.inputValue);
+        },
+      },
       'value': {
         handler: function(val, oldVal) {
-          this.$emit('value');
+          console.log('value changed?!?');
+          this.inputValue = val;
+//          this.$emit('input', this.inputValue);
         },
       }
     }

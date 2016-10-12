@@ -29,7 +29,7 @@
             <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
               <span v-if="!column.options">{{row[column.key]}}</span>
               <div class="v-column-options">
-                <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
+                <v-select v-if="column.options" :value="row[column.key]" :options="column.options" @selected="updateSelection(row, column, key, $event)">{{row[column.key]}}</v-select>
               </div>
               <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
             </td>
@@ -44,10 +44,10 @@
       </table>
       <transition>
         <div ref="editor" v-show="editing" class="v-data-table-edit-container">
-          <v-input ref="editinput" :value="editValue" :focus="true" @keyup.enter="saveEdit(editValue)" @keyup.esc="cancelEdit()"></v-input>
+          <v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue)" @keyup.native.esc="cancelEdit()" @input="editValue = $event"></v-input>
           <div class="v-edit-buttons">
-            <v-button class="cancel" :primary="true" @click="cancelEdit()">cancel</v-button>
-            <v-button class="save" :primary="true" @click="saveEdit(editValue)">save</v-button>
+            <v-button class="cancel" :primary="true" @click.native="cancelEdit()">cancel</v-button>
+            <v-button class="save" :primary="true" @click.native="saveEdit(editValue)">save</v-button>
           </div>
         </div>
       </transition>
@@ -180,11 +180,16 @@
           this.editValue = row[key];
           this.$refs.editor.style.left = target.offsetLeft + target.clientWidth - 216 + 'px';
           this.$refs.editor.style.top = target.offsetTop + target.offsetParent.offsetTop + 'px';
-          var input = this.$refs.editinput.getElementsByTagName('input')[0];
+          var input = this.$refs.editinput.$el.getElementsByTagName('input')[0];
           this.$nextTick(() => {
             input.focus();
           });
         }
+      },
+
+      updateSelection (row, col, key) {
+//        row[col[key]]
+        console.log(row, col, key);
       },
 
       cancelEdit () {

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/DataTables.vue" afterPath="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Forms.vue" afterPath="$PROJECT_DIR$/src/components/pages/Forms.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Checkbox.vue" afterPath="$PROJECT_DIR$/src/components/vex/Checkbox.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/DataTable.vue" afterPath="$PROJECT_DIR$/src/components/vex/DataTable.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_datatables.scss" afterPath="$PROJECT_DIR$/src/styles/components/_datatables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Input.vue" afterPath="$PROJECT_DIR$/src/components/vex/Input.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Select.vue" afterPath="$PROJECT_DIR$/src/components/vex/Select.vue" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="DataTables.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/DataTables.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="98" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
+            <state relative-caret-position="513">
+              <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -41,8 +39,8 @@
       <file leaf-file-name="DataTable.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/vex/DataTable.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="603">
+              <caret line="54" column="73" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -76,6 +74,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
               <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Select.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/Select.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="664">
+              <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/vex/Input.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -121,10 +139,8 @@
         <option value="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/styles/components/_expansion-panels.scss" />
-        <option value="$PROJECT_DIR$/src/components/vex/Input.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Textarea.vue" />
         <option value="$PROJECT_DIR$/src/styles/_transitions.scss" />
-        <option value="$PROJECT_DIR$/src/components/vex/Select.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/RadioGroup.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/RadioButton.vue" />
         <option value="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
@@ -139,6 +155,8 @@
         <option value="$PROJECT_DIR$/src/components/vex/Checkbox.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_datatables.scss" />
         <option value="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/Input.vue" />
+        <option value="$PROJECT_DIR$/src/components/vex/Select.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/DataTable.vue" />
       </list>
     </option>
@@ -492,12 +510,12 @@
       <workItem from="1475683495814" duration="388000" />
       <workItem from="1475683965091" duration="45653000" />
       <workItem from="1475877774579" duration="6861000" />
-      <workItem from="1476198691619" duration="33062000" />
+      <workItem from="1476198691619" duration="34251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348647000" />
+    <option name="totallyTimeSpent" value="349836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -792,26 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/Input.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_transitions.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vex/Select.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -954,16 +956,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/DataTables.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="98" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
+        <state relative-caret-position="513">
+          <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Input.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/vex/Select.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/DataTable.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="603">
+          <caret line="54" column="73" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
           <folding />
         </state>
       </provider>

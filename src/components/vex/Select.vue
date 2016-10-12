@@ -1,9 +1,9 @@
 <template>
-  <div class="v-select-container" v-bind:class="{ 'has-value': value}">
+  <div class="v-select-container" v-bind:class="{ 'has-value': selectValue}">
     <div class="v-select" @click="openSelect()">
       <label v-if="label">{{label}}</label>
-      <span v-if="value">{{value}}</span>
-      <span v-if="placeholder && !value">{{ placeholder }}</span>
+      <span v-if="selectValue">{{selectValue}}</span>
+      <span v-if="placeholder && !selectValue">{{ placeholder }}</span>
       <i class="material-icons">arrow_drop_down</i>
     </div>
     <transition name="fade">
@@ -52,16 +52,16 @@
       },
 
       selectOption (option, index) {
-        this.value = option;
+        this.selectValue = option;
         this.selectedIndex = index;
         this.closeSelect();
-        this.$emit('value');
+        this.$emit('selected', this.selectValue);
       },
 
       getSelectedIndex () {
-        if (this.value && this.options) {
+        if (this.selectValue && this.options) {
           this.options.forEach((item, index) => {
-            if (item === this.value) {
+            if (item === this.selectValue) {
               this.selectedIndex = index;
             }
           })
@@ -72,7 +72,8 @@
     data () {
       return {
         open: false,
-        selectedIndex: 0
+        selectedIndex: 0,
+        selectValue: this.value || ''
       }
     },
 

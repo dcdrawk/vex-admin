@@ -21,7 +21,7 @@
 
           <!-- Striped Data Table -->
           <h3 class="title">Striped + Editable Fields</h3>
-          <!--<v-data-table :rows="rows" :columns="columnsEditable" :striped="true"></v-data-table>-->
+          <v-data-table :rows="rows" :columns="columnsEditable" :striped="true"></v-data-table>
 
           <!-- Basic Dropdown -->
           <h3 class="title">Responsive</h3>
