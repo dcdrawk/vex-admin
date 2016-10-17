@@ -41,7 +41,6 @@
 
     &.has-actions .v-dialog-content {
       max-height: calc(80vh - 68px - 44px);
-      margin-bottom: 53px;
     }
 
     .v-dialog-title {
@@ -54,7 +53,7 @@
     &.dialog-leave-active {
       opacity: 1;
       transform: translateY(0px);
-      transition: all .3s $swift-in;
+      transition: all .25s $swift-in;
     }
 
     &.dialog-enter,
@@ -65,16 +64,15 @@
 
     .v-dialog-actions-container {
       padding: 4px;
-      //position: absolute;
-      //bottom: 0;
       width: 100%;
       background-color: #fff;
       bottom: 0;
       border-top: 1px solid rgba(0,0,0,.12);
+      text-align: right;
     }
 
     .v-dialog-actions {
-      float: right;
+      display: inline-block;
     }
 
     .v-dialog-actions .v-button {
