@@ -41,7 +41,6 @@
     watch: {
       'value': {
         handler: function(val, oldVal) {
-          console.log(this.autoGrow);
           if (typeof this.autoGrow === 'undefined' || this.autoGrow !== false) {
             this.auto_grow();
           }

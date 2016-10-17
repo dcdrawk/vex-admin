@@ -65,12 +65,15 @@
   import VueRouter from 'vue-router';
 
   export default {
+    // Components
     components: {
       VCard,
       VButton,
       VIconButton,
       VTabs
     },
+
+    // Mounted
     mounted () {
       this.showTabs = true;
 
@@ -78,11 +81,7 @@
       Prism.highlightAll();
     },
 
-    methods: {
-      test () {
-        console.log('test');
-      }
-    },
+    // Data
     data () {
       return {
         buttonMarkup: `<!-- Flat Buttons -->
@@ -124,9 +123,7 @@ export default {
     VIconButton
   }
 }
-`,
-
-
+`
       }
     }
 

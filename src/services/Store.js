@@ -13,15 +13,11 @@ const mutations = {
   },
 
   SETUSER (state, user) {
-    console.log('user has updated');
     state.user = user;
-    console.log(state);
   },
 
   SETCHARACTERS (state, characters) {
-    console.log('character list has updated');
     state.characters = characters;
-    console.log(state);
   }
 };
 

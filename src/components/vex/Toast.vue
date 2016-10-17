@@ -44,7 +44,6 @@
     watch: {
       'toggle': {
         handler: function(val, oldVal) {
-          console.log(this);
           if (this.toggle) {
             ToastService.queue(this, this.toastDelay);
           }

@@ -49,11 +49,6 @@
       MaterialCard,
     },
 
-    mounted () {
-      console.log(store);
-      console.log('profile is mounted');
-    },
-
     data () {
       return {
         msg: 'hello vue',

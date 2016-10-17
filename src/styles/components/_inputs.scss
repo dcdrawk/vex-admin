@@ -25,7 +25,7 @@
     font-size: 16px;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 
   }
 
@@ -45,7 +45,7 @@
     input,
     textarea {
       border-bottom: 2px solid $primary-color;
-      margin-bottom: 15px;
+      margin-bottom: -1px;
     }
   }
 }

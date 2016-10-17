@@ -87,6 +87,10 @@ $fg-breakpoints: (
   flex-direction: row;
   flex-wrap: wrap;
   @include spacing( ( -$fg-gutter ), margin, horizontal );
+  &.v-no-margin {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 
@@ -97,7 +101,10 @@ $fg-breakpoints: (
   flex-grow: 0;
   flex-shrink: 0;
   @include spacing( ( $fg-gutter ), padding, horizontal );
-  margin-top: 16px;
+  &.v-no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 %#{ $fg-class-col}-flex {

@@ -5,10 +5,6 @@
       <div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>
       <slot name="menu"></slot>
     </div>
-    <!--<div ref="container" class="v-dropdown-container">-->
-      <!--<div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>-->
-      <!--<slot name="target"></slot>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -32,7 +28,6 @@
       openDropdown () {
         var container = this.$refs.container;
         gsap.TweenLite.to(container, 0.25, { height: this.totalHeight + "px", opacity: 1, ease: gsap.Power1.easeOut });
-        console.log(this.target);
       },
 
       closeDropdown () {
@@ -68,14 +63,13 @@
     watch: {
       'open': {
         handler: function(val, oldVal) {
-          console.log(val);
           if (val === true) {
             this.openDropdown();
           } else {
             this.closeDropdown();
           }
         }
-      },
+      }
     }
   }
 </script>

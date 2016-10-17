@@ -4,42 +4,42 @@
     <div class="material-data-table-container">
       <table>
         <thead>
-          <tr>
-            <th v-if="selection" class="v-selection v-select-all" >
-              <v-checkbox :value="selectAll" @click.native="toggleSelect()" @checked="selectAll = $event" ref="selectAll"></v-checkbox>
-            </th>
-            <th v-for="(column, index) in tableColumns" :class="{ 'v-first-col': index === 0 }">
-              <i class="material-icons v-order-by" v-if="index !== 0"
-                 v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
-                arrow_downward
-              </i>
-              <span @click="orderBy(column.key);">{{ column.head }}</span>
-              <i class="material-icons v-order-by" v-if="index === 0"
-                 v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
-                arrow_downward
-              </i>
-            </th>
-          </tr>
+        <tr>
+          <th v-if="selection" class="v-selection v-select-all" >
+            <v-checkbox :value="selectAll" @click.native="toggleSelect()" @checked="selectAll = $event" ref="selectAll"></v-checkbox>
+          </th>
+          <th v-for="(column, index) in tableColumns" :class="{ 'v-first-col': index === 0 }">
+            <i class="material-icons v-order-by" v-if="index !== 0"
+               v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
+              arrow_downward
+            </i>
+            <span @click="orderBy(column.key);">{{ column.head }}</span>
+            <i class="material-icons v-order-by" v-if="index === 0"
+               v-bind:class="{ 'hidden': tableOrder !== column.key, 'descending': tableDirection === 1, 'ascending': tableDirection === -1}">
+              arrow_downward
+            </i>
+          </th>
+        </tr>
         </thead>
         <tbody>
-          <tr v-for="row in filteredRows">
-            <td v-if="selection" class="v-selection">
-              <v-checkbox :value="row[selectionKey]" @click.native="checkSelection()" @checked="selectRow(row, selectionKey, $event)" ref="checkboxes"></v-checkbox>
-            </td>
-            <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
-              <span v-if="!column.options">{{row[column.key]}}</span>
-              <div class="v-column-options">
-                <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
-              </div>
-              <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
-            </td>
-          </tr>
+        <tr v-for="row in filteredRows">
+          <td v-if="selection" class="v-selection">
+            <v-checkbox :value="row[selectionKey]" @click.native="checkSelection()" @checked="selectRow(row, selectionKey, $event)" ref="checkboxes"></v-checkbox>
+          </td>
+          <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
+            <span v-if="!column.options">{{row[column.key]}}</span>
+            <div class="v-column-options">
+              <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
+            </div>
+            <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
+          </td>
+        </tr>
 
-          <tr v-if="filteredRows.length === 0">
-            <td :colspan="columns.length" class="v-results-message">
-              {{ noResults }}
-            </td>
-          </tr>
+        <tr v-if="filteredRows.length === 0">
+          <td :colspan="columns.length" class="v-results-message">
+            {{ noResults }}
+          </td>
+        </tr>
         </tbody>
       </table>
       <transition name="fade">
@@ -118,9 +118,9 @@
     },
 
     mounted () {
-        if (this.selection) {
-          this.setSelection();
-        }
+      if (this.selection) {
+        this.setSelection();
+      }
     },
 
     // Methods
@@ -138,7 +138,6 @@
         this.$nextTick(() => {
           this.tableRows.forEach((item, index) => {
             if (this.selectAll) {
-              console.log(this.$refs.checkboxes[index]);
               this.$refs.checkboxes[index].toggleCheckbox(true);
             } else {
               this.$refs.checkboxes[index].toggleCheckbox(false);
@@ -175,12 +174,15 @@
       },
 
       editField (ev, editable, row, key) {
+        console.log('edit');
         if (editable) {
           this.editRow = row;
           this.editKey = key;
           var target = ev.target.nodeName !== 'SPAN' && ev.target.nodeName !== 'I' ? ev.target : ev.target.offsetParent;
           this.editing = !this.editing;
           this.editValue = row[key];
+
+          console.log(this.editValue);
           this.$refs.editor.style.left = target.offsetLeft + target.clientWidth - 216 + 'px';
           this.$refs.editor.style.top = target.offsetTop + target.offsetParent.offsetTop + 'px';
           var input = this.$refs.editinput.$el.getElementsByTagName('input')[0];
@@ -214,15 +216,12 @@
       filteredRows: function () {
         if (this.filter) {
           return this.tableRows.filter((row) => {
-              return row.name.toLowerCase().indexOf(this.filter) >= 0;
-          })
-          .sort((a, b) => {
+            return row.name.toLowerCase().indexOf(this.filter) >= 0;
+          }).sort((a, b) => {
             a[this.tableOrder] < b[this.tableOrder] ? -1 : 1
           });
         } else {
           if (this.tableOrder) {
-            console.log('order?');
-            console.log(this.tableOrder);
             return this.tableRows.sort((a, b) => {
               return a[this.tableOrder] < b[this.tableOrder] ? -1 * this.tableDirection : 1 * this.tableDirection;
             });

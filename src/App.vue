@@ -37,7 +37,6 @@ export default {
 
   methods: {
     getCharacters() {
-      console.log('lets get the characters');
       CharacterService.getCharacterList().then((characters) => {
         store.dispatch('SETCHARACTERS', characters);
       })

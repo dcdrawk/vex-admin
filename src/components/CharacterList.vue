@@ -32,18 +32,14 @@
   export default {
     store,
 
-
+    // Components
     components: {
       DataTable,
       MaterialSearchBar,
       MaterialSelect
     },
 
-    mounted () {
-      console.log('character list is mounted!!!!');
-      console.log(this);
-    },
-
+    // Data
     data () {
       return {
         columns: [{
@@ -62,6 +58,8 @@
         options: ['test1', 'test2', 'test3 longer', 'test4', 'test5 this', 'testjiosjtios', 'esfesf']
       }
     },
+
+    // Methods
     methods: {
       orderBy(property) {
         if (this.order === property) {
@@ -72,6 +70,8 @@
         this.order = property;
       }
     },
+
+    // Computed
     computed: {
       characters: function () {
         return store.state.characters

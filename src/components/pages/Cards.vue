@@ -65,11 +65,7 @@
       // Syntax Highlighting
       Prism.highlightAll();
     },
-    methods: {
-      testAlert(ev) {
-        console.log('test');
-      }
-    },
+
     // Data
     data () {
       return {

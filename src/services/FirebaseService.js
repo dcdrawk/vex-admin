@@ -21,10 +21,7 @@ class FirebaseService {
     }
 
     static getUserInfo() {
-        console.log('getting user info...');
-        console.log(firebase.auth().currentUser);
-        let user = firebase.auth().currentUser;
-        return user;
+        return firebase.auth().currentUser;
     }
 }
 

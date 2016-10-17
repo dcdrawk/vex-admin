@@ -82,7 +82,7 @@
             <list-item ref="signin" text="Sign In" :no-ripple="true" @click.native="setActive('signin')"></list-item>
           </router-link>
           <router-link to="/pages/sign-up">
-            <list-item ref="signin" text="Sign In" :no-ripple="true" @click.native="setActive('signin')"></list-item>
+            <list-item ref="signup" text="Sign Up" :no-ripple="true" @click.native="setActive('signup')"></list-item>
           </router-link>
         </list>
       </nav>

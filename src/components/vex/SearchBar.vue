@@ -56,7 +56,7 @@
 //            this.searchResults = [];
 //            this.hideAutocomplete = false;
 //          }
-        },
+        }
       }
     },
 
@@ -71,7 +71,6 @@
       },
 
       inputChanged () {
-        console.log('the input changed');
         this.$emit('changed', this.searchValue);
       },
 

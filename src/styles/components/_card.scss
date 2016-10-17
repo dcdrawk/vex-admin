@@ -18,7 +18,7 @@
     }
   }
   .actions {
-    padding: 8px;
+    padding: 8px 8px 0 8px;
   }
 
   .card-supporting-text {
@@ -42,10 +42,10 @@
   }
 }
 
-.card
-
- &.col-md-12,
- &.col-xs-12,
- &.col-md-12 {
-  padding: 0;
+.card {
+  &.col-md-12,
+  &.col-xs-12,
+  &.col-md-12 {
+    padding: 0;
+  }
 }

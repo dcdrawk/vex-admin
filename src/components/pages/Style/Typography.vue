@@ -137,9 +137,6 @@
   export default {
     components: {
       Card
-    },
-    mounted () {
-      console.log('mounted');
     }
   }
 </script>

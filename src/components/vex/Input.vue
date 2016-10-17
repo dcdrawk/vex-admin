@@ -38,9 +38,7 @@
       },
       'value': {
         handler: function(val, oldVal) {
-          console.log('value changed?!?');
           this.inputValue = val;
-//          this.$emit('input', this.inputValue);
         },
       }
     }

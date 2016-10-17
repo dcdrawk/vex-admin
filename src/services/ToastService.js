@@ -6,9 +6,7 @@ class ToastService {
 
     // Queue the toast
     static queue(toast, delay) {
-        console.log(toast);
         this.toastQueue.push(toast);
-        console.log(this.toastQueue);
         if (this.processing === false) {
             this.processQueue(delay);
         }
@@ -16,7 +14,6 @@ class ToastService {
 
     // Process the queue of toasts
     static processQueue(delay) {
-        console.log(delay);
         this.processing = true;
         this.toastQueue[0].show = true;
 
@@ -27,7 +24,6 @@ class ToastService {
 
             // Continue to process the queue if there are toasts left
             if (this.toastQueue.length > 0) {
-                console.log('not empty');
                 setTimeout(() => {
                     this.processQueue(delay);
                 }, 500);
