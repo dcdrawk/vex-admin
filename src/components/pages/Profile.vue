@@ -35,11 +35,11 @@
 
 </style>
 <script>
-  import MaterialInput from './vex/Input';
-  import MaterialButton from './vex/Button.vue';
-  import MaterialCard from './vex/Card.vue';
-  import FirebaseService from '../services/FirebaseService';
-  import store from '../services/Store';
+  import MaterialInput from '../vex/Input';
+  import MaterialButton from '../vex/Button.vue';
+  import MaterialCard from '../vex/Card.vue';
+  import FirebaseService from '../../services/FirebaseService';
+  import store from '../../services/Store';
 
   export default {
     store,

@@ -66,11 +66,23 @@
         </list>
 
         <list dense="true">
-          <list-item text="Style" bold="true" @click.native.native="expand('style')"></list-item>
-        </list>
+        <list-item text="Style" bold="true" @click.native.native="expand('style')"></list-item>
+      </list>
         <list dense="true" ref="style" style="height: 0px; overflow: hidden;" class="secondary-list">
           <router-link to="/style/typography">
             <list-item ref="typography" text="Typography" :no-ripple="true" @click.native="setActive('typography')"></list-item>
+          </router-link>
+        </list>
+
+        <list dense="true">
+          <list-item text="Pages" bold="true" @click.native.native="expand('pages')"></list-item>
+        </list>
+        <list dense="true" ref="pages" style="height: 0px; overflow: hidden;" class="secondary-list">
+          <router-link to="/pages/sign-in">
+            <list-item ref="signin" text="Sign In" :no-ripple="true" @click.native="setActive('signin')"></list-item>
+          </router-link>
+          <router-link to="/pages/sign-up">
+            <list-item ref="signin" text="Sign In" :no-ripple="true" @click.native="setActive('signin')"></list-item>
           </router-link>
         </list>
       </nav>

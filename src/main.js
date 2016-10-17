@@ -26,9 +26,13 @@ import Dividers from './components/pages/Dividers.vue';
 import Dropdowns from './components/pages/Dropdowns.vue';
 import DataTables from './components/pages/DataTables.vue';
 import Charts from './components/pages/Charts.vue';
-// import Test from './components/pages/Test.vue';
+
 // Style
 import Typography from './components/pages/Style/Typography.vue';
+
+// Pages
+import SignIn from './components/pages/SignIn.vue';
+import SignUp from './components/pages/SignUp.vue';
 
 // use Vue Router
 Vue.use(VueRouter);
@@ -114,6 +118,17 @@ var router = new VueRouter({
       path: '/style/typography',
       component: Typography
     },
+
+    //Pages
+    {
+      path: '/pages/sign-in',
+      component: SignIn
+    },
+    {
+      path: '/pages/sign-up',
+      component: SignUp
+    },
+
 
     // //Style Pages
     // '/style/typography': {
