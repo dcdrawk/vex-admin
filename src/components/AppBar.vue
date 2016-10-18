@@ -1,10 +1,10 @@
 <template>
   <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
-    <toolbar :title="'Vex Admin > ' + active">
+    <toolbar :title="'Vex Admidsadadsn! > ' + active">
       <icon-button class="app-bar-menu" icon="menu" @click.native="toggleSidenav"></icon-button>
     </toolbar>
 
-    <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click.native="toggleSidenav"></div>
+    <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav()"></div>
 
     <sidebar :open="open" class="locked-open">
       <!--<div class="avatar-container" v-if="user">-->
@@ -142,6 +142,7 @@
     },
     methods: {
       toggleSidenav () {
+        console.log('sidenav!!!');
         this.open = !this.open;
 
         if (this.open) {
@@ -163,6 +164,10 @@
         }
       },
       setActive (listItem) {
+        if (this.open) {
+          this.open = false;
+        }
+
         for (var i in this.$refs) {
           this.$refs[i].$el.classList.remove('active');
         }

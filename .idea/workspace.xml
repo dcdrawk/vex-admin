@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CharacterList.vue" afterPath="$PROJECT_DIR$/src/components/CharacterList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Buttons.vue" afterPath="$PROJECT_DIR$/src/components/pages/Buttons.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Cards.vue" afterPath="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Profile.vue" afterPath="$PROJECT_DIR$/src/components/pages/Profile.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/SignIn.vue" afterPath="$PROJECT_DIR$/src/components/pages/SignIn.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Style/Typography.vue" afterPath="$PROJECT_DIR$/src/components/pages/Style/Typography.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Card.vue" afterPath="$PROJECT_DIR$/src/components/vex/Card.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/DataTable.vue" afterPath="$PROJECT_DIR$/src/components/vex/DataTable.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Dropdown.vue" afterPath="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/SignUp.vue" afterPath="$PROJECT_DIR$/src/components/pages/SignUp.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Input.vue" afterPath="$PROJECT_DIR$/src/components/vex/Input.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/LoadingSpinner.vue" afterPath="$PROJECT_DIR$/src/components/vex/LoadingSpinner.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/SearchBar.vue" afterPath="$PROJECT_DIR$/src/components/vex/SearchBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Textarea.vue" afterPath="$PROJECT_DIR$/src/components/vex/Textarea.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Toast.vue" afterPath="$PROJECT_DIR$/src/components/vex/Toast.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/FirebaseService.js" afterPath="$PROJECT_DIR$/src/services/FirebaseService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/Store.js" afterPath="$PROJECT_DIR$/src/services/Store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/ToastService.js" afterPath="$PROJECT_DIR$/src/services/ToastService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_flex-grid.scss" afterPath="$PROJECT_DIR$/src/styles/_flex-grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_layout.scss" afterPath="$PROJECT_DIR$/src/styles/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_typography.scss" afterPath="$PROJECT_DIR$/src/styles/_typography.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_card.scss" afterPath="$PROJECT_DIR$/src/styles/components/_card.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_inputs.scss" afterPath="$PROJECT_DIR$/src/styles/components/_inputs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_toasts.scss" afterPath="$PROJECT_DIR$/src/styles/components/_toasts.scss" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,6 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="AppBar.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_appbar.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/_appbar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataTable.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/DataTable.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,11 +55,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Input.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SignIn.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/SignIn.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="49" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Input.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="45">
+              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUp.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/SignUp.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
               <folding />
             </state>
           </provider>
@@ -76,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/pages/Chips.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Divider.vue" />
         <option value="$PROJECT_DIR$/src/components/Profile.vue" />
@@ -102,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/styles/components/_dialog.scss" />
         <option value="$PROJECT_DIR$/src/components/pages/SignIn.Vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_inputs.scss" />
         <option value="$PROJECT_DIR$/src/components/vex/Card.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_card.scss" />
@@ -127,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/components/vex/SearchBar.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/DataTable.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Input.vue" />
+        <option value="$PROJECT_DIR$/src/components/pages/SignUp.vue" />
+        <option value="$PROJECT_DIR$/src/components/AppBar.vue" />
       </list>
     </option>
   </component>
@@ -396,6 +423,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vex-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vex-admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -513,12 +562,12 @@
       <workItem from="1475877774579" duration="6861000" />
       <workItem from="1476198691619" duration="52848000" />
       <workItem from="1476726881824" duration="2983000" />
-      <workItem from="1476736439009" duration="5818000" />
+      <workItem from="1476736439009" duration="8640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377234000" />
+    <option name="totallyTimeSpent" value="380056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -560,13 +609,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/vex/Button.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/RadioGroup.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -796,26 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/SignUp.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -922,14 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/SignIn.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Style/Typography.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -978,14 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Profile.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -1024,10 +1034,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/SignIn.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="49" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Input.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="45">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/SignUp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/_appbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AppBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
           <folding />
         </state>
       </provider>

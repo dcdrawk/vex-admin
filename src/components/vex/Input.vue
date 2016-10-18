@@ -1,7 +1,7 @@
 <template>
   <div class="v-input-container" v-bind:class="{ 'has-value': inputValue, 'focus': focused }">
     <label v-if="label">{{label}}</label>
-    <input ref="input" v-model="inputValue" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :type="type"/>
+    <input ref="input" v-model="inputValue" v-focus="focused" @focus="focused = true" @blur="focused = false" :placeholder="placeholder" :type="type" :autocomplete="inputAutocomplete"/>
   </div>
 </template>
 
@@ -19,13 +19,15 @@
       'value',
       'type',
       'model',
-      'placeholder'
+      'placeholder',
+      'autocomplete'
     ],
 
     data () {
       return {
         focused: false,
-        inputValue: this.value || ''
+        inputValue: this.value || '',
+        inputAutocomplete: this.autocomplete || 'on'
       }
     },
 
