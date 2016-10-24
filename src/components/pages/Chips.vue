@@ -1,19 +1,19 @@
 <template>
   <div class="doc-page">
 
-    <v-card title="Chips" class="col-xs-12">
+    <!--<v-card title="Chips" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
         <div slot="result">
+          <section class="padding">
+            <!-- Basic Chips -->
+            <h3 class="title">Basic Chips</h3>
+            <v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>
 
-          <!-- Basic Chips -->
-          <h3 class="title">Basic Chips</h3>
-          <v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>
-
-          <!-- Read-only Chips -->
-          <h3 class="title">Read-only Chips</h3>
-          <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>
-
+            <!-- Read-only Chips -->
+            <h3 class="title">Read-only Chips</h3>
+            <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>
+          </section>
         </div>
         <div slot="template">
           <pre><code class="language-html">{{ chipMarkup }}</code></pre>
@@ -22,7 +22,7 @@
           <pre><code class="language-javascript">{{ chipScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
 
   </div>
 </template>
@@ -46,7 +46,9 @@
 
     mounted () {
       // Syntax Highlighting
-      Prism.highlightAll();
+      this.$nextTick(() => {
+        Prism.highlightAll();
+      });
     },
 
     // Data

@@ -2,9 +2,9 @@
   <div class="doc-page">
 
     <!--Card Content-->
-    <v-card title="Tabs" class="col-xs-12">
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+    <!--<v-card title="Tabs" class="col-xs-12">-->
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Tabs -->
           <h3 class="title">Basic Tabs</h3>
@@ -59,7 +59,7 @@
           <pre><code class="language-javascript">{{tabScript}}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

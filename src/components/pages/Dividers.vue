@@ -2,10 +2,10 @@ s<template>
   <div class="doc-page">
 
     <!--Card Content-->
-    <v-card title="Dividers" class="col-xs-12">
+    <!--<v-card title="Dividers" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Divider -->
           <h3 class="title">Basic Divider</h3>
@@ -31,7 +31,7 @@ s<template>
           <pre><code class="language-javascript">{{ dividerScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

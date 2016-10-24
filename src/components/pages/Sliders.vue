@@ -2,10 +2,10 @@
   <div class="doc-page">
 
     <!--Card Content-->
-    <v-card title="Sliders" class="col-xs-12">
+    <!--<v-card title="Sliders" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Slider -->
           <h3 class="title">Basic Slider ({{ Math.round(value1) }})</h3>
@@ -30,7 +30,7 @@
           <pre><code class="language-javascript">{{ sliderScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

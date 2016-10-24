@@ -49,8 +49,8 @@
 
     &.locked-open {
       transform: translateX(0px);
-      top: 0;
-      height: calc(100vh - 40px);
+      top: 64px;
+      height: calc(100vh - 64px);
       // height: calc(100vh - 40px);
       // overflow: auto;
     }
@@ -65,7 +65,7 @@
 .app-bar.locked-open + .container {
   //width: calc(100% - 280px);
   width: 100%;
-  //padding-left: 280px;
+  padding-left: 280px;
   @media only screen and (max-width: $small-breakpoint) {
     padding-left: 0;
     margin-left: auto;

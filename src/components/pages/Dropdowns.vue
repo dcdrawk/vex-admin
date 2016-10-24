@@ -2,14 +2,14 @@
   <div class="doc-page">
 
     <!--Select Demo-->
-    <v-card title="Dropdowns" class="col-xs-12">
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result" v-cloak>
+    <!--<v-card title="Dropdowns" class="col-xs-12">-->
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Dropdown -->
           <h3 class="title">Basic Dropdown</h3>
-
-          <v-dropdown-menu :open="open1"  @toggle="open1 = false">
+          <v-icon-button  ref="test1" icon="more_vert" @click.native="open1 = true"></v-icon-button>
+          <v-dropdown-menu :open="open1"  @toggle="open1 = false" :test="$refs.test1">
             <div slot="target">
               <v-icon-button  ref="test" icon="more_vert" @click.native="open1 = true"></v-icon-button>
             </div>
@@ -87,7 +87,7 @@
           <pre><code class="language-javascript">{{ dropdownScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

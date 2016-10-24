@@ -2,14 +2,14 @@
   <div class="doc-page">
 
     <!--Card Content-->
-    <v-card title="Dialogs" class="col-xs-12">
+    <!--<v-card title="Dialogs" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Small Dialog -->
           <h3 class="title">Small Dialog</h3>
-          <v-button @click.native="showDialog.small = !showDialog.small">Show Small Dialog</v-button>
+          <v-button :raised="true" @click.native="showDialog.small = !showDialog.small">Show Small Dialog</v-button>
 
           <v-dialog :show="showDialog.small" @hide="showDialog.small = false" title="Small Dialog" :small="true">
             <p>Confirm you opened the dialog</p>
@@ -21,7 +21,7 @@
 
           <!-- Medium Dialog -->
           <h3 class="title">Medium Dialog</h3>
-          <v-button @click.native="showDialog.medium = !showDialog.medium">Show Medium Dialog</v-button>
+          <v-button :raised="true" @click.native="showDialog.medium = !showDialog.medium">Show Medium Dialog</v-button>
 
           <v-dialog :show="showDialog.medium" @hide="showDialog.medium = false" title="Medium Dialog" :medium="true">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
@@ -33,7 +33,7 @@
 
           <!-- Large Dialog -->
           <h3 class="title">Large Dialog</h3>
-          <v-button @click.native="showDialog.large = !showDialog.large">Show Large Dialog</v-button>
+          <v-button :raised="true" @click.native="showDialog.large = !showDialog.large">Show Large Dialog</v-button>
 
           <v-dialog :show="showDialog.large" @hide="showDialog.large = false" title="Large Dialog" :large="true">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat varius nulla. Aenean sit amet facilisis ante, bibendum volutpat diam. Donec quis lorem urna. Duis luctus convallis posuere. Aliquam venenatis odio sodales facilisis ullamcorper. In ut tincidunt mi. Nam eleifend, dui vel porta porttitor, dolor purus malesuada nibh, et rhoncus turpis tortor vitae risus. Duis nec arcu sem. Vivamus aliquet dictum turpis eu pharetra. Phasellus tempor sem ut metus porta, in blandit lorem pellentesque.</p>
@@ -54,7 +54,7 @@
           <pre><code class="language-javascript">{{ dialogScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
 
   </div>
 </template>
@@ -80,7 +80,9 @@
 
     mounted () {
       // Syntax Highlighting
-      Prism.highlightAll();
+      this.$nextTick(() => {
+        Prism.highlightAll();
+      });
     },
 
     methods: {

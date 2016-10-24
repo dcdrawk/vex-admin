@@ -4,7 +4,7 @@
       <icon-button class="app-bar-menu" icon="menu" @click.native="toggleSidenav"></icon-button>
     </toolbar>
 
-    <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click.native="toggleSidenav"></div>
+    <div class="sidebar-backdrop" v-bind:class="{ 'show': open, 'hide': !open}" @click="toggleSidenav"></div>
 
     <sidebar :open="open" class="locked-open">
       <!--<div class="avatar-container" v-if="user">-->
@@ -24,7 +24,7 @@
           <list-item text="Home" bold="true"></list-item>
           <list-item text="Getting Started" bold="true"></list-item>
         </list>
-
+        <v-divider></v-divider>
         <list dense="true">
           <list-item text="Components" bold="true" @click.native.native="expand('components')"></list-item>
         </list>

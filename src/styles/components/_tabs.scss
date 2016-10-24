@@ -91,19 +91,6 @@
     transition: none;
   }
   position: relative;
-  //&.primary > {
-  //  background-color: $primary-color;
-  //  button {
-  //    color: #fff;
-  //  }
-  //}
-  //
-  //&.secondary > {
-  //  background-color: $secondary-color;
-  //  button {
-  //    color: #fff;
-  //  }
-  //}
   i {
     display: block;
     margin-bottom: 10px;
@@ -130,6 +117,5 @@
 
 .v-tab-content {
   @extend .whiteframe-z1;
-  padding: 0 16px 16px 16px;
   background-color: #fff;
 }

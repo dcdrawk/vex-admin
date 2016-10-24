@@ -1,10 +1,10 @@
 <template>
   <div class="doc-page">
 
-    <v-card title="Lists and List Items" class="col-xs-12">
+    <!--<v-card title="Lists and List Items" class="col-xs-12">-->
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+        <div slot="result" class="padding">
 
           <!-- Basic List -->
           <h3 class="title">Basic List</h3>
@@ -54,7 +54,7 @@
           <pre><code class="language-javascript">{{ listScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
 
-    <v-card title="Input Fields" class="col-xs-12">
+    <!--<v-card title="Input Fields" class="col-xs-12">-->
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
         <div slot="result">

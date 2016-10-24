@@ -3,30 +3,34 @@
     <!--<v-card title="Flat / Raised Buttons" class="col-xs-12" @click="test()">-->
       <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
         <div slot="result">
+          <section class="padding">
+            <v-card title="card">
 
-          <!-- Flat Buttons -->
-          <h3 class="title">Flat Buttons</h3>
-          <v-button>Button</v-button>
-          <v-button :primary="true">Button</v-button>
-          <v-button :secondary="true">Button</v-button>
+            </v-card>
+            <!-- Flat Buttons -->
+            <h3 class="title">Flat Buttons</h3>
+            <v-button>Button</v-button>
+            <v-button :primary="true">Button</v-button>
+            <v-button :secondary="true">Button</v-button>
 
-          <!-- Raised Buttons -->
-          <h3 class="title">Raised Buttons</h3>
-          <v-button :raised="true">Button</v-button>
-          <v-button :raised="true" :primary="true">Button</v-button>
-          <v-button :raised="true" :secondary="true">Button</v-button>
+            <!-- Raised Buttons -->
+            <h3 class="title">Raised Buttons</h3>
+            <v-button :raised="true">Button</v-button>
+            <v-button :raised="true" :primary="true">Button</v-button>
+            <v-button :raised="true" :secondary="true">Button</v-button>
 
-          <!-- Flat Icon Buttons -->
-          <h3 class="title">Flat Buttons</h3>
-          <v-icon-button icon="phone"></v-icon-button>
-          <v-icon-button icon="notifications" :primary="true"></v-icon-button>
-          <v-icon-button icon="person" :secondary="true"></v-icon-button>
+            <!-- Flat Icon Buttons -->
+            <h3 class="title">Flat Buttons</h3>
+            <v-icon-button icon="phone"></v-icon-button>
+            <v-icon-button icon="notifications" :primary="true"></v-icon-button>
+            <v-icon-button icon="person" :secondary="true"></v-icon-button>
 
-          <!-- Raised Icon Buttons -->
-          <h3 class="title"></h3>
-          <v-icon-button icon="phone" :raised="true"></v-icon-button>
-          <v-icon-button icon="notifications" :raised="true" :primary="true"></v-icon-button>
-          <v-icon-button icon="person" :raised="true" :secondary="true"></v-icon-button>
+            <!-- Raised Icon Buttons -->
+            <h3 class="title"></h3>
+            <v-icon-button icon="phone" :raised="true"></v-icon-button>
+            <v-icon-button icon="notifications" :raised="true" :primary="true"></v-icon-button>
+            <v-icon-button icon="person" :raised="true" :secondary="true"></v-icon-button>
+          </section>
         </div>
         <div slot="template">
           <pre><code class="language-html">{{buttonMarkup}}</code></pre>

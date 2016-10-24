@@ -2,10 +2,10 @@
   <div class="doc-page">
 
     <!--Card Content-->
-    <v-card title="Toasts" class="col-xs-12">
+    <!--<v-card title="Toasts" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Toast -->
           <h3 class="title">Basic Toast</h3>
@@ -25,7 +25,7 @@
           <pre><code class="language-javascript">{{ toastScript }}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
+    <!--</v-card>-->
   </div>
 </template>
 

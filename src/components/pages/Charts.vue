@@ -1,70 +1,72 @@
 <template>
   <div class="doc-page">
 
-    <v-card title="Charts" class="col-xs-12">
+    <!--<v-card title="Charts" class="col-xs-12">-->
 
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+    <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+      <div slot="result">
+        <div class="padding">
 
-          <div class="row">
-            <!-- Line Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Line Chart</h3>
-              <v-chart type="line" :datasets="lineChartDatasets" :labels="monthLabels" :options="lineOptions"></v-chart>
-            </div>
-
-            <!-- Scatter Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Scatter Chart</h3>
-              <v-chart type="line" :datasets="scatterDatasets" :options="scatterOptions"></v-chart>
-            </div>
-
-            <!-- Bar Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Bar Chart</h3>
-              <v-chart type="bar" :datasets="barDataset" :labels="monthLabels" :options="barOptions"></v-chart>
-            </div>
-
-            <!-- Horizontal Bar Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Horizontal Bar Chart</h3>
-              <v-chart type="horizontalBar" :datasets="barDataset" :labels="monthLabels" :options="barOptions"></v-chart>
-            </div>
-
-            <!-- Radar Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Radar Chart</h3>
-              <v-chart type="radar" :datasets="radarDatasets" :labels="radarLabels"></v-chart>
-            </div>
-
-            <!-- Polar Area Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Polar Area Chart</h3>
-              <v-chart type="polarArea" :datasets="polarAreaDatasets" :labels="polarAreaLabels"></v-chart>
-            </div>
-
-            <!-- Pie Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Pie Chart</h3>
-              <v-chart type="pie" :datasets="pieDatasets" :labels="pieLabels"></v-chart>
-            </div>
-
-            <!-- Doughnut Chart -->
-            <div class="col-xs-6">
-              <h3 class="title">Doughnut Chart</h3>
-              <v-chart type="doughnut" :datasets="pieDatasets" :labels="pieLabels"></v-chart>
-            </div>
+        <div class="row">
+          <!-- Line Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Line Chart</h3>
+            <v-chart type="line" :datasets="lineChartDatasets" :labels="monthLabels" :options="lineOptions"></v-chart>
           </div>
 
+          <!-- Scatter Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Scatter Chart</h3>
+            <v-chart type="line" :datasets="scatterDatasets" :options="scatterOptions"></v-chart>
+          </div>
+
+          <!-- Bar Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Bar Chart</h3>
+            <v-chart type="bar" :datasets="barDataset" :labels="monthLabels" :options="barOptions"></v-chart>
+          </div>
+
+          <!-- Horizontal Bar Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Horizontal Bar Chart</h3>
+            <v-chart type="horizontalBar" :datasets="barDataset" :labels="monthLabels" :options="barOptions"></v-chart>
+          </div>
+
+          <!-- Radar Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Radar Chart</h3>
+            <v-chart type="radar" :datasets="radarDatasets" :labels="radarLabels"></v-chart>
+          </div>
+
+          <!-- Polar Area Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Polar Area Chart</h3>
+            <v-chart type="polarArea" :datasets="polarAreaDatasets" :labels="polarAreaLabels"></v-chart>
+          </div>
+
+          <!-- Pie Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Pie Chart</h3>
+            <v-chart type="pie" :datasets="pieDatasets" :labels="pieLabels"></v-chart>
+          </div>
+
+          <!-- Doughnut Chart -->
+          <div class="col-xs-6">
+            <h3 class="title">Doughnut Chart</h3>
+            <v-chart type="doughnut" :datasets="pieDatasets" :labels="pieLabels"></v-chart>
+          </div>
         </div>
-        <div slot="template">
-          <pre><code class="language-html">{{ chartMarkup }}</code></pre>
+
         </div>
-        <div slot="script">
-          <pre><code class="language-javascript">{{ chartScript }}</code></pre>
-        </div>
-      </v-tabs>
-    </v-card>
+      </div>
+      <div slot="template">
+        <pre><code class="language-html">{{ chartMarkup }}</code></pre>
+      </div>
+      <div slot="script">
+        <pre><code class="language-javascript">{{ chartScript }}</code></pre>
+      </div>
+    </v-tabs>
+    <!--</v-card>-->
   </div>
 </template>
 

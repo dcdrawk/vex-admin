@@ -2,9 +2,9 @@
   <div class="doc-page">
 
     <!--Select Demo-->
-    <v-card title="Data Tables" class="col-xs-12">
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
-        <div slot="result">
+    <!--<v-card title="Data Tables" class="col-xs-12">-->
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
+        <div slot="result" class="padding">
 
           <!-- Basic Data Table -->
           <h3 class="title">Basic</h3>
@@ -35,7 +35,6 @@
           <!--<pre><code class="language-javascript">{{ dropdownScript }}</code></pre>-->
         </div>
       </v-tabs>
-    </v-card>
   </div>
 </template>
 

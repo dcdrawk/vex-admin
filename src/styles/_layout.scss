@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #eeeeee;
+  //background-color: #eeeeee;
   color: rgba(0,0,0,.87);
   margin-bottom: 48px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -9,7 +9,7 @@ body {
 }
 
 #app {
-  padding-left: 280px;
+  //padding-left: 280px;
 }
 
 .container {
@@ -22,22 +22,35 @@ body {
 }
 
 .page-content {
-  //margin: auto;
-  //display: block;
-  //flex: 1;
-  overflow-y: auto;
-  margin-top: 64px;
-  height: calc(100vh - 64px);
-  //margin: 16px;
+
 }
 
-//.doc-page {
-//  padding: 0 16px;
-//}
+.doc-page {
+  //width: 1024px;
+}
 
-//.row.page-content {
-//  margin: 0 1rem;
-//}
+.padding {
+  padding: 0 16px;
+}
+.page-tabs {
+  .v-tab-items-container {
+    top: -44px;
+    position: absolute;
+    width: 100%;
+  }
+  .v-tab-content {
+    overflow-y: auto;
+    margin-top: 104px;
+    //padding-top: 44px;
+    height: calc(100vh - 104px);
+    padding-bottom: 16px;
+  }
+  .v-tab-content {
+    //padding-top: 44px;
+    box-shadow: none;
+  }
+}
+
 
 * {
   box-sizing: border-box;
