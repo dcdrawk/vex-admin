@@ -1,5 +1,5 @@
 <template>
-  <div class="row page-content">
+  <div class="doc-page">
 
     <!--Card Content-->
     <v-card title="Card Title" class="col-xs-12">

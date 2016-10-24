@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <app-bar></app-bar>
-    <div class="container">
-
-        <router-view></router-view>
+    <div class="container app-container">
+        <div class="page-content">
+          <transition name="router-fade">
+            <router-view></router-view>
+          </transition>
+        </div>
 
     </div>
   </div>

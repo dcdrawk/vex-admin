@@ -1,6 +1,6 @@
 <template>
   <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
-    <toolbar :title="'Vex Admin > ' + active">
+    <toolbar :title="active">
       <icon-button class="app-bar-menu" icon="menu" @click.native="toggleSidenav"></icon-button>
     </toolbar>
 
@@ -15,14 +15,22 @@
           <!--<p class="body-1 secondary-text">{{ user.email}}</p>-->
         <!--</div>-->
       <!--</div>-->
+      <img src="static/favicon/android-chrome-192x192.png">
+      <h2 class="display-1">Xen UI</h2>
+      <v-divider></v-divider>
 
       <nav class="sidebar-nav">
+        <list dense="true">
+          <list-item text="Home" bold="true"></list-item>
+          <list-item text="Getting Started" bold="true"></list-item>
+        </list>
+
         <list dense="true">
           <list-item text="Components" bold="true" @click.native.native="expand('components')"></list-item>
         </list>
         <list dense="true" ref="components" style="height: 0px; overflow: hidden;" class="secondary-list">
           <router-link to="/components/buttons">
-            <list-item ref="buttons" text="Buttons" :no-ripple="true" @click.native="setActive('buttons')"></list-item>
+            <list-item ref="buttons" text="Buttons" @click.native="setActive('buttons')"></list-item>
           </router-link>
           <router-link to="/components/cards">
             <list-item ref="cards" text="Cards" :no-ripple="true" @click.native="setActive('cards')"></list-item>
@@ -78,8 +86,18 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../styles/components/appbar';
+  img {
+    width: 120px;
+    margin: auto;
+    display: block;
+    margin-top: 16px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
   .list-item {
     cursor: pointer;
   }
@@ -90,6 +108,7 @@
   }
   .secondary-list .list-item {
     padding-left: 32px;
+    font-weight: 500;
   }
 
   .app-bar-menu .icon-button-wrapper.flat.primary i {
@@ -107,6 +126,7 @@
   import ListItem from './vex/ListItem';
   import FirebaseService from '../services/FirebaseService';
   import store from '../services/Store';
+  import VDivider from './vex/Divider.vue';
 //   import RouterLink from 'vue-router';
   // import VueRouter from 'vue-router';
   export default {
@@ -117,6 +137,7 @@
       Sidebar,
       List,
       ListItem,
+      VDivider
 //      RouterLink
     },
     props: [
@@ -151,11 +172,12 @@
         }
       },
       setActive (listItem) {
+        console.log(this.$refs);
         for (var i in this.$refs) {
           this.$refs[i].$el.classList.remove('active');
         }
         this.$refs[listItem].$el.classList.add('active');
-        this.active = listItem;
+        this.active = this.$refs[listItem].text;
       }
     },
     mounted () {

@@ -1,6 +1,8 @@
 <template>
-  <div class="row page-content">
-
+  <div class="doc-page">
+    <!--<toolbar title="Cards">-->
+      <!--<icon-button class="app-bar-menu" icon="menu" @click.native="toggleSidenav"></icon-button>-->
+    <!--</toolbar>-->
     <v-card title="Cards" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">
@@ -52,6 +54,7 @@
   import VButton from '../vex/Button.vue';
   import VTabs from '../vex/VTabs.vue';
   import Prism from 'prismjs';
+  import Toolbar from '../vex/Toolbar.vue';
   // Exports
   export default {
 
@@ -59,7 +62,8 @@
     components: {
       VCard,
       VButton,
-      VTabs
+      VTabs,
+      Toolbar
     },
     mounted () {
       // Syntax Highlighting

@@ -11,6 +11,35 @@
 //  opacity: 0;
 //}
 
+.app-container {
+  position: relative;
+}
+
+/* always present */
+.router-fade-enter-active,
+.router-fade-leave-active {
+  position: absolute;
+  width: calc(100%);
+  top: 0;
+  right: 0;
+  //overflow: scroll;
+  transition: opacity .3s $swift-in;
+  opacity: 1;
+  display: block;
+  left: 0;
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave-active defines the ending state for leaving */
+.router-fade-enter,
+.router-fade-leave-active {
+  opacity: 0;
+}
+
+.router-fade-enter-active {
+  transition-delay: .15s;
+}
+
+
 /* always present */
 .fade-enter-active,
 .fade-leave-active {

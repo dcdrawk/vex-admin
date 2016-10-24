@@ -1,5 +1,5 @@
 <template>
-  <div class="row page-content">
+  <div class="doc-page">
 
     <!--Select Demo-->
     <v-card title="Dropdowns" class="col-xs-12">

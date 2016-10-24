@@ -1,5 +1,5 @@
 s<template>
-  <div class="row page-content">
+  <div class="doc-page">
 
     <!--Card Content-->
     <v-card title="Dividers" class="col-xs-12">

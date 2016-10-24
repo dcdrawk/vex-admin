@@ -1,5 +1,9 @@
-$primary-color: #3F51B5;
+@import 'material-color';
+//$primary-color: #3F51B5;
+//$secondary-color: #e91e63;
+$primary-color: $clr-indigo;
 $secondary-color: #e91e63;
+
 
 $transition-timing: all .3s cubic-bezier(.55,0,.1,1);
 

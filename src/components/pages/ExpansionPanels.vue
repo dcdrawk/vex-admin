@@ -1,5 +1,5 @@
 <template>
-  <div class="row page-content">
+  <div class="doc-page">
     <v-card title="Expansion Panels" class="col-xs-12">
 
       <v-tabs default-tab="result" :primary="true" class="demo-tabs">

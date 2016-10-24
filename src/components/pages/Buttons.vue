@@ -1,7 +1,7 @@
 <template>
-  <div class="row page-content">
-    <v-card title="Flat / Raised Buttons" class="col-xs-12" @click="test()">
-      <v-tabs default-tab="result" :primary="true" class="demo-tabs">
+  <div class="doc-page">
+    <!--<v-card title="Flat / Raised Buttons" class="col-xs-12" @click="test()">-->
+      <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
         <div slot="result">
 
           <!-- Flat Buttons -->
@@ -15,6 +15,18 @@
           <v-button :raised="true">Button</v-button>
           <v-button :raised="true" :primary="true">Button</v-button>
           <v-button :raised="true" :secondary="true">Button</v-button>
+
+          <!-- Flat Icon Buttons -->
+          <h3 class="title">Flat Buttons</h3>
+          <v-icon-button icon="phone"></v-icon-button>
+          <v-icon-button icon="notifications" :primary="true"></v-icon-button>
+          <v-icon-button icon="person" :secondary="true"></v-icon-button>
+
+          <!-- Raised Icon Buttons -->
+          <h3 class="title"></h3>
+          <v-icon-button icon="phone" :raised="true"></v-icon-button>
+          <v-icon-button icon="notifications" :raised="true" :primary="true"></v-icon-button>
+          <v-icon-button icon="person" :raised="true" :secondary="true"></v-icon-button>
         </div>
         <div slot="template">
           <pre><code class="language-html">{{buttonMarkup}}</code></pre>
@@ -23,7 +35,6 @@
           <pre><code class="language-javascript">{{buttonScript}}</code></pre>
         </div>
       </v-tabs>
-    </v-card>
 
 
     <v-card title="Icon Buttons" class="col-xs-12">
@@ -63,13 +74,15 @@
   import VTabs from '../vex/VTabs.vue';
   import Prism from 'prismjs';
   import VueRouter from 'vue-router';
+  import Toolbar from '../vex/Toolbar.vue';
 
   export default {
     components: {
       VCard,
       VButton,
       VIconButton,
-      VTabs
+      VTabs,
+      Toolbar
     },
     mounted () {
       this.showTabs = true;
