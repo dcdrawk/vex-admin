@@ -1,6 +1,6 @@
 <template>
   <div class="app-bar locked-open" v-bind:class="{ 'open': open }">
-    <toolbar :title="'Vex Admidsadadsn! > ' + active">
+    <toolbar :title="'Vex Admin > ' + active">
       <icon-button class="app-bar-menu" icon="menu" @click.native="toggleSidenav"></icon-button>
     </toolbar>
 
@@ -84,6 +84,9 @@
           <router-link to="/pages/sign-up">
             <list-item ref="signup" text="Sign Up" :no-ripple="true" @click.native="setActive('signup')"></list-item>
           </router-link>
+          <router-link to="/minesweeper">
+            <list-item ref="minesweeper" text="minesweeper" :no-ripple="true" @click.native="setActive('minesweeper')"></list-item>
+          </router-link>
         </list>
       </nav>
     </sidebar>
@@ -152,10 +155,12 @@
         }
       },
       expand (list) {
-        if (this.$refs[list].$el.style.height === '0px') {
-          this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
-        } else {
-          this.$refs[list].$el.style.height = 0;
+        if (this.$refs[list]) {
+          if (this.$refs[list].$el.style.height === '0px') {
+            this.$refs[list].$el.style.height = this.$refs[list].$el.scrollHeight + 'px';
+          } else {
+            this.$refs[list].$el.style.height = 0;
+          }
         }
       },
       collapseAll () {
@@ -171,8 +176,10 @@
         for (var i in this.$refs) {
           this.$refs[i].$el.classList.remove('active');
         }
-        this.$refs[listItem].$el.classList.add('active');
-        this.active = listItem;
+        if (this.$refs[listItem]) {
+          this.$refs[listItem].$el.classList.add('active');
+          this.active = listItem;
+        }
       }
     },
     mounted () {

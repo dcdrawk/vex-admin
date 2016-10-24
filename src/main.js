@@ -34,6 +34,9 @@ import Typography from './components/pages/Style/Typography.vue';
 import SignIn from './components/pages/SignIn.vue';
 import SignUp from './components/pages/SignUp.vue';
 
+// Games
+import Minesweeper from './components/pages/Minesweeper.vue';
+
 // use Vue Router
 Vue.use(VueRouter);
 
@@ -128,6 +131,11 @@ var router = new VueRouter({
       path: '/pages/sign-up',
       component: SignUp
     },
+
+    {
+      path: '/minesweeper',
+      component: Minesweeper
+    }
 
 
     // //Style Pages
