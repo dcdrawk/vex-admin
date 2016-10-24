@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8669d-976b-4f90-864d-3ef095113b16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppBar.vue" afterPath="$PROJECT_DIR$/src/components/AppBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Buttons.vue" afterPath="$PROJECT_DIR$/src/components/pages/Buttons.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Cards.vue" afterPath="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Charts.vue" afterPath="$PROJECT_DIR$/src/components/pages/Charts.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Chips.vue" afterPath="$PROJECT_DIR$/src/components/pages/Chips.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/DataTables.vue" afterPath="$PROJECT_DIR$/src/components/pages/DataTables.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Dialogs.vue" afterPath="$PROJECT_DIR$/src/components/pages/Dialogs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Dividers.vue" afterPath="$PROJECT_DIR$/src/components/pages/Dividers.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" afterPath="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/ExpansionPanels.vue" afterPath="$PROJECT_DIR$/src/components/pages/ExpansionPanels.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Forms.vue" afterPath="$PROJECT_DIR$/src/components/pages/Forms.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Lists.vue" afterPath="$PROJECT_DIR$/src/components/pages/Lists.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Sliders.vue" afterPath="$PROJECT_DIR$/src/components/pages/Sliders.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Tabs.vue" afterPath="$PROJECT_DIR$/src/components/pages/Tabs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pages/Toasts.vue" afterPath="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/vex/Dropdown.vue" afterPath="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_layout.scss" afterPath="$PROJECT_DIR$/src/styles/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/_transitions.scss" afterPath="$PROJECT_DIR$/src/styles/_transitions.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_card.scss" afterPath="$PROJECT_DIR$/src/styles/components/_card.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_sidebar.scss" afterPath="$PROJECT_DIR$/src/styles/components/_sidebar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_tabs.scss" afterPath="$PROJECT_DIR$/src/styles/components/_tabs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/_dropdowns.scss" afterPath="$PROJECT_DIR$/src/styles/components/_dropdowns.scss" />
     </list>
     <ignored path="vue-dndhub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,30 +97,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dropdowns.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dropdowns.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+            <state relative-caret-position="405">
+              <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
               <folding>
-                <marker date="1477344826321" expanded="true" signature="4927:5641" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="4949:5052" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5072:5622" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5085:5297" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5338:5496" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5537:5613" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5800:6537" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5826:5858" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5968:6518" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="5981:6193" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6234:6392" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6433:6509" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6707:7425" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6729:6836" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6856:7406" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="6869:7081" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="7122:7280" ph="..." />
-                <marker date="1477344826321" expanded="true" signature="7321:7397" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="4868:5582" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="4890:4993" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5013:5563" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5026:5238" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5279:5437" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5478:5554" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5741:6478" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5767:5799" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5909:6459" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="5922:6134" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6175:6333" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6374:6450" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6648:7366" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6670:6777" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6797:7347" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="6810:7022" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="7063:7221" ph="..." />
+                <marker date="1477348934527" expanded="true" signature="7262:7338" ph="..." />
               </folding>
             </state>
           </provider>
@@ -146,21 +129,19 @@
       <file leaf-file-name="Dropdown.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/vex/Dropdown.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+            <state relative-caret-position="675">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/styles/_layout.scss">
+      <file leaf-file-name="_dropdowns.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/_dropdowns.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-              <folding>
-                <marker date="1477346578859" expanded="true" signature="317:967" ph="{...}" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/vex/Dialog.vue" />
         <option value="$PROJECT_DIR$/src/components/vex/Divider.vue" />
         <option value="$PROJECT_DIR$/src/components/Profile.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_expansion-panels.scss" />
@@ -221,9 +201,10 @@
         <option value="$PROJECT_DIR$/src/components/pages/Toasts.vue" />
         <option value="$PROJECT_DIR$/src/styles/components/_card.scss" />
         <option value="$PROJECT_DIR$/src/components/pages/Cards.vue" />
-        <option value="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
-        <option value="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
         <option value="$PROJECT_DIR$/src/styles/_layout.scss" />
+        <option value="$PROJECT_DIR$/src/styles/components/_dropdowns.scss" />
+        <option value="$PROJECT_DIR$/src/components/vex/Dropdown.vue" />
+        <option value="$PROJECT_DIR$/src/components/pages/Dropdowns.vue" />
       </list>
     </option>
   </component>
@@ -649,12 +630,12 @@
       <workItem from="1475877774579" duration="6861000" />
       <workItem from="1476198691619" duration="52848000" />
       <workItem from="1476726881824" duration="87000" />
-      <workItem from="1477324649120" duration="18112000" />
+      <workItem from="1477324649120" duration="20464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386632000" />
+    <option name="totallyTimeSpent" value="388984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="0" width="1931" height="1056" extended-state="0" />
@@ -696,13 +677,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/components/_expansion-panels.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Textarea.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1126,47 +1100,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
+    <entry file="file://$PROJECT_DIR$/src/styles/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1477344826321" expanded="true" signature="4927:5641" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="4949:5052" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5072:5622" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5085:5297" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5338:5496" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5537:5613" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5800:6537" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5826:5858" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5968:6518" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="5981:6193" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6234:6392" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6433:6509" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6707:7425" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6729:6836" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6856:7406" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="6869:7081" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="7122:7280" ph="..." />
-            <marker date="1477344826321" expanded="true" signature="7321:7397" ph="..." />
+            <marker date="1477346578859" expanded="true" signature="317:967" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/_dropdowns.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vex/Dropdown.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state relative-caret-position="675">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_layout.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/Dropdowns.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="405">
+          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
           <folding>
-            <marker date="1477346578859" expanded="true" signature="317:967" ph="{...}" />
+            <marker date="1477348934527" expanded="true" signature="4868:5582" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="4890:4993" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5013:5563" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5026:5238" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5279:5437" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5478:5554" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5741:6478" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5767:5799" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5909:6459" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="5922:6134" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6175:6333" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6374:6450" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6648:7366" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6670:6777" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6797:7347" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="6810:7022" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="7063:7221" ph="..." />
+            <marker date="1477348934527" expanded="true" signature="7262:7338" ph="..." />
           </folding>
         </state>
       </provider>

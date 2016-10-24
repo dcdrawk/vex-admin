@@ -8,24 +8,23 @@
 
           <!-- Basic Dropdown -->
           <h3 class="title">Basic Dropdown</h3>
-          <v-icon-button  ref="test1" icon="more_vert" @click.native="open1 = true"></v-icon-button>
           <v-dropdown-menu :open="open1"  @toggle="open1 = false" :test="$refs.test1">
             <div slot="target">
               <v-icon-button  ref="test" icon="more_vert" @click.native="open1 = true"></v-icon-button>
             </div>
             <div slot="menu">
-              <v-list>
+              <v-list :dense="true">
                 <v-list-item text="Preview" icon="remove_red_eye"></v-list-item>
                 <v-list-item text="Share" icon="person_add"></v-list-item>
                 <v-list-item text="Get link" icon="link"></v-list-item>
               </v-list>
               <v-divider></v-divider>
-              <v-list>
+              <v-list :dense="true">
                 <v-list-item text="Make a copy" icon="content_copy"></v-list-item>
                 <v-list-item text="Download" icon="file_download"></v-list-item>
               </v-list>
               <v-divider></v-divider>
-              <v-list>
+              <v-list :dense="true">
                 <v-list-item text="Remove" icon="delete"></v-list-item>
               </v-list>
             </div>

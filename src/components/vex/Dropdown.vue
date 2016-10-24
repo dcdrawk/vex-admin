@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="v-dropdown">
     <slot ref="target" name="target"></slot>
     <div ref="container" class="v-dropdown-container">
       <div class="v-dropdown-backdrop" v-if="open" @click="closeDropdown();"></div>
@@ -28,31 +28,19 @@
     methods: {
       openDropdown () {
         var container = this.$refs.container;
+        container.classList.remove('closed')
+        container.classList.add('open');
         gsap.TweenLite.to(container, 0.25, { height: this.totalHeight + "px", opacity: 1, ease: gsap.Power1.easeOut });
-        console.log(this.target);
+//        console.log(this.target);
       },
 
       closeDropdown () {
         var container = this.$refs.container;
+        container.classList.remove('open');
+        container.classList.add('closed');
         gsap.TweenLite.to(container, 0.25, { height: '0px', opacity: 0, ease: gsap.Power1.easeOut });
         this.$emit('toggle');
       },
-
-//      setPos () {
-//        console.log(this);
-//        var container = this.$refs.container;
-////        this.totalHeight = container.clientHeight;
-////        container.style.height = '0px';
-////        this.target = this.$slots.target[0].elm;
-////        this.target = this.$slots.target[0].elm.firstChild;
-//        if (this.position === 'right') {
-//          container.style.left = this.target.offsetLeft + this.target.clientWidth - container.clientWidth + 'px';
-//          container.style.top = this.target.offsetTop + 'px';
-//        } else {
-//          container.style.left = this.target.offsetLeft + 'px';
-//          container.style.top = this.target.offsetTop + 'px';
-//        }
-//      }
     },
 
     data () {
@@ -63,31 +51,42 @@
     },
 
     mounted () {
-      console.log(this);
-      this.target = this.$slots.target[0].elm;
-      this.$nextTick(() => {
+//      this.$nextTick(() => {
         setTimeout(() => {
-          var container = this.$refs.container;
-          console.dir(container);
-          this.totalHeight = container.clientHeight;
-          container.style.height = '0px';
-//          this.target = this.$slots.target[0].elm;
+        console.log(this);
+        this.target = this.$slots.target[0].elm;
+        console.log(this.target);
+
+        var container = this.$slots.menu[0].elm;
+        console.dir(container);
+        console.dir(container.clientHeight);
+        console.dir(container.offsetHeight);
+        this.totalHeight = container.clientHeight + 16;
+//        console.log(this.totalHeight);
+//          var container = this.$refs.container;
+//          console.dir(container);
+//          this.totalHeight = container.clientHeight;
+//          container.style.height = '0px';
+////          this.target = this.$slots.target[0].elm;
           if (this.position === 'right') {
-            container.style.left = this.target.offsetLeft + this.target.clientWidth - container.clientWidth + 'px';
-            container.style.top = this.target.offsetTop + 'px';
+            this.$refs.container.style.left = this.target.offsetLeft + this.target.clientWidth - container.clientWidth + 'px';
+            console.log(this.target.offsetLeft);
+            console.log(this.target.clientWidth);
+            console.log(container.clientWidth);
+            this.$refs.container.style.top = this.target.offsetTop + 'px';
           } else {
-            container.style.left = this.target.offsetLeft + 'px';
-            container.style.top = this.target.offsetTop + 'px';
+            this.$refs.container.style.left = this.target.offsetLeft + 'px';
+            this.$refs.container.style.top = this.target.offsetTop + 'px';
           }
         }, 0);
-      });
+//      });
     },
 
     watch: {
       'open': {
         handler: function(val, oldVal) {
           console.log(val);
-//          this.setPos();
+//          thi s.setPos();
           if (val === true) {
             this.openDropdown();
           } else {

@@ -1,6 +1,8 @@
 @import '../whiteframe';
 @import '../variables';
-
+.v-dropdown {
+  position: relative;
+}
 .v-dropdown-container {
   @extend .whiteframe-z1;
   min-width: 112px;
@@ -12,13 +14,18 @@
   overflow: hidden;
   opacity: 0;
   z-index: 10;
+  top: 10px;
+  pointer-events: none;
   &.closed {
     opacity: 0;
+    display: none;
+    pointer-events: none;
     //height: 0px;
   }
 
   &.open {
     z-index: 10;
+    pointer-events: auto;
   }
 
   .list-item {
