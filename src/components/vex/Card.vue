@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :class="{ 'border': border, 'no-padding': noPadding }">
     <div class="media-container" v-if="media">
       <img :src="media"/>
     </div>
@@ -38,7 +38,9 @@
       'subtitle',
       'content',
       'actions',
-      'media'
+      'media',
+      'border',
+      'noPadding'
     ]
   }
 </script>

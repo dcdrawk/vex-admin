@@ -6,13 +6,13 @@
       <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
         <div slot="result">
           <section class="padding">
-            <!-- Basic Chips -->
-            <h3 class="title">Basic Chips</h3>
-            <v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>
+            <v-card title="Default" :border="true">
+              <v-chips :chips="basicChips" placeholder="+add a chip"></v-chips>
+            </v-card>
 
-            <!-- Read-only Chips -->
-            <h3 class="title">Read-only Chips</h3>
-            <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>
+            <v-card title="Read Only" :border="true">
+              <v-chips :chips="readOnlyChips" placeholder="+add a chip" :read-only="true"></v-chips>
+            </v-card>
           </section>
         </div>
         <div slot="template">

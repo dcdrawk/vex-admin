@@ -2,7 +2,7 @@
   <div class="material-data-table" :class="{ 'responsive': responsive, 'bordered': border, 'striped': striped, 'hover': hover }">
     <!--TABLE-->
     <div class="material-data-table-container">
-      <table>
+      <table ref="table">
         <thead>
           <tr>
             <th v-if="selection" class="v-selection v-select-all" >
@@ -26,12 +26,19 @@
             <td v-if="selection" class="v-selection">
               <v-checkbox :value="row[selectionKey]" @click.native="checkSelection()" @checked="selectRow(row, selectionKey, $event)" ref="checkboxes"></v-checkbox>
             </td>
-            <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }" @click="editField($event, column.editable, row, column.key);">
-              <span v-if="!column.options">{{row[column.key]}}</span>
+            <td v-for="(column, index) in tableColumns" :data-title="[column.head]" :class="{ 'v-first-col': index === 0, 'v-editable': column.editable }">
+              <span v-if="!column.options">
+                <span class="v-col-value" v-if="row !== editRow || column.key !== editKey" @click="editField($event, column.editable, row, column.key);">{{row[column.key]}}</span>
+                <span v-if="row === editRow && column.key === editKey">
+                  <v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue, row, column.key)" @keyup.native.esc="cancelEdit(row, column.key)" @input="editValue = $event"></v-input>
+                </span>
+              </span>
               <div class="v-column-options">
                 <v-select v-if="column.options" :value="row[column.key]" :options="column.options">{{row[column.key]}}</v-select>
               </div>
-              <i class="material-icons v-table-edit-icon" v-if="column.editable">edit</i>
+              <i class="material-icons v-table-edit-icon" v-if="column.editable && row !== editRow || column.editable && column.key !== editKey" @click="editField($event, column.editable, row, column.key);">edit</i>
+              <i class="material-icons v-table-save-icon" v-if="column.editable && row === editRow && column.key === editKey" @click="saveEdit(editValue, row, column.key)">check</i>
+              <i class="material-icons v-table-cancel-icon" v-if="column.editable && row === editRow && column.key === editKey" @click="cancelEdit(row, column.key)">close</i>
             </td>
           </tr>
 
@@ -42,17 +49,26 @@
           </tr>
         </tbody>
       </table>
-      <transition name="fade">
-        <div ref="editor" v-show="editing" class="v-data-table-edit-container">
-          <v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue)" @keyup.native.esc="cancelEdit()" @input="editValue = $event"></v-input>
-          <div class="v-edit-buttons">
-            <v-button class="cancel" :primary="true" @click.native="cancelEdit()">cancel</v-button>
-            <v-button class="save" :primary="true" @click.native="saveEdit(editValue)">save</v-button>
-          </div>
-        </div>
-      </transition>
 
-      <div class="v-table-edit-backdrop" v-if="editing" @click="cancelEdit()"></div>
+      <!--<v-dialog :show="editing" @hide="editing = false" :small="true">-->
+        <!--&lt;!&ndash;<p>Confirm you opened the dialog</p>&ndash;&gt;-->
+        <!--<v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue)" @keyup.native.esc="cancelEdit()" @input="editValue = $event"></v-input>-->
+        <!--<div slot="actions">-->
+          <!--<v-button :primary="true" @click.native="showDialog.small = false">Cancel</v-button>-->
+          <!--<v-button :primary="true" @click.native="showAlert('you clicked confirm', 'small')">Save</v-button>-->
+        <!--</div>-->
+      <!--</v-dialog>-->
+      <!--<transition name="fade">-->
+        <!--<div ref="editor" v-show="editing" class="v-data-table-edit-container">-->
+          <!--<v-input ref="editinput" :value="editValue" :focus="true" @keyup.native.enter="saveEdit(editValue)" @keyup.native.esc="cancelEdit()" @input="editValue = $event"></v-input>-->
+          <!--<div class="v-edit-buttons">-->
+            <!--<v-button class="cancel" :primary="true" @click.native="cancelEdit()">cancel</v-button>-->
+            <!--<v-button class="save" :primary="true" @click.native="saveEdit(editValue)">save</v-button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</transition>-->
+
+      <!--<div class="v-table-edit-backdrop" v-if="editing" @click="cancelEdit()"></div>-->
 
     </div>
   </div>
@@ -68,7 +84,25 @@
   table {
     width: 100%;
     table-layout: fixed;
+    .v-input-container {
+      margin: 14px 0;
+      input {
+        margin-bottom: 1px;
+        border-bottom: 1px solid rgba(0,0,0,.24);
+        width: 150px;
+        position: relative;
+        right: 40px;
+      }
+    }
+    .v-input-container.focus input {
+      margin-bottom: 0;
+    }
   }
+  .v-dialog-content {
+    margin-bottom: 0;
+  }
+
+
 </style>
 
 <script>
@@ -76,13 +110,15 @@
   import VCheckbox from './Checkbox.vue';
   import VInput from './Input.vue';
   import VSelect from './Select.vue';
+  import VDialog from './Dialog.vue';
   export default {
 
     components: {
       VButton,
       VCheckbox,
       VInput,
-      VSelect
+      VSelect,
+      VDialog
     },
 
     props: [
@@ -175,27 +211,40 @@
       },
 
       editField (ev, editable, row, key) {
-        if (editable) {
-          this.editRow = row;
-          this.editKey = key;
-          var target = ev.target.nodeName !== 'SPAN' && ev.target.nodeName !== 'I' ? ev.target : ev.target.offsetParent;
-          this.editing = !this.editing;
-          this.editValue = row[key];
-          this.$refs.editor.style.left = target.offsetLeft + target.clientWidth - 216 + 'px';
-          this.$refs.editor.style.top = target.offsetTop + target.offsetParent.offsetTop + 'px';
-          var input = this.$refs.editinput.$el.getElementsByTagName('input')[0];
-          this.$nextTick(() => {
-            input.focus();
-          });
-        }
+          console.log('edit');
+          if (this.editRow) {
+            this.editRow.editing = false;
+          }
+
+          if (editable && !row.editing) {
+            row.editing = key;
+            console.log(row, key);
+            this.editRow = row;
+            this.editKey = key;
+            this.editValue = row[key];
+              this.$nextTick(() => {
+                var input = this.$refs.editinput[0].$el.getElementsByTagName('input')[0];
+                input.focus();
+              });
+          }
       },
 
-      cancelEdit () {
+      cancelEdit (row, key) {
+        row.editing = false;
+        this.editKey = '';
         this.editing = false;
+        this.editRow.editing = false;
       },
 
-      saveEdit (value) {
+      saveEdit (value, row, key) {
+        console.log('save');
+        row.editing = false;
+
+        row[key] = value;
+
         this.editing = false;
+        this.editRow.editing = false;
+        this.editKey = '';
         this.editRow[this.editKey] = value;
       }
     },

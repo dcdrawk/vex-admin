@@ -7,25 +7,30 @@
         <div slot="result" class="padding">
 
           <!-- Basic Data Table -->
-          <h3 class="title">Basic</h3>
-          <v-data-table :rows="rows1" :columns="columns" order="name" :direction="-1"></v-data-table>
+          <v-card title="Default" :border="true">
+            <v-data-table :rows="rows1" :columns="columns" order="name" :direction="-1"></v-data-table>
+          </v-card>
 
           <!-- Hover Data Table -->
-          <h3 class="title">Search Filter + Border {{ searchText }}</h3>
-          <v-search-bar ref="search" placeholder="Search" :value="searchText" key="name" @changed="searchText = $event"></v-search-bar>
-          <v-data-table :rows="rows2" :columns="columns" :border="true" :filter="searchText" no-results="No Results to Display"></v-data-table>
+          <v-card title="Search Filter + Border" :border="true">
+            <v-search-bar ref="search" placeholder="Search" :value="searchText" key="name" @changed="searchText = $event"></v-search-bar>
+            <v-data-table :rows="rows2" :columns="columns" :border="true" :filter="searchText" no-results="No Results to Display"></v-data-table>
+          </v-card>
 
           <!-- Row Selection + Hover Data Table -->
-          <h3 class="title">Row Selection + Hover</h3>
-          <v-data-table :rows="rows3" :columns="columns" :hover="true" :selection="true" selection-key="selected" @selected="rows = $event"></v-data-table>
+          <v-card title="Row Selection + Hover" :border="true">
+            <v-data-table :rows="rows3" :columns="columns" :hover="true" :selection="true" selection-key="selected" @selected="rows = $event"></v-data-table>
+          </v-card>
 
           <!-- Striped Data Table -->
-          <h3 class="title">Striped + Editable Fields</h3>
-          <v-data-table :rows="rows4" :columns="columnsEditable" :striped="true"></v-data-table>
+          <!--<v-card title="Striped + Editable" :border="true">-->
+            <v-data-table :rows="rows4" :columns="columnsEditable" :striped="true"></v-data-table>
+          <!--</v-card>-->
 
           <!-- Basic Dropdown -->
-          <h3 class="title">Responsive</h3>
-          <v-data-table :rows="rows5" :columns="columns" :responsive="true"></v-data-table>
+          <v-card title="Responsive" :border="true">
+            <v-data-table :rows="rows5" :columns="columns" :responsive="true"></v-data-table>
+          </v-card>
 
         </div>
         <div slot="template">

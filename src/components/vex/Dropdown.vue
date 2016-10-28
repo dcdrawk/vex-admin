@@ -28,7 +28,7 @@
     methods: {
       openDropdown () {
         var container = this.$refs.container;
-        container.classList.remove('closed')
+        container.classList.remove('closed');
         container.classList.add('open');
         gsap.TweenLite.to(container, 0.25, { height: this.totalHeight + "px", opacity: 1, ease: gsap.Power1.easeOut });
 //        console.log(this.target);
@@ -38,7 +38,7 @@
         var container = this.$refs.container;
         container.classList.remove('open');
         container.classList.add('closed');
-        gsap.TweenLite.to(container, 0.25, { height: '0px', opacity: 0, ease: gsap.Power1.easeOut });
+        gsap.TweenLite.to(container, 1.25, { height: '0px', opacity: 0, ease: gsap.Power1.easeOut });
         this.$emit('toggle');
       },
     },

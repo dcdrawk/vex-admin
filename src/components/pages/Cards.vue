@@ -3,47 +3,49 @@
     <v-tabs default-tab="result" :primary="true" class="demo-tabs page-tabs">
       <div slot="result">
         <section class="padding">
+          <v-card title="Regular Cards" :border="true">
           <div class="row">
+              <!-- Basic Card -->
+              <div class="col-xs-3">
+              <h3 class="title">Basic Card</h3>
+                <v-card title="Card Title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis, odio et imperdiet condimentum, tellus erat cursus neque, vel tempor dolor libero id quam. Vestibulum venenatis risus eu diam lacinia ultrices.
+                </v-card>
+              </div>
 
-            <!-- Basic Card -->
-            <div class="col-xs-3">
-            <h3 class="title">Basic Card</h3>
-              <v-card title="Card Title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis, odio et imperdiet condimentum, tellus erat cursus neque, vel tempor dolor libero id quam. Vestibulum venenatis risus eu diam lacinia ultrices.
-              </v-card>
-            </div>
+              <!-- Card with Subtitle -->
+              <div class="col-xs-3">
+                <h3 class="title">Card with Subtitle</h3>
+                <v-card title="Card Title" subtitle="Here is the Subtitle">
+                  Duis at varius leo. Praesent ultrices quam sit amet ligula porta, at mollis elit maximus. Aliquam quis tellus et ipsum venenatis luctus. Vivamus molestie feugiat porttitor.
+                </v-card>
+              </div>
 
-            <!-- Card with Subtitle -->
-            <div class="col-xs-3">
-              <h3 class="title">Card with Subtitle</h3>
-              <v-card title="Card Title" subtitle="Here is the Subtitle">
-                Duis at varius leo. Praesent ultrices quam sit amet ligula porta, at mollis elit maximus. Aliquam quis tellus et ipsum venenatis luctus. Vivamus molestie feugiat porttitor.
-              </v-card>
-            </div>
+              <!-- Card with Actions -->
+              <div class="col-xs-3">
+                <h3 class="title">Card with Actions</h3>
+                <v-card title="Card Title">
+                  Quisque hendrerit sodales ultricies. Nam pretium, augue vel efficitur consequat, lacus neque aliquam urna, ac volutpat elit leo ac ante. Sed vel felis id mi aliquam feugiat quis eget enim. Pellentesque tempor sodales commodo.
+                  <div slot="actions">
+                    <v-button primary="true">Action 1</v-button>
+                    <v-button primary="true">Action 2</v-button>
+                  </div>
+                </v-card>
+              </div>
 
-            <!-- Card with Actions -->
-            <div class="col-xs-3">
-              <h3 class="title">Card with Actions</h3>
-              <v-card title="Card Title">
-                Quisque hendrerit sodales ultricies. Nam pretium, augue vel efficitur consequat, lacus neque aliquam urna, ac volutpat elit leo ac ante. Sed vel felis id mi aliquam feugiat quis eget enim. Pellentesque tempor sodales commodo.
-                <div slot="actions">
-                  <v-button primary="true">Action 1</v-button>
-                  <v-button primary="true">Action 2</v-button>
-                </div>
-              </v-card>
-            </div>
-
-            <!-- Card with Media -->
-            <div class="col-xs-3">
-              <h3 class="title">Card with Media</h3>
-              <v-card title="Card Title" media="http://placehold.it/640x360">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate est egestas augue consequat, sit amet tincidunt libero egestas. Maecenas tincidunt mi eu quam dapibus tempus. Morbi iaculis felis vitae leo pellentesque condimentum sit amet vel urna. Suspendisse placerat in mi nec facilisis. Curabitur at leo arcu.
-              </v-card>
-            </div>
+              <!-- Card with Media -->
+              <div class="col-xs-3">
+                <h3 class="title">Card with Media</h3>
+                <v-card title="Card Title" media="http://placehold.it/640x360">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate est egestas augue consequat, sit amet tincidunt libero egestas. Maecenas tincidunt mi eu quam dapibus tempus. Morbi iaculis felis vitae leo pellentesque condimentum sit amet vel urna. Suspendisse placerat in mi nec facilisis. Curabitur at leo arcu.
+                </v-card>
+              </div>
           </div>
+          </v-card>
         </section>
       </div>
       <div slot="template">
+
         <pre><code class="language-html">{{ cardMarkup }}</code></pre>
       </div>
       <div slot="script">

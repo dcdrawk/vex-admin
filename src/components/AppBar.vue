@@ -86,7 +86,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import '../styles/components/appbar';
   img {
     width: 120px;
@@ -101,11 +101,14 @@
   .list-item {
     cursor: pointer;
   }
-  .sidebar-nav {
-    .list {
+
+  .xen-nav {
+    margin-top: 10px;
+    .xen-list {
       margin: 0;
     }
   }
+
   .secondary-list .list-item {
     padding-left: 32px;
     font-weight: 500;

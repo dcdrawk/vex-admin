@@ -129,10 +129,11 @@
   }
 
   .v-editable {
-    cursor: pointer;
+    //cursor: pointer;
   }
 
-  .v-editable span {
+  .v-editable .v-col-value {
+    cursor: pointer;
     border-bottom: 1px dashed rgba(0,0,0,.54);
     cursor: pointer;
     right: 48px;
@@ -140,7 +141,9 @@
   }
   .v-data-table-edit-container {
     position: absolute;
-    left: 230px;
+    //top: 0;
+    //left: 200px;
+    //left: 230px;
     z-index: 12;
     @extend .whiteframe-z1;
     background-color: #fafafa;
@@ -159,11 +162,23 @@
       margin-right: 0;
     }
   }
-  .v-table-edit-icon {
+  //.v-table-edit-icon {
+  //  right: 56px;
+  //}
+  .v-table-edit-icon,
+  .v-table-save-icon,
+  .v-table-cancel-icon {
     position: absolute;
-    right: 56px;
     top: 18px;
     color: rgba(0,0,0,.54);
+    cursor: pointer;
+  }
+  .v-table-cancel-icon,
+  .v-table-edit-icon {
+    right: 56px;
+  }
+  .v-table-save-icon {
+    right: 24px;
   }
   .v-results-message {
     text-align: center;
